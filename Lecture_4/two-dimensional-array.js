@@ -1,6 +1,3 @@
-// Count min, max on main diagonal in two-dimensional Array of numbers
-// Sort numbers on main diagonal in descending order
-
 function selectMainDiagonal (items) {
   const length = items.length
   const result = []
@@ -35,13 +32,12 @@ const twoDimensionalArr = [
   [17, 11, 15, 4, 1, 8, -5],
   [21, 2, 30, -4, 24, -5, 16]
 ]
-
 const mainDiagonalArr = selectMainDiagonal(twoDimensionalArr)
 const maxNumberOnDiagonal = countMax(mainDiagonalArr)
 const minNumberOnDiagonal = countMin(mainDiagonalArr)
 const mainDiagonalSortedDesc = sortDescending(mainDiagonalArr)
 
-console.log(`Main diagonal: ${mainDiagonalArr}.`)
+console.log(`Main diagonal: ${mainDiagonalArr}`)
 console.log(`Max number on main diagonal: ${maxNumberOnDiagonal}`)
 console.log(`Min number on main diagonal: ${minNumberOnDiagonal}`)
 console.log(`Descending order of main diagonal: ${mainDiagonalSortedDesc}`)

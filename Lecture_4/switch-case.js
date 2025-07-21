@@ -1,5 +1,3 @@
-// Rewrite the code using the switch-case comnstruction
-
 function browserCheck (browser) {
   switch (browser) {
     case 'Edge':
@@ -18,4 +16,5 @@ function browserCheck (browser) {
 
 const browsers = ['Edge', 'Chrome', 'Firefox', 'Safari', 'Opera', 'BlaBlaBla']
 const myBrowser = browsers[Math.floor(Math.random() * browsers.length)]
+
 browserCheck(myBrowser)
