@@ -12,14 +12,10 @@ function checkIfNumberIsValid (n) {
 }
 
 function checkIfNumberIsPrime (n) {
-  let isPrime = true
-  for (let divisor = 2; divisor < n; divisor++) {
-    if (n % divisor === 0) {
-      isPrime = false
-      break
-    }
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) return false
   }
-  return isPrime
+  return true
 }
 
 function printNumber (n) {
