@@ -1,6 +1,7 @@
-function filterOver4Characters (value) {
+function over4Characters (value) {
   return value.length > 4
 }
+
 function filterUniqueValues (array) {
   return [...new Set(array)]
 }
@@ -29,7 +30,7 @@ function printResult (result) {
 }
 
 function main (array) {
-  const over4 = array.filter(filterOver4Characters)
+  const over4 = array.filter(over4Characters)
   const uniqueOver4 = filterUniqueValues(over4)
   const splitArray = splitCharactersArray(uniqueOver4)
   const sumO = countCharacter(splitArray, 'o')
