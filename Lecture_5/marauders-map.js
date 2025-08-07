@@ -13,7 +13,7 @@ function defineNicknames () {
 }
 
 function findMarauders () {
-  return console.log(marauderLocation)
+  console.log(marauderLocation)
 }
 
 const names = ['James', 'Sirius', 'Remus', 'Peter']
