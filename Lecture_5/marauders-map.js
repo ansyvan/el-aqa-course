@@ -9,7 +9,7 @@ Array.prototype.maraudersMap = function (fn) {
 }
 
 function defineNicknames () {
-  return console.log(namesAndNicknames)
+  console.log(namesAndNicknames)
 }
 
 function findMarauders () {
