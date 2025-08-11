@@ -22,7 +22,7 @@ function printSubstractedDate (result) {
 }
 
 // DD-MM-YYYY HH:MM:SS (05-02-2021 15:56:00)
-function convertDate (milliseconds) {
+function formatDate (milliseconds) {
   const date = new Date(milliseconds)
   const day = `${date.getUTCDate()}`.padStart(2, '0')
   const month = `${(date.getUTCMonth() + 1)}`.padStart(2, '0')
@@ -38,11 +38,11 @@ function compareWithCurrent (date) {
   const dateInMilliseconds = date.getTime()
 
   if (isDifferenceOver10Days(dateInMilliseconds, currentDateInMiliseconds)) {
-    const result = convertDate(currentDateInMiliseconds)
+    const result = formatDate(currentDateInMiliseconds)
     printCurrentDate(result)
   } else {
     const dateMinus8Hours = substract8Hours(date)
-    const result = convertDate(dateMinus8Hours)
+    const result = formatDate(dateMinus8Hours)
     printSubstractedDate(result)
   }
 }
