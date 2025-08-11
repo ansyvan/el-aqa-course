@@ -1,6 +1,6 @@
 function logIn500Millis () {
   return new Promise((resolve, reject) => {
-    setTimeout(function () {
+    setTimeout(() => {
       console.log(1)
       resolve('1')
     }, 500)
