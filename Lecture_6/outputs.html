@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    Outputs in the browser
+</head>
+
+<body>
+    <h3>What is the value of the keyword <i>this</i> in the following example:</h3>
+    <pre><code>
+            var data = this;
+            console.log(data);
+        </code></pre>
+    <script>
+        var data = this;
+        console.log(data);
+    </script>
+    <p>
+        <b>The output in the browser:</b></br>
+        Window {window: Window, self: Window, document: document, name: '', location: Location, …}</br>
+        <b>Explanation:</b></br>
+        <i>this</i> refers to the Object depending of the context. In this case the code is in global scope,
+        so <i>this</i> points to the global object <i>Window</i> with lots of data. </br>
+        <b>The output in Node.js:</b> {} </br>
+        <b>Explanation:</b></br>
+        it points to <i>module.exports</i>, which starts as an empty object.
+    </p>
+    <h3>What does this function output? Why?</h3>
+    <pre><code>
+            function logThis(){
+                return this;
+            }
+            
+            logThis(); // nothing
+        </code></pre>
+    <script>
+        function logThis() {
+            return this;
+        }
+
+        logThis();
+    </script>
+    <p>
+        <b>Explanation:</b></br>
+        The function logThis() displays nothing.
+        We need console.log(logThis()) for visible output.
+    </p>
+    <h3>What does this function output? Why?</h3>
+    <pre><code>
+        var instructor = {
+            firstName: 'Tim',
+            sayHi: function(){
+                console.log("Hello! " + this.firstName);
+            }
+        }
+        
+        instructor.sayHi() // Hello! Tim
+        </code></pre>
+    <script>
+        var instructor = {
+            firstName: 'Tim',
+            sayHi: function () {
+                console.log("Hello! " + this.firstName);
+            }
+        }
+
+        instructor.sayHi()
+    </script>
+    <p>
+        <b>Explanation:</b></br>
+        <i>instructor</i> is an Object, <i>sayHi</i> is the Object's method, which displays the message.
+        In the message this is refering to the Object itself and its property <i>firstName</i>.
+        The function is called as a method of an object: <i>object.method()</i>
+    </p>
+    <h3>What does this function output? Why?</h3>
+    <pre><code>
+        var instructor = {
+            firstName: 'Tim',
+            info: {
+                catOwner: true,
+                boatOwner: true
+            },
+            displayInfo: function(){
+                console.log("Cat owner? " + this.catOwner);
+            }
+        }
+        
+        instructor.displayInfo() // Cat owner? undefined
+        </code></pre>
+    <script>
+        var instructor = {
+            firstName: 'Tim',
+            info: {
+                catOwner: true,
+                boatOwner: true
+            },
+            displayInfo: function () {
+                console.log("Cat owner? " + this.catOwner);
+            }
+        }
+
+        instructor.displayInfo()
+    </script>
+    <p>
+        <b>Explanation:</b></br>
+        <i>catOwner</i> is in nested object so we can't call it like <i>object.catOwner</i>.
+        We need <i>object.info.catOwner</i> to see <i>Cat owner? true</i>
+    </p>
+    <h3>What does this function output? Why?</h3>
+    <pre><code>
+        var instructor = {
+            firstName: 'Tim',
+            info: {
+                catOwner: true,
+                boatOwner: true,
+                displayLocation: function(){
+                    return this.data.location;
+                },
+                data: {
+                    location: "Oakland"
+                }
+            },
+        }
+        
+        instructor.info.displayLocation() // nothing
+        </code></pre>
+    <script>
+        var instructor = {
+            firstName: 'Tim',
+            info: {
+                catOwner: true,
+                boatOwner: true,
+                displayLocation: function () {
+                    return this.data.location;
+                },
+                data: {
+                    location: "Oakland"
+                }
+            },
+        }
+
+        instructor.info.displayLocation()
+    </script>
+    <p>
+        <b>Explanation:</b></br>
+        There is nothing in the output unless we print the result. </br>
+        console.log(instructor3.info.displayLocation()) // Oakland
+    </p>
+    <h3>What does this function output? Why?</h3>
+    <pre><code>
+        var instructor = {
+            firstName: 'Tim',
+            info: {
+                catOwner: true,
+                boatOwner: true,
+                displayLocation: function(){
+                    return this.location;
+                },
+                data: {
+                    location: "Oakland",
+                    logLocation: this.displayLocation
+                }
+            },
+        }
+        
+        instructor.info.data.logLocation() // Why might we be getting an error here?
+        </code></pre>
+    <script>
+        var instructor = {
+            firstName: 'Tim',
+            info: {
+                catOwner: true,
+                boatOwner: true,
+                displayLocation: function () {
+                    return this.location;
+                },
+                data: {
+                    location: "Oakland",
+                    logLocation: this.displayLocation
+                }
+            },
+        }
+
+        instructor.info.data.logLocation() // Why might we be getting an error here?
+    </script>
+    <p>
+        <b>Explanation:</b></br>
+        <i>this.location</i> refers to <i>info.location</i> but location is under <i>data</i> object.
+        And there is no <i>displayLocation</i> property in <i>data</i> object (this),
+        so the object is not properly created.
+    </p>
+    <h3>What does this function output? Why?</h3>
+    <pre><code>
+        function f () {
+            console.log(this)
+          }
+          const user = {
+            g: f.bind(null),
+            arrowFunc: () => console.log(this)
+          }
+          user.g() <i>// null or global object in non-strict mode</i>
+          user.arrowFunc() <i>// {} in Node.js or Window in browser</i>
+        </code></pre>
+    <script>
+        'use strict'
+        function f() {
+            console.log(this);
+        }
+        let user = {
+            g: f.bind(null),
+            arrowFunc: () => console.log(this)
+        };
+        user.g();
+        user.arrowFunc();
+    </script>
+    </p>
+    <b>Explanation:</b></br>
+    <i>this</i> inside the <i>f</i> function is locked to <i>null</i>. 
+    When <i>user.g()</i> is called the <i>console.log(this)</i> inside the original <i>f</i> function runs.</br>
+    Arrow function referes to the scope where it is defined - global.
+</body>
+
+</html>
