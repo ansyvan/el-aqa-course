@@ -5,11 +5,7 @@ function isDifferenceOver10Days (date) {
   const dateToCompare = moment.utc(date)
   const differenceInDays = currentDate.diff(dateToCompare, 'days')
 
-  if (differenceInDays > 10) {
-    return true
-  } else {
-    return false
-  }
+return differenceInDays > 10
 }
 
 function substract8Hours (date) {
