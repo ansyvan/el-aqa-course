@@ -52,7 +52,7 @@ export class SmartHomeController {
   checkMotionInside () {
     if (this.devices.motionSensor._motionDetected) {
       console.log('Controller: Motion detected! Activating outdoor security.')
-      this.devices.insideLight.turnOn()
+      this.devices.indoorLight.turnOn()
     } else {
       if (this.devices.insideLight.isOn) {
         this.devices.insideLight.turnOff()
