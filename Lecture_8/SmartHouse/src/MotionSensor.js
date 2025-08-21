@@ -7,13 +7,8 @@ export class MotionSensor extends SmartDevice {
     this._motionDetected = false
   }
 
-  detectMotion (isSomeoneAround) {
-    if (isSomeoneAround) {
-      console.log('Motion Sensor: Movement detected.')
-      this._motionDetected = true
-    } else {
-      console.log('Motion Sensor: No movement detected.')
-      this._motionDetected = false
-    }
-  }
+detectMotion(isSomeoneAround) {
+  this._motionDetected = isSomeoneAround;
+  console.log(`Motion Sensor: ${isSomeoneAround ? 'Movement detected.' : 'No movement detected.'}`);
+}
 }
