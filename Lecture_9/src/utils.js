@@ -4,6 +4,5 @@ export function mergeObjects (...objects) {
 
 export async function getUserInfo (id) {
   const user = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-  const userJSON = await user.json()
-  return userJSON
+  return user.json()
 }
