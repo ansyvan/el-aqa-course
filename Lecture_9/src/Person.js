@@ -4,7 +4,7 @@ export class Person {
     this.lastName = lastName
   }
 
-  greeting (firstName, lastName) {
+  greeting () {
     return `Hi, my name is ${this.firstName} ${this.lastName}.`
   }
 
