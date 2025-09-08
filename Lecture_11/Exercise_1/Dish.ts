@@ -1,8 +1,9 @@
-import { IDish } from "./types.js"
-import { Taxable } from "./decorators.js"
+/* eslint-disable no-useless-constructor */
+import { IDish } from './types.js'
+import { Taxable } from './decorators.js'
 
 export class Dish implements IDish {
-  constructor(
+  constructor (
     private _price: number,
     private _name: string,
     private _weight: number,
@@ -10,35 +11,35 @@ export class Dish implements IDish {
   ) {}
 
   @Taxable(0.07)
-  get price() {
-    return this._price;
+  get price () {
+    return this._price
   }
 
-  get name() {
-    return this._name;
+  get name () {
+    return this._name
   }
 
-  get weight() {
-    return this._weight;
+  get weight () {
+    return this._weight
   }
 
-  get availability() {
-    return this._availability;
+  get availability () {
+    return this._availability
   }
 
-  set price(price) {
-    this._price = price;
+  set price (price) {
+    this._price = price
   }
 
-  set name(name) {
-    this._name = name;
+  set name (name) {
+    this._name = name
   }
 
-  set weight(weight) {
-    this._weight = weight;
+  set weight (weight) {
+    this._weight = weight
   }
 
-  set availability(availability) {
-    this._availability = availability;
+  set availability (availability) {
+    this._availability = availability
   }
 }
