@@ -6,6 +6,12 @@ import { updateObjectInArray } from './updateObjectInArray.js'
 class PostService {
   @Loggable()
   logAllPosts (posts: Post[]) {
+    console.log('--- Processing individual posts ---')
+    posts.forEach(post => {
+      console.log(`Post ID: ${post.id}, Title: ${post.title}`)
+      console.log(post)
+      console.log('-'.repeat(70))
+    })
     return `Logged ${posts.length} posts.`
   }
 }

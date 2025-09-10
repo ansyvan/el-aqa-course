@@ -13,12 +13,10 @@ export function Loggable () {
 
     descriptor.value = function (...args: any[]) {
       console.log(`--- Entering method: ${propertyKey} ---`)
-      console.log('Arguments received:', args)
 
       const result = original.apply(this, args)
 
       console.log(`--- Exiting method: ${propertyKey} ---`)
-      console.log('Method returned:', result)
 
       return result
     }
