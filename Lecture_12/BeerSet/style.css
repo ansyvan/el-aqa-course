@@ -1,0 +1,134 @@
+body {
+    font-family: Montserrat;
+    color: #FFFFFF;
+    background-color: #1B1B1B;
+    margin: 0;
+}
+
+:root {
+    --main-gradient: linear-gradient(301.07deg, #F12711 7.18%, #F5AF19 96.48%);
+    --brand-orange: #F12711;
+}
+
+h1 {
+    /* position: absolute;
+    width: 259px;
+    height: 88px;
+    top: 1116px;
+    left: 831px; */
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 1;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gr1-rect-2,
+.gr1-rect-3 {
+    position: absolute;
+    top: 0;
+}
+
+.gr1-rect-2 {
+    width: 1043px;
+    height: 926px;
+    left: 877px;
+    background: var(--main-gradient);
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.gr1-rect-3 {
+    width: 1051px;
+    height: 926px;
+    left: 0px;
+    background: #1B1B1B;
+}
+
+.main-header {
+    position: absolute;
+    width: 1720px;
+    height: 249px;
+    left: 100px;
+    top: 0;
+    padding: 0px 50px;
+}
+
+.main-nav {
+    display: flex;
+    position: relative;
+    top: 53px;
+    left: 0px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 70px;
+}
+
+.main-nav li {
+    position: relative;
+    padding: 10px 0px;
+    display: inline-flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.main-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main-nav a,
+.main-nav a:visited {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.dropdown-arrow-svg {
+    display: inline-flex;
+    width: 7px;
+    height: 15px;
+    top: 61px;
+    left: 109px;
+
+    position: absolute;
+    right: 93.26%;
+    top: 34.5%;
+    bottom: 69.48%;
+    transform: matrix(0, 1, 1, 0, 0, 0);
+}
+
+.has-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    background: var(--main-gradient)
+}
