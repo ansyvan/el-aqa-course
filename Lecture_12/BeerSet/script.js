@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('click', function (event) {
+    const dropdownArrow = dropdown.querySelector('.dropdown-arrow-svg')
+
+    dropdownArrow.addEventListener('click', function (event) {
       event.preventDefault()
       event.stopPropagation()
 
