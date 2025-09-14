@@ -33,6 +33,12 @@
                                 <path d="M2 2L27 26.5L2 51" stroke="white" stroke-width="5" stroke-linejoin="round" />
                             </svg>
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">пиво</a></li>
+                            <li><a href="#">вино</a></li>
+                            <li><a href="#">закуски</a></li>
+                            <li><a href="#">комбінації</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">про нас</a>
@@ -49,24 +55,7 @@
     </section>
     <h1>МЕНЮ</h1>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navItems = document.querySelectorAll('.main-nav li');
-
-            navItems.forEach(item => {
-                item.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    const currentActive = document.querySelector('.main-nav .active');
-                    if (currentActive) {
-                        currentActive.classList.remove('active');
-                    }
-
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
