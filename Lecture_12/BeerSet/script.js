@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   dropdowns.forEach(dropdown => {
-    const dropdownArrow = dropdown.querySelector('.dropdown-arrow-svg')
+    const dropdownArrow = dropdown.querySelector('.has-dropdown-arrow')
 
     dropdownArrow.addEventListener('click', function (event) {
       event.preventDefault()
       event.stopPropagation()
 
       const currentOpenDropdown = document.querySelector('.has-dropdown.active')
-      if (currentOpenDropdown && currentOpenDropdown !== this) {
+      if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
         currentOpenDropdown.classList.remove('active')
       }
 
