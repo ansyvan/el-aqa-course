@@ -2,19 +2,19 @@ import { DataTypes, Model, Optional } from 'sequelize'
 import sequelize from '../connection.js'
 
 interface CountryAttributes {
-  id: number
-  name: string
-  population?: number
-  phone?: string
+  id: number;
+  name: string;
+  population: number;
+  phone: string;
 }
 
-type CountryCreationAttributes = Optional<CountryAttributes, 'id'>
+type CountryCreationAttributes = Optional<CountryAttributes, 'id'>;
 
-class Country extends Model<CountryAttributes, CountryCreationAttributes> implements CountryAttributes {
-  public id!: number
-  public name!: string
-  public population?: number
-  public phone?: string
+export class Country extends Model<CountryAttributes, CountryCreationAttributes> {
+  declare id: number
+  declare name: string
+  declare population: number
+  declare phone: string
 }
 
 Country.init(
@@ -39,6 +39,7 @@ Country.init(
     sequelize,
     tableName: 'Countries',
     timestamps: false
-  })
+  }
+)
 
 export default Country
