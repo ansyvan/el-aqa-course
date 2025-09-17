@@ -9,7 +9,17 @@ import {
   findDistinctCountriesFromUsers,
   findUsersOlder,
   findUsersBetween,
-  findUsersInCountries
+  findUsersInCountries,
+  orderUsersByAgeAsc,
+  orderCountriesByNameDescLimit,
+  sumAgeInEachCountry,
+  countUsersInEachCountry,
+  findMinAgeUser,
+  findAllInfoAboutMinAgeUser,
+  countCountries,
+  countCountriesWithPopulation,
+  countTotalPopulation,
+  getFullNames
 } from './services/databaseService.js'
 import sequelize from './db/connection.js'
 
@@ -42,46 +52,7 @@ async function runCrudDemo () {
     })
 
     console.log('-'.repeat(50))
-    console.log('3. UPDATING A COUNTRY')
-    const updateResult = await updateCountryByName('Random', {
-      name: 'United Kingdom',
-      phone: '+447441426488',
-      population: 67000000
-    })
-    console.log('Update successful:', updateResult)
-
-    console.log('-'.repeat(50))
-    console.log('4. DELETING COUNTRIES (population <= 40,000,000)')
-    const deletedCount = await deleteCountriesByPopulation(40000000)
-    console.log(`Deletion successful: ${deletedCount} countries deleted.`)
-
-    console.log('-'.repeat(50))
-    console.log('5. FINAL LIST OF COUNTRIES')
-    const finalCountries = await findAllCountries()
-    finalCountries.forEach((country) => {
-      console.log(`  - ${country.name}, population: ${country.population}`)
-    })
-
-    console.log('-'.repeat(50))
-    console.log('6. FINAL LIST OF USERS (with country details)')
-    const finalUsers = await findAllUsersWithCountries()
-    finalUsers.forEach((user) => {
-      const countryName = user.country ? user.country.name : 'N/A'
-      console.log(`  - ${user.firstName} ${user.lastName || ''} lives in ${countryName}`)
-    })
-
-    console.log('-'.repeat(50))
-    console.log('6. WHERE IS JIM?')
-    const id = 5
-    const jim = await findUserById(id)
-    if (jim) {
-      console.log(`Found user: ${jim.firstName} ${jim.lastName}`)
-    } else {
-      console.log(`User with ID ${id} was not found. He was deleted with his country.`)
-    }
-
-    console.log('-'.repeat(50))
-    console.log('7. DISTINCT COUNTRIES IN FINAL USER LIST:')
+    console.log('3. DISTINCT COUNTRIES IN USER LIST:')
     const distinctCountries = await findDistinctCountriesFromUsers()
     distinctCountries.forEach((country) => {
       if (country) {
@@ -92,25 +63,131 @@ async function runCrudDemo () {
     })
 
     console.log('-'.repeat(50))
-    console.log('8. USERS OLDER THAN 40 YEARS:')
+    console.log('4. USERS OLDER THAN 40 YEARS:')
     const usersOver = await findUsersOlder(40)
     usersOver.forEach((user) => {
       console.log(`  - ${user.firstName} ${user.lastName || ''}, Age: ${user.age}`)
     })
 
     console.log('-'.repeat(50))
-    console.log('9. USERS BETWEEN 30 AND 50 YEARS:')
+    console.log('5. USERS BETWEEN 30 AND 50 YEARS:')
     const usersBetween = await findUsersBetween(30, 50)
     usersBetween.forEach((user) => {
       console.log(`  - ${user.firstName} ${user.lastName || ''}, Age: ${user.age}`)
     })
 
     console.log('-'.repeat(50))
-    console.log('10. USERS IN COUNTRIES 2 and 4:')
+    console.log('6. USERS IN COUNTRIES 2 and 4:')
     const usersInCountries = await findUsersInCountries([2, 4])
     usersInCountries.forEach((user) => {
       console.log(`  - ${user.firstName} ${user.lastName || ''} lives in ${user.country}`)
     })
+
+    console.log('-'.repeat(50))
+    console.log('7. USERS LIST FROM THE YOUNGEST TO THE OLDEST:')
+    const usersAsc = await orderUsersByAgeAsc()
+    usersAsc.forEach((user) => {
+      console.log(`  - ${user.firstName} ${user.lastName || ''}, Age: ${user.age}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('8. COUNTRIES ORDERED BY NAME IN DESC (first 3):')
+    const countriesDesc = await orderCountriesByNameDescLimit(3)
+    countriesDesc.forEach((country) => {
+      console.log(`  - ${country.name}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('9. TOTAL AGE IN EACH COUNTRY:')
+    const totalAgeInCountry = await sumAgeInEachCountry()
+    totalAgeInCountry.forEach((entry) => {
+      console.log(`  - ${entry.country}: Total Age = ${entry.totalAge}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('10. COUNT USERS IN EACH COUNTRY:')
+    const usersInCountry = await countUsersInEachCountry()
+    usersInCountry.forEach((entry) => {
+      console.log(`  - ${entry.country}: Total Users = ${entry.count}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('11. THE YOUNGEST USER:')
+    const youngestUser = await findMinAgeUser()
+    if (youngestUser) {
+      console.log(`  - ${youngestUser.firstName} ${youngestUser.lastName || ''}, \
+Age: ${youngestUser.age}`)
+    } else {
+      console.log('No youngest user found.')
+    }
+
+    console.log('-'.repeat(50))
+    console.log('12. ALL INFO ABOUT THE YOUNGEST USER:')
+    const youngestUserAllInfo = await findAllInfoAboutMinAgeUser()
+    if (youngestUserAllInfo) {
+      console.log(`  - ${youngestUserAllInfo.firstName} ${youngestUserAllInfo.lastName || ''}, \
+Age: ${youngestUserAllInfo.age}, \
+Country: ${youngestUserAllInfo.country}`)
+    } else {
+      console.log('No youngest user found.')
+    }
+
+    console.log('-'.repeat(50))
+    console.log('13. COUNTRIES COUNT:')
+    const countriesCount = await countCountries()
+    console.log(`  - Total Countries: ${countriesCount}`)
+
+    console.log('-'.repeat(50))
+    console.log('14. TOTAL POPULATION FROM COUNTRIES AMOUNT:')
+    const totalCountriesWithPopulationData = await countCountriesWithPopulation()
+    const totalPopulation = await countTotalPopulation()
+    console.log(`  - Total Population from ${totalCountriesWithPopulationData} countries: ${totalPopulation}`)
+
+    console.log('-'.repeat(50))
+    console.log('15. Users full names:')
+    const users = await getFullNames()
+    users.forEach((fullName) => {
+      console.log(`  - ${fullName}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('16. UPDATING A COUNTRY')
+    const updateResult = await updateCountryByName('Random', {
+      name: 'United Kingdom',
+      phone: '+447441426488',
+      population: 67000000
+    })
+    console.log('Update successful:', updateResult)
+
+    console.log('-'.repeat(50))
+    console.log('17. DELETING COUNTRIES (population <= 40,000,000)')
+    const deletedCount = await deleteCountriesByPopulation(40000000)
+    console.log(`Deletion successful: ${deletedCount} countries deleted.`)
+
+    console.log('-'.repeat(50))
+    console.log('18. FINAL LIST OF COUNTRIES')
+    const finalCountries = await findAllCountries()
+    finalCountries.forEach((country) => {
+      console.log(`  - ${country.name}, population: ${country.population}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('19. FINAL LIST OF USERS (with country details)')
+    const finalUsers = await findAllUsersWithCountries()
+    finalUsers.forEach((user) => {
+      const countryName = user.country ? user.country.name : 'N/A'
+      console.log(`  - ${user.firstName} ${user.lastName || ''} lives in ${countryName}`)
+    })
+
+    console.log('-'.repeat(50))
+    console.log('20. WHERE IS JIM?')
+    const id = 5
+    const jim = await findUserById(id)
+    if (jim) {
+      console.log(`Found user: ${jim.firstName} ${jim.lastName}`)
+    } else {
+      console.log(`User with ID ${id} was not found. He was deleted with his country.`)
+    }
 
     console.log('\nCRUD operations completed.')
   } catch (error) {

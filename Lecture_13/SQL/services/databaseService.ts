@@ -1,5 +1,6 @@
 import { Op } from 'sequelize'
 import { Country, User } from '../db/models/assosiations.js'
+import sequelize from '../db/connection.js'
 
 export async function createCountry (
   name: string,
@@ -86,7 +87,8 @@ export async function findUsersOlder (minAge: number) {
   const users = await User.findAll({
     where: {
       age: {
-        [Op.gt]: minAge
+        [Op.gt]: minAge,
+        [Op.ne]: null
       }
     },
     attributes: ['firstName', 'lastName', 'age']
@@ -98,7 +100,8 @@ export async function findUsersBetween (minAge: number, maxAge: number) {
   const users = await User.findAll({
     where: {
       age: {
-        [Op.between]: [minAge, maxAge]
+        [Op.between]: [minAge, maxAge],
+        [Op.ne]: null
       }
     },
     attributes: ['firstName', 'lastName', 'age']
@@ -126,4 +129,132 @@ export async function findUsersInCountries (countriesIds: number[]) {
     age: user.age,
     country: user.country ? user.country.name : 'N/A'
   }))
+}
+
+export async function orderUsersByAgeAsc () {
+  const users = await User.findAll({
+    order: [['age', 'ASC']]
+  })
+  return users
+}
+
+export async function orderCountriesByNameDescLimit (limit: number) {
+  const countries = await Country.findAll({
+    order: [['name', 'DESC']],
+    limit
+  })
+  return countries
+}
+
+export async function sumAgeInEachCountry () {
+  const users = await User.findAll({
+    attributes: [
+      'countryId',
+      [sequelize.fn('SUM', sequelize.col('age')), 'totalAge']
+    ],
+    where: {
+      age: { [Op.ne]: null }
+    },
+    group: ['countryId'],
+    include: [{
+      model: Country,
+      as: 'country',
+      required: true,
+      attributes: ['name']
+    }]
+  })
+  return users.map(user => ({
+    country: user.country ? user.country.name : 'N/A',
+    totalAge: user.get('totalAge') || 0
+  }))
+}
+
+export async function countUsersInEachCountry () {
+  const users = await User.findAll({
+    attributes: [
+      'countryId',
+      [sequelize.fn('COUNT', sequelize.col('User.id')), 'count']
+    ],
+    where: {
+      age: { [Op.ne]: null }
+    },
+    group: ['countryId'],
+    include: [{
+      model: Country,
+      as: 'country',
+      required: true,
+      attributes: ['name']
+    }]
+  })
+  return users.map(user => ({
+    country: user.country ? user.country.name : 'N/A',
+    count: user.get('count') || 0
+  }))
+}
+
+export async function findMinAgeUser () {
+  const user = await User.findOne({
+    where: {
+      age: { [Op.ne]: null }
+    },
+    order: [['age', 'ASC']]
+  })
+  return user
+    ? {
+        firstName: user.firstName,
+        lastName: user.lastName,
+        age: user.age
+      }
+    : null
+}
+
+export async function findAllInfoAboutMinAgeUser () {
+  const user = await User.findOne({
+    where: {
+      age: {
+        [Op.and]: [
+          { [Op.ne]: null },
+          sequelize.literal('age = (SELECT MIN(age) FROM Users)')
+        ]
+      }
+    },
+    include: [{
+      model: Country,
+      as: 'country',
+      required: false,
+      attributes: ['name']
+    }]
+  })
+  return user
+    ? {
+        firstName: user.firstName,
+        lastName: user.lastName,
+        age: user.age,
+        country: user.country ? user.country.name : 'N/A'
+      }
+    : null
+}
+
+export async function countCountries () {
+  return await Country.count()
+}
+
+export async function countCountriesWithPopulation () {
+  return await Country.count({
+    where: { population: { [Op.gt]: 0 } }
+  })
+}
+
+export async function countTotalPopulation () {
+  const totalPopulation = await Country.sum('population')
+  return totalPopulation || 0
+}
+
+export async function getFullNames () {
+  const users = await User.findAll({
+    attributes: [
+      [sequelize.fn('CONCAT', sequelize.col('firstName'), ' ', sequelize.col('lastName')), 'fullName']
+    ]
+  })
+  return users.map(user => user.get('fullName') as string)
 }
