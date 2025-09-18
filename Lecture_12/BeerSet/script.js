@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault()
 
       const currentActive = document.querySelector('.main-nav .active')
-      if (currentActive) {
+      if (currentActive && currentActive !== this) {
         currentActive.classList.remove('active')
       }
 
@@ -16,24 +16,27 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   dropdowns.forEach(dropdown => {
-    const dropdownArrow = dropdown.querySelector('.has-dropdown-arrow')
+    const dropdownArrow = dropdown.querySelector('.dropdown-arrow-svg')
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu')
 
-    dropdownArrow.addEventListener('click', function (event) {
-      event.preventDefault()
-      event.stopPropagation()
+    if (dropdownArrow && dropdownMenu) {
+      dropdownArrow.addEventListener('click', function (event) {
+        event.preventDefault()
+        event.stopPropagation()
 
-      const currentOpenDropdown = document.querySelector('.has-dropdown.active')
-      if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-        currentOpenDropdown.classList.remove('active')
-      }
+        const currentOpenDropdown = document.querySelector('.dropdown-menu.active')
+        if (currentOpenDropdown && currentOpenDropdown !== dropdownArrow) {
+          currentOpenDropdown.classList.remove('active')
+        }
 
-      this.classList.toggle('active')
-    })
+        dropdownMenu.classList.toggle('active')
+      })
+    }
   })
 
-  document.addEventListener('click', function () {
-    const openDropdown = document.querySelector('.has-dropdown.active')
-    if (openDropdown) {
+  document.addEventListener('click', function (event) {
+    const openDropdown = document.querySelector('.main-nav li.has-dropdown.active')
+    if (openDropdown && !openDropdown.contains(event.target)) {
       openDropdown.classList.remove('active')
     }
   })
