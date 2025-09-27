@@ -299,7 +299,7 @@ h1 {
 }
 
 .slider-arrow-right {
-  left: 137%;
+  right: -45%;
 }
 
 .slider-arrow-img {
@@ -381,15 +381,8 @@ h1 {
 .beer-title-new {
   color: black;
   letter-spacing: 0.02em;
-  text-shadow:
-    -4px -4px #fff,
-     4px -4px #fff,
-    -4px  4px #fff,
-     4px  4px #fff,
-    0px  -4px #fff,
-    0px   4px #fff,
-    -4px  0px #fff,
-     4px  0px #fff;
+  text-shadow: -4px -4px #fff, 4px -4px #fff, -4px 4px #fff, 4px 4px #fff,
+    0px -4px #fff, 0px 4px #fff, -4px 0px #fff, 4px 0px #fff;
   background: transparent;
   font-weight: 900;
   font-size: 72px;
@@ -412,4 +405,70 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.beer-info-block {
+  position: absolute;
+  top: 272px;
+  left: 730px;
+  width: 511px;
+  padding: 32px 32px 120px 32px;
+  box-sizing: border-box;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.beer-info-list {
+  height: 44px;
+  list-style: disc inside;
+  color: #1b1b1b;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0 0 32px 0;
+  padding: 0;
+}
+
+.beer-info-list li {
+  margin-bottom: 22px;
+}
+
+.beer-info-list li::marker {
+  font-size: 45px;
+}
+
+.beer-cart-btn {
+  position: absolute;
+  left: 32px;
+  top: 170%;
+  bottom: 32%;
+  width: 415px;
+  height: 88px;
+  background: #1b1b1b;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.beer-cart-btn:hover {
+  background: var(--main-gradient);
+  color: #1b1b1b;
+}
+
+.cart-icon-btn {
+  width: 40px;
+  height: 40px;
 }
