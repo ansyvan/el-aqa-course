@@ -11,14 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- <script>
-        setTimeout(wakeUpUser, 5000);
-        function wakeUpUser() {
-            alert("How do you like this amazing page?");
-        }
-    </script> -->
   </head>
-
   <body>
     <section class="hero-section">
       <header class="main-header">
@@ -70,61 +63,79 @@
           <img src="assets/logo.svg" alt="Logo" class="logo" />
         </div>
       </header>
+
       <div class="slider">
         <button class="slider-arrow slider-arrow-left">
           <img src="assets/arrow.svg" alt="Previous" class="slider-arrow-img" />
         </button>
         <div class="slider-track">
+          <!-- Slide 1 -->
           <div class="slide active">
-            <div class="beer-title-block">
-              <span class="beer-title-new">новий</span>
-              <span class="beer-title-main">бурштиновий ель</span>
-            </div>
-            <img src="assets/heroBeer.png" alt="" class="beer-glass-shadow" />
-            <img
-              src="assets/heroBeer.png"
-              alt="Beer Golden"
-              class="beer-glass"
-            />
-            <div class="beer-info-block">
-              <ul class="beer-info-list">
-                <li>Ель</li>
-                <li>IBU - 14.5%</li>
-                <li>Алкоголь - 6.5%</li>
-                <li>“Бургомістр”, Львів</li>
-                <li>45 грн за 0.33 л</li>
-              </ul>
-              <button class="beer-cart-btn">
-                <img src="assets/cartIcon.svg" alt="" class="cart-icon-btn" />
-                в кошик
-              </button>
+            <div class="slider-content">
+              <div class="beer-title-block">
+                <span class="beer-title-new">новий</span>
+                <span class="beer-title-main">бурштиновий ель</span>
+              </div>
+              <div class="beer-center-block">
+                <img
+                  src="assets/heroBeer.png"
+                  alt=""
+                  class="beer-glass-shadow"
+                />
+                <img
+                  src="assets/heroBeer.png"
+                  alt="Beer Golden"
+                  class="beer-glass"
+                />
+              </div>
+              <div class="beer-info-block">
+                <ul class="beer-info-list">
+                  <li>Ель</li>
+                  <li>IBU - 14.5%</li>
+                  <li>Алкоголь - 6.5%</li>
+                  <li>“Бургомістр”, Львів</li>
+                  <li>45 грн за 0.33 л</li>
+                </ul>
+                <button class="beer-cart-btn">
+                  <img src="assets/cartIcon.svg" alt="" class="cart-icon-btn" />
+                  в кошик
+                </button>
+              </div>
             </div>
           </div>
+          <!-- Slide 2 -->
           <div class="slide">
-            <div class="beer-title-block">
-              <span class="beer-title-new">традиційний</span>
-              <span class="beer-title-main">львівський лагер</span>
+            <div class="slider-content">
+              <div class="beer-title-block">
+                <span class="beer-title-new">традиційний</span>
+                <span class="beer-title-main">Львівський лагер</span>
+              </div>
+              <div class="beer-center-block">
+                <img
+                  src="assets/heroBeer.png"
+                  alt=""
+                  class="beer-glass-shadow"
+                />
+                <img
+                  src="assets/heroBeer.png"
+                  alt="Beer Dark"
+                  class="beer-glass"
+                />
+              </div>
+              <div class="beer-info-block">
+                <ul class="beer-info-list">
+                  <li>Лагер</li>
+                  <li>IBU - 18%</li>
+                  <li>Алкоголь - 5.2%</li>
+                  <li>“Пивоварня”, Київ</li>
+                  <li>50 грн за 0.5 л</li>
+                </ul>
+                <button class="beer-cart-btn">
+                  <img src="assets/cartIcon.svg" alt="" class="cart-icon-btn" />
+                  в кошик
+                </button>
+              </div>
             </div>
-            <img src="assets/lightBeer.png" alt="" class="beer-glass-shadow" />
-            <div class="beer-info-block">
-              <ul class="beer-info-list">
-                <li>Лагер</li>
-                <li>IBU - 4.5%</li>
-                <li>Алкоголь - 5.5%</li>
-                <li>“Бургомістр”, Львів</li>
-                <li>35 грн за 0.33 л</li>
-              </ul>
-              <button class="beer-cart-btn">
-                <img src="assets/cartIcon.svg" alt="" class="cart-icon-btn" />
-                в кошик
-              </button>
-            </div>
-            <img
-              src="assets/lightBeer.png"
-              alt="Beer Light"
-              class="beer-glass beer-glass--small"
-            />
-            <!-- Add other slide content here -->
           </div>
         </div>
         <button class="slider-arrow slider-arrow-right">
@@ -135,7 +146,10 @@
           <span class="slider-dot"></span>
         </div>
       </div>
+
+
     </section>
+
     <section class="menu-section">
       <h1 class="menu-heading">меню</h1>
       <div class="menu-grid">

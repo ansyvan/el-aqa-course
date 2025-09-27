@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => showSlide(i))
+    dot.addEventListener('click', function () {
+      showSlide(i)
+    })
   })
+  showSlide(0)
 })
