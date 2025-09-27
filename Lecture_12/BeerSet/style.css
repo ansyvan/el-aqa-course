@@ -2,6 +2,7 @@ body {
   font-family: Montserrat, sans-serif;
   color: #ffffff;
   background-color: #1b1b1b;
+  align-items: center;
   margin: 0;
 }
 
@@ -20,6 +21,7 @@ h1 {
   font-weight: 900;
   font-size: 72px;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .hero-section {
@@ -28,28 +30,6 @@ h1 {
   min-height: 926px;
   background: url("assets/sliderBg.svg") center center/cover no-repeat;
 }
-
-/* .gr1-rect-2,
-.gr1-rect-3 {
-    position: absolute;
-    top: 0;
-}
-
-.gr1-rect-2 {
-    width: 1043px;
-    height: 926px;
-    left: 877px;
-    background: var(--main-gradient);
-    clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-} */
-/* 
-.gr1-rect-3 {
-    width: 1051px;
-    height: 926px;
-    left: 0px;
-    background: #1B1B1B;
-} */
 
 .main-header {
   position: absolute;
@@ -472,3 +452,80 @@ h1 {
   width: 40px;
   height: 40px;
 }
+
+.menu-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+.menu-heading {
+    font-weight: 900;
+    font-size: 72px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 40px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+    letter-spacing: 0;
+  }
+
+  .menu-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .menu-card {
+    width: 415px;
+    height: 415px;
+    flex-shrink: 0;
+    padding: 4px;
+    border-radius: 10px;
+    background: var(--main-gradient);
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-card-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: transparent;
+    background-color: #1b1b1b; /* or your card background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-card:hover {
+    box-shadow: 0 0 34px 0 rgba(241, 39, 17, 0.677);
+    border-color: #fff;
+  }
+
+  .menu-card-icon {
+    width: 178px;
+    height: 210px;
+  }
+
+  .menu-card-label {
+    font-weight: 600;
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
