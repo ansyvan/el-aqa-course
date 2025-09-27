@@ -265,7 +265,7 @@ h1 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   background: transparent;
   opacity: 1;
   cursor: pointer;
@@ -273,10 +273,10 @@ h1 {
 }
 
 .slider-dot.active {
-    background: var(--main-gradient);
-    border: none;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
-  }
+  background: var(--main-gradient);
+  border: none;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+}
 
 .slider-arrow {
   position: absolute;
@@ -313,28 +313,103 @@ h1 {
   transform: scaleX(-1);
 }
 
+.beer-glass-shadow {
+  position: absolute;
+  top: 200px;
+  left: 203px;
+  z-index: 0;
+  max-height: 835px;
+  width: auto;
+  filter: brightness(0) blur(42px);
+  opacity: 0.19;
+  transform: scale(1.12);
+  pointer-events: none;
+}
+
+.slide:nth-child(2) .beer-glass-shadow,
+.beer-glass-shadow--small {
+  top: 250px;
+  left: 330px;
+  max-height: 635px;
+  filter: brightness(0) blur(42px);
+  opacity: 0.19;
+  transform: scale(1.12);
+}
+
 .beer-glass {
-    display: block;
-    position: absolute;
-    top: 200px;
-    left: 203px;
-    z-index: 1;
-    max-height: 835px;
-  }
+  display: block;
+  position: absolute;
+  top: 200px;
+  left: 203px;
+  z-index: 1;
+  max-height: 835px;
+}
 
-  .beer-glass--small {
-    top: 250px;
-    left: 330px;
-    max-height: 635px; 
-    height: 635px;
-    width: auto;
-  }
+.beer-glass--small {
+  top: 250px;
+  left: 330px;
+  max-height: 635px;
+  height: 635px;
+  width: auto;
+}
 
-  .slide {
-    position: relative;
-    min-height: 900px;
-    display: none;
-  }
-  .slide.active {
-    display: block;
-  }
+.slide {
+  position: relative;
+  min-height: 900px;
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+
+.beer-title-block {
+  position: absolute;
+  top: 292.61px;
+  left: -27%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.beer-title-new {
+  color: black;
+  letter-spacing: 0.02em;
+  text-shadow:
+    -4px -4px #fff,
+     4px -4px #fff,
+    -4px  4px #fff,
+     4px  4px #fff,
+    0px  -4px #fff,
+    0px   4px #fff,
+    -4px  0px #fff,
+     4px  0px #fff;
+  background: transparent;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0 24px;
+  width: 291px;
+  height: 88px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.beer-title-main {
+  padding: 0 24px;
+  width: 635px;
+  height: 176px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
