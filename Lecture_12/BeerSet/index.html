@@ -1,62 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beer Set | Shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <!-- <script>
         setTimeout(wakeUpUser, 5000);
         function wakeUpUser() {
             alert("How do you like this amazing page?");
         }
     </script> -->
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="hero-section">
-        <div class="gr1-rect-3"></div>
-        <div class="gr1-rect-2"></div>
-        <header class="main-header">
-            <nav class="main-nav">
-                <ul>
-                    <li class="has-dropdown">
-                        <a href="#">
-                            магазин
-                            <svg class="dropdown-arrow-svg" width="30" height="53" viewBox="0 0 30 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 2L27 26.5L2 51" stroke="white" stroke-width="5" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">пиво</a></li>
-                            <li><a href="#">вино</a></li>
-                            <li><a href="#">закуски</a></li>
-                            <li><a href="#">комбінації</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">про нас</a>
-                    </li>
-                    <li>
-                        <a href="#">історія</a>
-                    </li>
-                    <li>
-                        <a href="#">контакти і співпраця</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+      <!-- <div class="gr1-rect-3"></div>
+        <div class="gr1-rect-2"></div> -->
+      <header class="main-header">
+        <nav class="main-nav">
+          <ul>
+            <li class="has-dropdown">
+              <a href="#">
+                магазин
+                <svg
+                  class="dropdown-arrow-svg"
+                  width="30"
+                  height="53"
+                  viewBox="0 0 30 53"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2L27 26.5L2 51"
+                    stroke="white"
+                    stroke-width="5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">пиво</a></li>
+                <li><a href="#">вино</a></li>
+                <li><a href="#">закуски</a></li>
+                <li><a href="#">комбінації</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">про нас</a>
+            </li>
+            <li>
+              <a href="#">історія</a>
+            </li>
+            <li>
+              <a href="#">контакти і співпраця</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart-rectangle">
+          <div class="cart-group">
+            <img src="assets/cartIcon.svg" alt="Cart" class="cart-icon" />
+            <div class="cart-counter">2</div>
+          </div>
+          <span class="cart-label">кошик</span>
+          <img src="assets/logo.svg" alt="Logo" class="logo" />
+        </div>
+      </header>
+      <div class="slider">
+        <button class="slider-arrow slider-arrow-left">
+          <img src="assets/arrow.svg" alt="Previous" class="slider-arrow-img">
+        </button>
+        <div class="slider-track">
+          <div class="slide active">
+            <img src="assets/heroBeer.png" alt="Beer Golden" class="beer-glass">
+            <!-- Add other slide content here -->
+            </div>
+          <div class="slide">
+            <img src="assets/lightBeer.png" alt="Beer Light" class="beer-glass beer-glass--small">
+            <!-- Add other slide content here -->
+          </div>
+        </div>
+        <button class="slider-arrow slider-arrow-right">
+          <img src="assets/arrow.svg" alt="Next" class="slider-arrow-img">
+        </button>
+        <div class="slider-dots">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+        </div>
+      </div>
     </section>
     <h1>МЕНЮ</h1>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

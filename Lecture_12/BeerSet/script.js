@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   const navItems = document.querySelectorAll('.main-nav li')
   const dropdowns = document.querySelectorAll('.has-dropdown')
+  const slides = document.querySelectorAll('.slide')
+  const dots = document.querySelectorAll('.slider-dot')
+  const leftArrow = document.querySelector('.slider-arrow-left')
+  const rightArrow = document.querySelector('.slider-arrow-right')
+  let current = 0
 
   navItems.forEach(item => {
     item.addEventListener('click', function (event) {
@@ -39,5 +44,25 @@ document.addEventListener('DOMContentLoaded', function () {
     if (openDropdown && !openDropdown.contains(event.target)) {
       openDropdown.classList.remove('active')
     }
+  })
+
+  function showSlide (index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index)
+      dots[i].classList.toggle('active', i === index)
+    })
+    current = index
+  }
+
+  leftArrow.addEventListener('click', () => {
+    showSlide((current - 1 + slides.length) % slides.length)
+  })
+
+  rightArrow.addEventListener('click', () => {
+    showSlide((current + 1) % slides.length)
+  })
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => showSlide(i))
   })
 })
