@@ -32,6 +32,8 @@
   },
   "homepage": "https://github.com/ansyvan/el-aqa-course#readme",
   "dependencies": {
-    "moment": "^2.30.1"
+    "moment": "^2.30.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   }
 }
