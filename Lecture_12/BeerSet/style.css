@@ -22,7 +22,6 @@ h1 {
 .hero-section {
   position: relative;
   width: 100%;
-  /* max-height: 926px; */
   margin: 0 auto;
   background: url("assets/sliderBg.svg") center center/cover no-repeat;
   box-sizing: border-box;
@@ -212,7 +211,6 @@ h1 {
 .slider {
   position: relative;
   width: 100%;
-  /* max-width: 1920px; */
   max-height: 926px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -246,7 +244,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* min-width: 320px; */
   margin-top: 200px;
   margin-left: 100px;
   z-index: 200;
@@ -286,7 +283,6 @@ h1 {
   position: relative;
   z-index: 2;
   margin-top: 80px;
-  /* margin: 0 40px; */
 }
 
 .beer-glass-shadow {
@@ -330,7 +326,6 @@ h1 {
 
 .beer-info-list {
   list-style: disc inside;
-  /* color: #1b1b1b; */
   font-size: 32px;
   font-weight: 600;
   line-height: 0.7;
@@ -391,8 +386,6 @@ h1 {
   min-width: 320px;
   max-width: 420px;
 }
-
-/* --- SLIDER ARROWS & DOTS --- */
 
 .slider-arrow {
   position: absolute;
@@ -500,7 +493,7 @@ h1 {
   height: 100%;
   border-radius: 10px;
   background: transparent;
-  background-color: #1b1b1b; /* or your card background */
+  background-color: #1b1b1b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -564,7 +557,7 @@ h1 {
 .bestsellers-card {
   background: #202020;
   border-radius: 16px;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.35);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
   width: 375px;
   min-height: 544px;
   display: flex;
@@ -583,7 +576,7 @@ h1 {
 
 .bestsellers-card-image {
   position: absolute;
-  top: -80px; /* Move image above the card */
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
   height: 390px;
@@ -731,7 +724,7 @@ h1 {
 
 .blog-card {
   width: 385px;
-  /* height: 535px; */
+  height: 512px;
   flex-shrink: 0;
   padding: 4px;
   border-radius: 10px;
@@ -744,23 +737,24 @@ h1 {
 }
 
 .blog-card-inner {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   background: transparent;
   background-color: #1b1b1b;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 20px 20px 20px;
+  box-sizing: border-box;
 }
 
 .blog-card:hover {
   box-shadow: 0 0 34px 0 var(--brand-orange);
   border-color: #fff;
 }
-
-/* .blog-card-icon {
-  height: 230px;
-} */
 
 .blog-card-label {
   font-weight: 600;
@@ -769,47 +763,85 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0;
   text-align: left;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
-.blog-card-label p {
+.blog-card-inner p {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 240px;
   font-weight: 600;
   font-size: 24px;
   color: #fff;
-  text-transform: none;
-  letter-spacing: 0;
   text-align: left;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  line-height: 1.2;
+  margin: 0;
+  line-height: 1.3;
+  z-index: 2;
 }
 
 .blog-card:last-child {
   border: none;
   background: #181818;
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  /* min-height: 340px; */
 }
-
-/* .blog-card:last-child .blog-card-label {
-  text-align: left;
-  margin-bottom: 0;
-  margin-top: 18px;
-  width: 100%;
-} */
 
 .more-arrow {
   display: block;
-  margin: 48px auto 0 auto;
+  margin: 85px auto 0 auto;
   width: 126px;
   height: 213px;
   object-fit: contain;
+}
+
+.footer-section {
+  width: 100%;
+  background: #2a2a2a;
+  padding: 0 0 80px 0;
+  color: #fff;
+}
+
+.footer-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.footer-subtitle {
+  max-width: 900px;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.footer-contacts {
+  display: flex;
+  gap: 234px;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.footer-contacts-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }

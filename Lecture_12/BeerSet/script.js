@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const rightArrow = document.querySelector('.slider-arrow-right')
   let current = 0
 
-  navItems.forEach(item => {
+  navItems.forEach((item) => {
     item.addEventListener('click', function (event) {
       event.preventDefault()
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  dropdowns.forEach(dropdown => {
+  dropdowns.forEach((dropdown) => {
     const dropdownArrow = dropdown.querySelector('.dropdown-arrow-svg')
     const dropdownMenu = dropdown.querySelector('.dropdown-menu')
 
@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault()
         event.stopPropagation()
 
-        const currentOpenDropdown = document.querySelector('.dropdown-menu.active')
+        const currentOpenDropdown = document.querySelector(
+          '.dropdown-menu.active'
+        )
         if (currentOpenDropdown && currentOpenDropdown !== dropdownArrow) {
           currentOpenDropdown.classList.remove('active')
         }
@@ -40,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   document.addEventListener('click', function (event) {
-    const openDropdown = document.querySelector('.main-nav li.has-dropdown.active')
+    const openDropdown = document.querySelector(
+      '.main-nav li.has-dropdown.active'
+    )
     if (openDropdown && !openDropdown.contains(event.target)) {
       openDropdown.classList.remove('active')
     }
