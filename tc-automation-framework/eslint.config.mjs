@@ -17,7 +17,6 @@ export default [
       mocha
     },
     rules: {
-      // Paste all your rules from .eslintrc here
       "no-unreachable": 2,
       "use-isnan": 2,
       "valid-typeof": 2,
