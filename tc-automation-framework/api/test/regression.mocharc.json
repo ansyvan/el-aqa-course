@@ -1,0 +1,14 @@
+{
+    "diff": true,
+    "recursive": true,
+    "exit": true,
+    "full-trace": true,
+    "reporter": "mocha-multi",
+    "reporter-options": [
+        "spec=-",
+        "json=report.json"
+    ],
+    "timeout": 99999,
+    "color": true,
+    "file": "./baseTest.js"
+}
