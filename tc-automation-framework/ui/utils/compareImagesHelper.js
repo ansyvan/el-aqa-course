@@ -1,8 +1,5 @@
-
 const fs = require('fs');
-const glob = require('glob');
-const { ContentType } = require('allure2-js-commons');
-const log = require('../../api/utils/test-logger.js');
+const ContentType = require('../../config/test-config').CONTENT_TYPE;
 
 class CompareImagesHelper {
     static deleteOrigins() {

@@ -1,8 +1,7 @@
-
-const config = {
+module.exports = {
     BROWSER_NAME: process.env.BROWSER_NAME || 'chrome',
     IMPLICIT_WAIT_TIMEOUT: Number(process.env.IMPLICIT_WAIT_TIMEOUT) || 2000,
-    SPEC_NAME: process.env.SPEC_NAME || 'ui/test/**/*Test.js',
+    SPEC_NAME: process.env.SPEC_NAME || '../ui/test/**/*Test.js',
     LOG_LEVEL: process.env.LOG_LEVEL || 'info',
     DELETE_IMAGES_ORIGINS: process.env.DELETE_IMAGES_ORIGINS || 'false',
     SPEC_FILE_RETRIES: Number(process.env.SPEC_FILE_RETRIES) || 0,
@@ -12,8 +11,20 @@ const config = {
     PROXY_HOST: process.env.PROXY_HOST || 'localhost',
     PROXY_PORT: process.env.PROXY_PORT || 8090,
     PROXY_PROTOCOL: process.env.PROXY_PROTOCOL || 'https',
-    SERVER_URL: process.env.SERVER_URL || 'https://swapi.dev/api/',
-    UI_BASE_URL: process.env.FRONTEND_URL || 'http://localhost:3000'
+    SERVER_URL: process.env.SERVER_URL || 'http://localhost:5000',
+    UI_BASE_URL: process.env.FRONTEND_URL || 'http://localhost:3000',
+    SWAPI_APP_URL: 'https://swapi.dev/',
+    CONTENT_TYPE: {
+        TEXT: 'text/plain',
+        XML: 'application/xml',
+        CSV: 'text/csv',
+        TSV: 'text/tab-separated-values',
+        CSS: 'text/css',
+        URI: 'text/uri-list',
+        SVG: 'image/svg+xml',
+        PNG: 'image/png',
+        JSON: 'application/json',
+        WEBM: 'video/webm',
+        JPEG: 'image/jpeg'
+    }
 };
-
-module.exports = config;

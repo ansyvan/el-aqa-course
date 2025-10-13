@@ -1,7 +1,6 @@
-const { ContentType } = require('allure2-js-commons');
+const ContentType = require('../../config/test-config').CONTENT_TYPE;
 const allureReporter = require('@wdio/allure-reporter').default;
-const logProcessor = require('./browserLogsProcessor.js');
-const log = require('../api/utils/test-logger.js');
+const logProcessor = require('./browserLogsProcessor');
 
 global.testReporter = allureReporter;
 beforeEach('', function() {

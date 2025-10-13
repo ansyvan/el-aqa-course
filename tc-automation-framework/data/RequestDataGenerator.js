@@ -1,4 +1,3 @@
-
 const faker = require('faker');
 const _ = require('lodash');
 
@@ -26,3 +25,4 @@ class RequestDataGenerator {
 }
 
 module.exports = RequestDataGenerator;
+

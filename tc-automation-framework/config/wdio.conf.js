@@ -1,6 +1,4 @@
-
 const path = require('path');
-
 global.UI_TEST = true;
 global.baseTest = require('../baseTest');
 global.testConfig = require('./test-config.js');
@@ -10,7 +8,7 @@ const capabilities = {
     chrome: {
         browserName: 'chrome',
         'goog:chromeOptions': {
-            prefs: { 'profile.managed_default_content_settings.notifications': 1 },
+            prefs: {'profile.managed_default_content_settings.notifications': 1},
             args: testConfig.BROWSER_ARGS
         }
     },
@@ -22,13 +20,15 @@ const capabilities = {
     }
 };
 
-// This is the main configuration object for WebdriverIO
 exports.config = {
     path: '/',
     runner: 'local',
+    geckoDriverRandomPort: false,
+    geckoDriverArgs: ['--log=info'],
     waitforTimeout: 10000,
     maxInstances: 1,
     specFileRetries: testConfig.SPEC_FILE_RETRIES,
+    specFileRetriesDeferred: false,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
     framework: 'mocha',
@@ -41,17 +41,17 @@ exports.config = {
         inlineDiffs: true
     },
     capabilities:
-    testConfig.BROWSER_NAME === 'firefox'
-        ? [capabilities.firefox]
-        : [capabilities.chrome],
+        testConfig.BROWSER_NAME === 'firefox'
+            ? [capabilities.firefox]
+            : [capabilities.chrome],
     baseUrl: testConfig.UI_BASE_URL,
-    logLevel: testConfig.LOG_LEVEL,
+    logLevel:  testConfig.LOG_LEVEL,
     specs: [
         testConfig.SPEC_NAME
     ],
     suites: {
         test: [
-            'ui/test/**/*Test.js'
+            '../ui/test/**/*Test.js'
         ]
     },
     reporters: [
@@ -63,7 +63,6 @@ exports.config = {
     ],
     services: [
         'intercept',
-        testConfig.BROWSER_NAME === 'firefox' ? 'geckodriver' : 'chromedriver',
         ['image-comparison',
             {
                 baselineFolder: path.join(__dirname, '../data/TestsImages/ImagesOrigin'),
@@ -73,8 +72,9 @@ exports.config = {
         ]
     ],
     before: async function() {
+        global.expect = require('chai').expect;
         await browser.setWindowSize(1920, 1280);
-        await browser.setTimeout({ implicit: testConfig.IMPLICIT_WAIT_TIMEOUT });
+        await browser.setTimeout({'implicit': testConfig.IMPLICIT_WAIT_TIMEOUT});
         const capabilities = await browser.capabilities;
         const windowSize = await browser.getWindowSize();
         global.buildInfo = _.merge(
@@ -82,9 +82,6 @@ exports.config = {
             {windowSize: `${windowSize.width},${windowSize.height}`}
         );
         global.BROWSER_NAME = testConfig.BROWSER_NAME;
-        global.chai = require('chai');
-        global.chaiPromised = require('chai-as-promised');
-        global.chai.use(global.chaiPromised);
         global.browserUtils = require('../ui/utils/wdioBrowserUtils.js');
         global.compareImagesHelper = require('../ui/utils/compareImagesHelper');
         global.glob = require('glob');

@@ -1,4 +1,3 @@
-
 const log = require('../../api/utils/test-logger.js');
 
 class WdioBrowserUtils {

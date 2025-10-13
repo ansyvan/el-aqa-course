@@ -1,6 +1,5 @@
-
-const testConfig = require('../../../config/test-config.js');
-const BasePage = require('../BasePage.js');
+const testConfig = require('../../../config/test-config');
+const BasePage = require('../BasePage');
 
 class SwapiPage extends BasePage {
 
@@ -19,6 +18,8 @@ class SwapiPage extends BasePage {
     async sendRequestToSwapiEndPoint(endPointName) {
         await this.typeText(this.restEndPointNameInput, endPointName);
         await this.clickOnElement(this.sendRequestButton);
+        // This wait is required to complete the request
+        // Please use browser.pause only when there are no other ways
         await browser.pause(3000);
     }
 

@@ -1,8 +1,6 @@
-
-const log = require('../api/utils/test-logger.js');
+const log = require('../../api/utils/test-logger.js');
 const _ = require('lodash');
 const testConfig = require('../../config/test-config.js');
-const testConstants = require('../../config/test-constants.js');
 
 class BasePage {
 
@@ -164,14 +162,15 @@ class BasePage {
         after maximum retries (${maxRetries}), Error message: ${error.name.toString()}`);
     }
 
-    async navigateTo(url, element, {
+    async navigateTo(url, wdioElement, {
         timeout = testConfig.ELEMENT_VISIBILITY_TIMEOUT,
         maxRetries = testConfig.MAX_WAIT_RETRY
     } = {}) {
         testReporter.addStep(`Navigating to ${url}`);
-        if (element) {
+        if (wdioElement) {
+            const element = typeof wdioElement === 'object' ? await wdioElement : wdioElement;
             await browser.url(url);
-            log.debug(`Navigating to: ${url} and waiting for + ${element}`);
+            log.debug(`Navigating to: ${url} and waiting for + ${element.selector}`);
             return this.waitForElementVisible(element, {timeout, maxRetries});
         } else {
             log.debug(`Navigating to: ${url}`);

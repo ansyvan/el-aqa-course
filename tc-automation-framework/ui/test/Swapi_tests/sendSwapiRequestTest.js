@@ -1,11 +1,7 @@
-
-const SwapiPage = require('../pages/SwapiPage.js');
-const browserUtils = require('../utils/wdioBrowserUtils.js');
-const { expect } = require('chai');
-
-// This line is often used to set up reporting tools like Allure
-// require('../../utils/test-reporter-setup.js'); // Assuming this file exists and is CommonJS
-
+// The next line should be added to the all e2e scenarios
+// It helps to create an Allure report
+require('../../utils/test-reporter-setup');
+const SwapiPage = require('../../pages/SwapiApp/SwapiPage');
 const [endPointName, starShipName] = ['starships/5/', 'Sentinel-class landing craft'];
 
 describe('Send Swapi request using "Try it out" functionality', () => {

@@ -1,26 +1,16 @@
-const { expect } = require('chai');
-const RequestDataGenerator = require('../../../data/RequestDataGenerator');
-const SwapiRequests = require('../../rest-client/requests/SwapiRequests');
-const log = require('../../utils/test-logger');
+let res;
 
 describe('Starship CRUD operations', () => {
-    before(() => {
-        log.info('I am called once before all specs in this file');
-    });
-
-    beforeEach(() => {
-        log.info('I am called before each spec in this file');
-    });
 
     it('Should get a random existing starship by id', async() => {
         const randomStartShipId = RequestDataGenerator.generateStarshipId();
-        const res = await SwapiRequests.getStarShipById(randomStartShipId);
+        res = await SwapiRequests.getStarShipById(randomStartShipId);
         expect(res).to.have.status(200);
         expect(res.body).to.have.property('name');
     });
 
     it('Should not return a starship with non existing id', async() => {
-        const res = await SwapiRequests.getStarShipById(1000000);
+        res = await SwapiRequests.getStarShipById(1000000);
         expect(res).to.have.status(404);
         expect(res.body.detail).to.equal('Not found');
     });
@@ -103,13 +93,5 @@ describe('Starship CRUD operations', () => {
             'vehicles',
             'starships'
         );
-    });
-
-    afterEach(() => {
-        log.info('I am called after each spec in this file');
-    });
-
-    after(() => {
-        log.info('I am called once after all specs in this file');
     });
 });

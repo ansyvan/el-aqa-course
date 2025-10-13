@@ -10,7 +10,7 @@ describe('SWAPI Root Resource Smoke Tests', () => {
         'films',
         'species',
         'vehicles',
-        'starships',
+        'starships'
     ];
 
     itParam(

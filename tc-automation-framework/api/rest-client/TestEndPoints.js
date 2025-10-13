@@ -1,5 +1,8 @@
-
 class TestEndPoints {
+    static getRootEndPoint() {
+        return '';
+    }
+    
     static getStarShipByIdEndPoint(starShipId) {
         return `starships/${starShipId}/`;
     }
@@ -44,10 +47,6 @@ class TestEndPoints {
 
     static getResourceEndpoint(resourceName) {
         return `${resourceName}/`;
-    }
-
-    static getRootEndPoint() {
-        return '';
     }
 }
 

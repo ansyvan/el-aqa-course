@@ -1,4 +1,3 @@
-
 module.exports.getBrowserLogs = async(suiteTitle) => {
     if (process.env.SAVE_LOGS === 'true') {
         const data = await browser.getLogs('browser');

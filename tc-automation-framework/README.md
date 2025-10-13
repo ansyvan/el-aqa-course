@@ -1,8 +1,8 @@
-# tc-framework
-Automated testing framework for the Automation TC 2021.
+# automation-framework
+Sample automated testing framework for new projects.
 
 ## INSTALLATION:
-* Install [node LTS] (https://nodejs.org/en/download/);
+* Install node [18.20.4](https://nodejs.org/en/blog/release/v18.20.4) or [node LTS](https://nodejs.org/en/download/);
 * Clone the project locally;
 * In project root directory run:
 ```
