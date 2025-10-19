@@ -11,9 +11,11 @@ module.exports = {
     PROXY_HOST: process.env.PROXY_HOST || 'localhost',
     PROXY_PORT: process.env.PROXY_PORT || 8090,
     PROXY_PROTOCOL: process.env.PROXY_PROTOCOL || 'https',
-    SERVER_URL: process.env.SERVER_URL || 'http://localhost:5000',
+    SWAPI_SERVER_URL: process.env.SWAPI_SERVER_URL || 'http://localhost:5000',
+    DOG_SERVER_URL: process.env.DOG_SERVER_URL || 'http://localhost:6000',
     UI_BASE_URL: process.env.FRONTEND_URL || 'http://localhost:3000',
     SWAPI_APP_URL: 'https://swapi.dev/',
+    DOG_APP_URL: 'https://dog.ceo/',
     CONTENT_TYPE: {
         TEXT: 'text/plain',
         XML: 'application/xml',

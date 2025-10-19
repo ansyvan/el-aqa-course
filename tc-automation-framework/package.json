@@ -6,6 +6,8 @@
     "e2e": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js 2>&1 | tee test-logs.log",
     "e2e-test-suite": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --suite test 2>&1 | tee test-logs.log",
     "test": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json api/test/",
+    "test-swapi": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Starships_tests/**/*.js\"",
+    "test-dog": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Dogs_tests/**/*.js\"",
     "allure-report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
     "lint": "./node_modules/.bin/eslint \"**/*.js\" --fix --quiet"
   },

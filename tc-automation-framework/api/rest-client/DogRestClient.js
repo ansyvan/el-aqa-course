@@ -1,7 +1,7 @@
 const testConfig = require('../../config/test-config');
 const axios = require('axios-proxy-fix');
 const log = require('../utils/test-logger');
-const apiBaseUrl = testConfig.SERVER_URL;
+const apiBaseUrl = testConfig.DOG_SERVER_URL;
 log.level = testConfig.LOG_LEVEL || 'info';
 
 const proxyParams = {

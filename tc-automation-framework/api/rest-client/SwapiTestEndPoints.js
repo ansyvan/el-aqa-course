@@ -1,4 +1,4 @@
-class TestEndPoints {
+class SwapiTestEndPoints {
     static getRootEndPoint() {
         return '';
     }
@@ -50,4 +50,4 @@ class TestEndPoints {
     }
 }
 
-module.exports = TestEndPoints;
+module.exports = SwapiTestEndPoints;

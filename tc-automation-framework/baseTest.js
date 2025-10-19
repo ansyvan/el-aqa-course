@@ -14,6 +14,8 @@ global.itParam = require('mocha-param').itParam;
 // Integration core
 global.SwapiRequests =
     require('./api/rest-client/requests/SwapiRequests');
+global.DogRequests =
+    require('./api/rest-client/requests/DogRequests');
 global.RequestDataGenerator = require('./data/RequestDataGenerator.js');
 
 // Utilities
