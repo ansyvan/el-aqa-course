@@ -1,20 +1,56 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 5,
+    "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2025-10-19T13:40:18.597Z",
-    "end": "2025-10-19T13:40:19.537Z",
-    "duration": 940
+    "start": "2025-10-20T18:36:39.751Z",
+    "end": "2025-10-20T18:36:40.965Z",
+    "duration": 1214
   },
   "tests": [
     {
       "title": "Should get all breeds",
       "fullTitle": "Dog CRUD operations Should get all breeds",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 940,
+      "duration": 885,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should check that breed \"hound\" has sub-breed \"basset\"",
+      "fullTitle": "Dog CRUD operations Should check that breed \"hound\" has sub-breed \"basset\"",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 80,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get a random dog image",
+      "fullTitle": "Dog CRUD operations Should get a random dog image",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 82,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get all images for breed \"hound\"",
+      "fullTitle": "Dog CRUD operations Should get all images for breed \"hound\"",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 83,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get list of sub-breeds for breed \"bulldog\"",
+      "fullTitle": "Dog CRUD operations Should get list of sub-breeds for breed \"bulldog\"",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 80,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -27,7 +63,43 @@
       "title": "Should get all breeds",
       "fullTitle": "Dog CRUD operations Should get all breeds",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 940,
+      "duration": 885,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should check that breed \"hound\" has sub-breed \"basset\"",
+      "fullTitle": "Dog CRUD operations Should check that breed \"hound\" has sub-breed \"basset\"",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 80,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get a random dog image",
+      "fullTitle": "Dog CRUD operations Should get a random dog image",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 82,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get all images for breed \"hound\"",
+      "fullTitle": "Dog CRUD operations Should get all images for breed \"hound\"",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 83,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get list of sub-breeds for breed \"bulldog\"",
+      "fullTitle": "Dog CRUD operations Should get list of sub-breeds for breed \"bulldog\"",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
+      "duration": 80,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
