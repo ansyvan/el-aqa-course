@@ -1,20 +1,20 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 5,
-    "passes": 5,
+    "suites": 3,
+    "tests": 23,
+    "passes": 23,
     "pending": 0,
     "failures": 0,
-    "start": "2025-10-20T18:36:39.751Z",
-    "end": "2025-10-20T18:36:40.965Z",
-    "duration": 1214
+    "start": "2025-10-26T14:28:49.837Z",
+    "end": "2025-10-26T14:28:57.167Z",
+    "duration": 7330
   },
   "tests": [
     {
       "title": "Should get all breeds",
       "fullTitle": "Dog CRUD operations Should get all breeds",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 885,
+      "duration": 509,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -23,7 +23,7 @@
       "title": "Should check that breed \"hound\" has sub-breed \"basset\"",
       "fullTitle": "Dog CRUD operations Should check that breed \"hound\" has sub-breed \"basset\"",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 80,
+      "duration": 1618,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -32,7 +32,7 @@
       "title": "Should get a random dog image",
       "fullTitle": "Dog CRUD operations Should get a random dog image",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 82,
+      "duration": 250,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -41,7 +41,7 @@
       "title": "Should get all images for breed \"hound\"",
       "fullTitle": "Dog CRUD operations Should get all images for breed \"hound\"",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 83,
+      "duration": 288,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -50,7 +50,169 @@
       "title": "Should get list of sub-breeds for breed \"bulldog\"",
       "fullTitle": "Dog CRUD operations Should get list of sub-breeds for breed \"bulldog\"",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 80,
+      "duration": 229,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get a random existing starship by id",
+      "fullTitle": "Starship CRUD operations Should get a random existing starship by id",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 1782,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should not return a starship with non existing id",
+      "fullTitle": "Starship CRUD operations Should not return a starship with non existing id",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 82,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should not return a non-existing person",
+      "fullTitle": "Starship CRUD operations Should not return a non-existing person",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 81,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Luke Skywalker has blue eyes",
+      "fullTitle": "Starship CRUD operations Should verify that Luke Skywalker has blue eyes",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 90,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Darth Vader is from Tatooine",
+      "fullTitle": "Starship CRUD operations Should verify that Darth Vader is from Tatooine",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 193,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Death Star has a crew over 300,000",
+      "fullTitle": "Starship CRUD operations Should verify that Death Star has a crew over 300,000",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 98,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that R2-D2 has appeared in 6 films",
+      "fullTitle": "Starship CRUD operations Should verify that R2-D2 has appeared in 6 films",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 117,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that datatype of planet population field is a string",
+      "fullTitle": "Starship CRUD operations Should verify that datatype of planet population field is a string",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 91,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify all starship names are unique",
+      "fullTitle": "Starship CRUD operations Should verify all starship names are unique",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 574,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Leia has not appeared in 4th film",
+      "fullTitle": "Starship CRUD operations Should verify that Leia has not appeared in 4th film",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 194,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that there are no pilots of 'Sand Crawler'",
+      "fullTitle": "Starship CRUD operations Should verify that there are no pilots of 'Sand Crawler'",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 88,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that all resources are reachable from the root endpoint",
+      "fullTitle": "Starship CRUD operations Should verify that all resources are reachable from the root endpoint",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 85,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /people/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /people/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 140,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /planets/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /planets/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 131,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /films/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /films/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 265,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /species/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /species/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 120,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /vehicles/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /vehicles/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 129,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /starships/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /starships/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 158,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -63,7 +225,7 @@
       "title": "Should get all breeds",
       "fullTitle": "Dog CRUD operations Should get all breeds",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 885,
+      "duration": 509,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -72,7 +234,7 @@
       "title": "Should check that breed \"hound\" has sub-breed \"basset\"",
       "fullTitle": "Dog CRUD operations Should check that breed \"hound\" has sub-breed \"basset\"",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 80,
+      "duration": 1618,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -81,7 +243,7 @@
       "title": "Should get a random dog image",
       "fullTitle": "Dog CRUD operations Should get a random dog image",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 82,
+      "duration": 250,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -90,7 +252,7 @@
       "title": "Should get all images for breed \"hound\"",
       "fullTitle": "Dog CRUD operations Should get all images for breed \"hound\"",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 83,
+      "duration": 288,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -99,7 +261,169 @@
       "title": "Should get list of sub-breeds for breed \"bulldog\"",
       "fullTitle": "Dog CRUD operations Should get list of sub-breeds for breed \"bulldog\"",
       "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Dogs_tests/dog-crud.test.js",
-      "duration": 80,
+      "duration": 229,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should get a random existing starship by id",
+      "fullTitle": "Starship CRUD operations Should get a random existing starship by id",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 1782,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should not return a starship with non existing id",
+      "fullTitle": "Starship CRUD operations Should not return a starship with non existing id",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 82,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should not return a non-existing person",
+      "fullTitle": "Starship CRUD operations Should not return a non-existing person",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 81,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Luke Skywalker has blue eyes",
+      "fullTitle": "Starship CRUD operations Should verify that Luke Skywalker has blue eyes",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 90,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Darth Vader is from Tatooine",
+      "fullTitle": "Starship CRUD operations Should verify that Darth Vader is from Tatooine",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 193,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Death Star has a crew over 300,000",
+      "fullTitle": "Starship CRUD operations Should verify that Death Star has a crew over 300,000",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 98,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that R2-D2 has appeared in 6 films",
+      "fullTitle": "Starship CRUD operations Should verify that R2-D2 has appeared in 6 films",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 117,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that datatype of planet population field is a string",
+      "fullTitle": "Starship CRUD operations Should verify that datatype of planet population field is a string",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 91,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify all starship names are unique",
+      "fullTitle": "Starship CRUD operations Should verify all starship names are unique",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 574,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that Leia has not appeared in 4th film",
+      "fullTitle": "Starship CRUD operations Should verify that Leia has not appeared in 4th film",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 194,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that there are no pilots of 'Sand Crawler'",
+      "fullTitle": "Starship CRUD operations Should verify that there are no pilots of 'Sand Crawler'",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 88,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that all resources are reachable from the root endpoint",
+      "fullTitle": "Starship CRUD operations Should verify that all resources are reachable from the root endpoint",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-crud.test.js",
+      "duration": 85,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /people/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /people/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 140,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /planets/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /planets/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 131,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /films/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /films/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 265,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /species/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /species/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 120,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /vehicles/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /vehicles/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 129,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Should verify that each /starships/ endpoint is reachable",
+      "fullTitle": "SWAPI Root Resource Smoke Tests Should verify that each /starships/ endpoint is reachable",
+      "file": "/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/api/test/Starships_tests/starship-smoke.test.js",
+      "duration": 158,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
