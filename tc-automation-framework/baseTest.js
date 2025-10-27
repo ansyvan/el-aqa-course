@@ -21,7 +21,7 @@ global.RequestDataGenerator = require('./data/RequestDataGenerator.js');
 // Utilities
 // global.sleep = require('sleep');
 global.moment = require('moment');
-global.Promise = require('bluebird');
+// global.Promise = require('bluebird');
 global.log = require('./api/utils/test-logger.js');
 global.testConfig = require('./config/test-config.js');
 global._ = require('lodash');

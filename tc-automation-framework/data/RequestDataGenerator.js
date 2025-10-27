@@ -43,6 +43,10 @@ class RequestDataGenerator {
         };
         return person;
     }
+
+    static generateJobTitle() {
+        return faker.name.jobTitle();
+    }
 }
 
 module.exports = RequestDataGenerator;
