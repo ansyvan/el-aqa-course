@@ -1,7 +1,7 @@
 const testConfig = require('../../config/test-config');
 const axios = require('axios-proxy-fix');
 const log = require('../utils/test-logger');
-const apiBaseUrl = testConfig.SERVER_URL;
+const apiBaseUrl = testConfig.DOG_SERVER_URL;
 log.level = testConfig.LOG_LEVEL || 'info';
 
 const proxyParams = {
@@ -27,7 +27,14 @@ const client = axios.create({
 });
 
 client.interceptors.request.use(async function(config) {
-    testConfig.USE_PROXY === 'true' ? config.proxy = proxyParams.proxy : delete config.proxy;
+    if (process.env.USE_PROXY === 'true') {
+        config.proxy = proxyParams.proxy;
+        console.log('>>> DogClient Interceptor: Proxy ENABLED based on process.env');
+    } else {
+        delete config.proxy;
+        console.log('>>> DogClient Interceptor: Proxy DISABLED based on process.env');
+    }
+    console.log('Final config.proxy:', config.proxy);
     config.cookie ? config.headers['Cookie'] = config.cookie : delete config.headers['Cookie'];
     config.contentType ? config.headers['Content-Type'] = config.contentType : null;
     config.maxRedirects ? client.maxRedirects = config.maxRedirects : null;

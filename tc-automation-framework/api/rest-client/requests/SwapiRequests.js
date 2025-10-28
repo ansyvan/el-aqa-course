@@ -1,8 +1,8 @@
 const testConfig = require('../../../config/test-config');
-const TestEndPoints = require('../TestEndPoints');
+const TestEndPoints = require('../SwapiTestEndPoints');
 const log = require('../../utils/test-logger');
 log.level = testConfig.LOG_LEVEL || 'info';
-const {client} = require('../RestClient');
+const {client} = require('../SwapiRestClient');
 
 class SwapiRequests {
 
