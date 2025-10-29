@@ -16,6 +16,7 @@ module.exports = {
     UI_BASE_URL: process.env.FRONTEND_URL || 'http://localhost:3000',
     SWAPI_APP_URL: 'https://swapi.dev/',
     DOG_APP_URL: 'https://dog.ceo/',
+    CONDUIT_APP_URL: 'https://demo.learnwebdriverio.com/',
     CONTENT_TYPE: {
         TEXT: 'text/plain',
         XML: 'application/xml',

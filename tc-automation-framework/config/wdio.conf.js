@@ -59,10 +59,12 @@ exports.config = {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableMochaHooks: true
-        }]
+        }],
+        'spec'
     ],
     services: [
         'intercept',
+        // testConfig.BROWSER_NAME === 'firefox' ? 'geckodriver' : 'chromedriver',
         ['image-comparison',
             {
                 baselineFolder: path.join(__dirname, '../data/TestsImages/ImagesOrigin'),
