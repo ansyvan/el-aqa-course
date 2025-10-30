@@ -1,337 +1,56 @@
 
-Execution of 2 workers started at 2025-10-29T07:53:20.671Z
+Execution of 2 workers started at 2025-10-30T08:42:55.423Z
 
-2025-10-29T07:53:20.786Z INFO @wdio/cli:launcher: Run onPrepare hook
-2025-10-29T07:53:20.787Z INFO @wdio/utils: Setting up browser driver for: chrome@stable
-2025-10-29T07:53:20.787Z INFO @wdio/utils: Setting up browser binaries for: chrome@stable
-2025-10-29T07:53:20.854Z INFO webdriver: Using Chromedriver v141.0.7390.123 from cache directory /var/folders/2w/hpfkkbq973723n901wwc1nww0000gp/T
-2025-10-29T07:53:20.888Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2025-10-29T07:53:20.888Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.conf.js
-[0-0] 2025-10-29T07:53:21.487Z INFO @wdio/local-runner: Run worker command: run
-[0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/signUpConduitTest.js
-[0-0] 2025-10-29T07:53:21.887Z INFO webdriver: Initiate new session using the WebDriver protocol
-[0-0] 2025-10-29T07:53:22.005Z INFO webdriver: Using Chromedriver v141.0.7390.123 from cache directory /var/folders/2w/hpfkkbq973723n901wwc1nww0000gp/T
-[0-0] 2025-10-29T07:53:22.019Z INFO chromedriver: Starting ChromeDriver 141.0.7390.123 (fcf346308f838bc89a3e3270e07f2fca679303ad-refs/branch-heads/7390@{#2668}) on port 58611
-[0-0] 2025-10-29T07:53:22.019Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
-[0-0] 2025-10-29T07:53:22.019Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-[0-0] 2025-10-29T07:53:22.032Z INFO chromedriver: ChromeDriver was started successfully on port 58611.
-[0-0] 2025-10-29T07:53:23.016Z INFO @wdio/utils: Started Chromedriver v141.0.7390.123 with params --port=58611 --allowed-origins=* --allowed-ips=0.0.0.0 in 1042ms on port 58611
-[0-0] 2025-10-29T07:53:23.098Z INFO webdriver: [POST] http://0.0.0.0:58611/session
-[0-0] 2025-10-29T07:53:23.098Z INFO webdriver: DATA {
-[0-0]   capabilities: {
-[0-0]     alwaysMatch: { browserName: 'chrome', 'goog:chromeOptions': [Object] },
-[0-0]     firstMatch: [ {} ]
-[0-0]   },
-[0-0]   desiredCapabilities: {
-[0-0]     browserName: 'chrome',
-[0-0]     'goog:chromeOptions': {
-[0-0]       binary: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-[0-0]       prefs: [Object]
-[0-0]     }
-[0-0]   }
-[0-0] }
-[0-0] 2025-10-29T07:53:25.657Z INFO wdio-image-comparison-service: Adding commands to global browser
-[0-0] 2025-10-29T07:53:25.658Z INFO webdriver: COMMAND setWindowRect(null, null, 1920, 1280)
-[0-0] 2025-10-29T07:53:25.659Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/window/rect
-[0-0] 2025-10-29T07:53:25.659Z INFO webdriver: DATA { x: null, y: null, width: 1920, height: 1280 }
-[0-0] 2025-10-29T07:53:26.009Z INFO webdriver: RESULT { height: 1001, width: 1920, x: 1732, y: 25 }
-[0-0] 2025-10-29T07:53:26.010Z INFO webdriver: COMMAND setTimeouts(2000, undefined, undefined)
-[0-0] 2025-10-29T07:53:26.010Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/timeouts
-[0-0] 2025-10-29T07:53:26.010Z INFO webdriver: DATA { implicit: 2000 }
-[0-0] 2025-10-29T07:53:26.011Z INFO webdriver: RESULT null
-[0-0] 2025-10-29T07:53:26.011Z INFO webdriver: COMMAND getWindowRect()
-[0-0] 2025-10-29T07:53:26.011Z INFO webdriver: [GET] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/window/rect
-[0-0] 2025-10-29T07:53:26.013Z INFO webdriver: RESULT { height: 1001, width: 1920, x: 1732, y: 25 }
-[0-0] 2025-10-29T07:53:26.029Z INFO webdriver: COMMAND findElement("css selector", "[data-qa-id="site-header"]")
-[0-0] 2025-10-29T07:53:26.029Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/element
-[0-0] 2025-10-29T07:53:26.030Z INFO webdriver: DATA { using: 'css selector', value: '[data-qa-id="site-header"]' }
-[0-0] 2025-10-29T07:53:28.039Z INFO webdriver: RESULT {
-[0-0]   error: 'no such element',
-[0-0]   message: 'no such element: Unable to locate element: {"method":"css selector","selector":"[data-qa-id="site-header"]"}\n' +
-[0-0]     '  (Session info: chrome=141.0.7390.123)',
-[0-0]   stacktrace: '0   chromedriver                        0x00000001005b7d20 cxxbridge1$str$ptr + 2895872\n' +
-[0-0]     '1   chromedriver                        0x00000001005afc5c cxxbridge1$str$ptr + 2862908\n' +
-[0-0]     '2   chromedriver                        0x00000001000d5570 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74324\n' +
-[0-0]     '3   chromedriver                        0x000000010011cf34 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 367640\n' +
-[0-0]     '4   chromedriver                        0x000000010015e3d8 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 635068\n' +
-[0-0]     '5   chromedriver                        0x00000001001110f8 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318940\n' +
-[0-0]     '6   chromedriver                        0x000000010057b844 cxxbridge1$str$ptr + 2648868\n' +
-[0-0]     '7   chromedriver                        0x000000010057ee20 cxxbridge1$str$ptr + 2662656\n' +
-[0-0]     '8   chromedriver                        0x000000010055c35c cxxbridge1$str$ptr + 2520636\n' +
-[0-0]     '9   chromedriver                        0x000000010057f708 cxxbridge1$str$ptr + 2664936\n' +
-[0-0]     '10  chromedriver                        0x000000010054daa8 cxxbridge1$str$ptr + 2461064\n' +
-[0-0]     '11  chromedriver                        0x000000010059f03c cxxbridge1$str$ptr + 2794268\n' +
-[0-0]     '12  chromedriver                        0x000000010059f1c0 cxxbridge1$str$ptr + 2794656\n' +
-[0-0]     '13  chromedriver                        0x00000001005af8a8 cxxbridge1$str$ptr + 2861960\n' +
-[0-0]     '14  libsystem_pthread.dylib             0x000000018a653bc8 _pthread_start + 136\n' +
-[0-0]     '15  libsystem_pthread.dylib             0x000000018a64eb80 thread_start + 8\n'
-[0-0] }
-[0-0] 2025-10-29T07:53:28.046Z INFO webdriver: COMMAND navigateTo("https://demo.learnwebdriverio.com/")
-[0-0] 2025-10-29T07:53:28.047Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/url
-[0-0] 2025-10-29T07:53:28.047Z INFO webdriver: DATA { url: 'https://demo.learnwebdriverio.com/' }
-[0-0] 2025-10-29T07:53:28.410Z INFO webdriver: RESULT null
-[0-0] 2025-10-29T07:53:28.446Z INFO webdriver: COMMAND findElement("css selector", "[data-qa-id="site-header"]")
-[0-0] 2025-10-29T07:53:28.446Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/element
-[0-0] 2025-10-29T07:53:28.446Z INFO webdriver: DATA { using: 'css selector', value: '[data-qa-id="site-header"]' }
-[0-0] 2025-10-29T07:53:28.949Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.3'
-[0-0] }
-[0-0] 2025-10-29T07:53:28.951Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
-[0-0] 2025-10-29T07:53:28.951Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/execute/sync
-[0-0] 2025-10-29T07:53:28.951Z INFO webdriver: DATA {
-[0-0]   script: 'isElementDisplayed(...) [8489 bytes]',
-[0-0]   args: [
-[0-0]     {
-[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.3',
-[0-0]       ELEMENT: 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.3'
-[0-0]     }
-[0-0]   ]
-[0-0] }
-[0-0] 2025-10-29T07:53:28.956Z INFO webdriver: RESULT true
-[0-0] 2025-10-29T07:53:28.956Z INFO webdriver: COMMAND setupInterceptor()
-[0-0] 2025-10-29T07:53:28.957Z INFO webdriver: COMMAND executeAsyncScript(<fn>, <object>)
-[0-0] 2025-10-29T07:53:28.957Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/execute/async
-[0-0] 2025-10-29T07:53:28.957Z INFO webdriver: DATA { script: 'setup(...) [10992 bytes]', args: [] }
-[0-0] 2025-10-29T07:53:28.963Z INFO webdriver: RESULT { excludedUrls: [], interceptorDisabled: false, requests: [] }
-[0-0] 2025-10-29T07:53:28.964Z INFO webdriver: RESULT { excludedUrls: [], interceptorDisabled: false, requests: [] }
-[0-0] 2025-10-29T07:53:28.966Z INFO webdriver: COMMAND findElement("css selector", ".home-page")
-[0-0] 2025-10-29T07:53:28.966Z INFO webdriver: COMMAND findElement("css selector", "[data-qa-id="site-header"]")
-[0-0] 2025-10-29T07:53:28.967Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/element
-[0-0] 2025-10-29T07:53:28.967Z INFO webdriver: DATA { using: 'css selector', value: '.home-page' }
-[0-0] 2025-10-29T07:53:28.967Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/element
-[0-0] 2025-10-29T07:53:28.967Z INFO webdriver: DATA { using: 'css selector', value: '[data-qa-id="site-header"]' }
-[0-0] 2025-10-29T07:53:28.974Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.9'
-[0-0] }
-[0-0] 2025-10-29T07:53:28.975Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
-[0-0] 2025-10-29T07:53:28.976Z INFO webdriver: [POST] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17/execute/sync
-[0-0] 2025-10-29T07:53:28.976Z INFO webdriver: DATA {
-[0-0]   script: 'isElementDisplayed(...) [8489 bytes]',
-[0-0]   args: [
-[0-0]     {
-[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.9',
-[0-0]       ELEMENT: 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.9'
-[0-0]     }
-[0-0]   ]
-[0-0] }
-[0-0] 2025-10-29T07:53:28.977Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'f.46FB08CDC8E15B6F94B63704F739B90B.d.EB425EBCC7A5BEB0E639C8EDBF03D7EE.e.3'
-[0-0] }
-[0-0] 2025-10-29T07:53:28.979Z INFO webdriver: RESULT true
-[0-0] 2025-10-29T07:53:28.983Z INFO webdriver: COMMAND deleteSession()
-[0-0] 2025-10-29T07:53:28.983Z INFO webdriver: [DELETE] http://0.0.0.0:58611/session/b0f2cc1dc94070d72715f057f548ee17
-[0-0] 2025-10-29T07:53:29.040Z INFO webdriver: RESULT null
-[0-0] 2025-10-29T07:53:29.041Z INFO webdriver: Kill driver process with PID 32220
-[0-0] PASSED in chrome - file:///ui/test/Conduit_tests/signUpConduitTest.js
-2025-10-29T07:53:29.154Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2025-10-29T07:53:29.154Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2025-10-29T07:53:29.154Z INFO @wdio/local-runner: Start worker 0-1 with arg: config/wdio.conf.js
-[0-1] 2025-10-29T07:53:29.696Z INFO @wdio/local-runner: Run worker command: run
-[0-1] RUNNING in chrome - file:///ui/test/Swapi_tests/sendSwapiRequestTest.js
-[0-1] 2025-10-29T07:53:30.093Z INFO webdriver: Initiate new session using the WebDriver protocol
-[0-1] 2025-10-29T07:53:30.257Z INFO webdriver: Using Chromedriver v141.0.7390.123 from cache directory /var/folders/2w/hpfkkbq973723n901wwc1nww0000gp/T
-[0-1] 2025-10-29T07:53:30.267Z INFO chromedriver: Starting ChromeDriver 141.0.7390.123 (fcf346308f838bc89a3e3270e07f2fca679303ad-refs/branch-heads/7390@{#2668}) on port 58672
-[0-1] 2025-10-29T07:53:30.268Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
-[0-1] 2025-10-29T07:53:30.268Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-[0-1] 2025-10-29T07:53:30.269Z INFO chromedriver: ChromeDriver was started successfully on port 58672.
-[0-1] 2025-10-29T07:53:31.267Z INFO @wdio/utils: Started Chromedriver v141.0.7390.123 with params --port=58672 --allowed-origins=* --allowed-ips=0.0.0.0 in 1086ms on port 58672
-[0-1] 2025-10-29T07:53:31.317Z INFO webdriver: [POST] http://0.0.0.0:58672/session
-[0-1] 2025-10-29T07:53:31.317Z INFO webdriver: DATA {
-[0-1]   capabilities: {
-[0-1]     alwaysMatch: { browserName: 'chrome', 'goog:chromeOptions': [Object] },
-[0-1]     firstMatch: [ {} ]
-[0-1]   },
-[0-1]   desiredCapabilities: {
-[0-1]     browserName: 'chrome',
-[0-1]     'goog:chromeOptions': {
-[0-1]       binary: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-[0-1]       prefs: [Object]
-[0-1]     }
-[0-1]   }
-[0-1] }
-[0-1] 2025-10-29T07:53:33.774Z INFO wdio-image-comparison-service: Adding commands to global browser
-[0-1] 2025-10-29T07:53:33.775Z INFO webdriver: COMMAND setWindowRect(null, null, 1920, 1280)
-[0-1] 2025-10-29T07:53:33.776Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/window/rect
-[0-1] 2025-10-29T07:53:33.776Z INFO webdriver: DATA { x: null, y: null, width: 1920, height: 1280 }
-[0-1] 2025-10-29T07:53:34.119Z INFO webdriver: RESULT { height: 1001, width: 1920, x: 1732, y: 25 }
-[0-1] 2025-10-29T07:53:34.120Z INFO webdriver: COMMAND setTimeouts(2000, undefined, undefined)
-[0-1] 2025-10-29T07:53:34.120Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/timeouts
-[0-1] 2025-10-29T07:53:34.120Z INFO webdriver: DATA { implicit: 2000 }
-[0-1] 2025-10-29T07:53:34.124Z INFO webdriver: RESULT null
-[0-1] 2025-10-29T07:53:34.124Z INFO webdriver: COMMAND getWindowRect()
-[0-1] 2025-10-29T07:53:34.124Z INFO webdriver: [GET] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/window/rect
-[0-1] 2025-10-29T07:53:34.126Z INFO webdriver: RESULT { height: 1001, width: 1920, x: 1732, y: 25 }
-[0-1] 2025-10-29T07:53:34.141Z INFO webdriver: COMMAND findElement("css selector", "input#interactive")
-[0-1] 2025-10-29T07:53:34.142Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element
-[0-1] 2025-10-29T07:53:34.142Z INFO webdriver: DATA { using: 'css selector', value: 'input#interactive' }
-[0-1] 2025-10-29T07:53:36.162Z INFO webdriver: RESULT {
-[0-1]   error: 'no such element',
-[0-1]   message: 'no such element: Unable to locate element: {"method":"css selector","selector":"input#interactive"}\n' +
-[0-1]     '  (Session info: chrome=141.0.7390.123)',
-[0-1]   stacktrace: '0   chromedriver                        0x0000000103457d20 cxxbridge1$str$ptr + 2895872\n' +
-[0-1]     '1   chromedriver                        0x000000010344fc5c cxxbridge1$str$ptr + 2862908\n' +
-[0-1]     '2   chromedriver                        0x0000000102f75570 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74324\n' +
-[0-1]     '3   chromedriver                        0x0000000102fbcf34 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 367640\n' +
-[0-1]     '4   chromedriver                        0x0000000102ffe3d8 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 635068\n' +
-[0-1]     '5   chromedriver                        0x0000000102fb10f8 _RNvCs47EqcsrPRmA_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318940\n' +
-[0-1]     '6   chromedriver                        0x000000010341b844 cxxbridge1$str$ptr + 2648868\n' +
-[0-1]     '7   chromedriver                        0x000000010341ee20 cxxbridge1$str$ptr + 2662656\n' +
-[0-1]     '8   chromedriver                        0x00000001033fc35c cxxbridge1$str$ptr + 2520636\n' +
-[0-1]     '9   chromedriver                        0x000000010341f708 cxxbridge1$str$ptr + 2664936\n' +
-[0-1]     '10  chromedriver                        0x00000001033edaa8 cxxbridge1$str$ptr + 2461064\n' +
-[0-1]     '11  chromedriver                        0x000000010343f03c cxxbridge1$str$ptr + 2794268\n' +
-[0-1]     '12  chromedriver                        0x000000010343f1c0 cxxbridge1$str$ptr + 2794656\n' +
-[0-1]     '13  chromedriver                        0x000000010344f8a8 cxxbridge1$str$ptr + 2861960\n' +
-[0-1]     '14  libsystem_pthread.dylib             0x000000018a653bc8 _pthread_start + 136\n' +
-[0-1]     '15  libsystem_pthread.dylib             0x000000018a64eb80 thread_start + 8\n'
-[0-1] }
-[0-1] 2025-10-29T07:53:36.168Z INFO webdriver: COMMAND navigateTo("https://swapi.dev/")
-[0-1] 2025-10-29T07:53:36.168Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/url
-[0-1] 2025-10-29T07:53:36.168Z INFO webdriver: DATA { url: 'https://swapi.dev/' }
-[0-1] 2025-10-29T07:53:36.437Z INFO webdriver: RESULT null
-[0-1] 2025-10-29T07:53:36.454Z INFO webdriver: COMMAND findElement("css selector", "input#interactive")
-[0-1] 2025-10-29T07:53:36.455Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element
-[0-1] 2025-10-29T07:53:36.455Z INFO webdriver: DATA { using: 'css selector', value: 'input#interactive' }
-[0-1] 2025-10-29T07:53:37.283Z INFO webdriver: RESULT {
-[0-1]   'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3'
-[0-1] }
-[0-1] 2025-10-29T07:53:37.285Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
-[0-1] 2025-10-29T07:53:37.286Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/execute/sync
-[0-1] 2025-10-29T07:53:37.286Z INFO webdriver: DATA {
-[0-1]   script: 'isElementDisplayed(...) [8489 bytes]',
-[0-1]   args: [
-[0-1]     {
-[0-1]       'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3',
-[0-1]       ELEMENT: 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3'
-[0-1]     }
-[0-1]   ]
-[0-1] }
-[0-1] 2025-10-29T07:53:37.290Z INFO webdriver: RESULT true
-[0-1] 2025-10-29T07:53:37.290Z INFO webdriver: COMMAND setupInterceptor()
-[0-1] 2025-10-29T07:53:37.290Z INFO webdriver: COMMAND executeAsyncScript(<fn>, <object>)
-[0-1] 2025-10-29T07:53:37.291Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/execute/async
-[0-1] 2025-10-29T07:53:37.291Z INFO webdriver: DATA { script: 'setup(...) [10992 bytes]', args: [] }
-[0-1] 2025-10-29T07:53:37.297Z INFO webdriver: RESULT { excludedUrls: [], interceptorDisabled: false, requests: [] }
-[0-1] 2025-10-29T07:53:37.297Z INFO webdriver: RESULT { excludedUrls: [], interceptorDisabled: false, requests: [] }
-[0-1] 2025-10-29T07:53:37.299Z INFO webdriver: COMMAND findElement("css selector", "input#interactive")
-[0-1] 2025-10-29T07:53:37.300Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element
-[0-1] 2025-10-29T07:53:37.300Z INFO webdriver: DATA { using: 'css selector', value: 'input#interactive' }
-[0-1] 2025-10-29T07:53:37.304Z INFO webdriver: RESULT {
-[0-1]   'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3'
-[0-1] }
-[0-1] 2025-10-29T07:53:37.305Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
-[0-1] 2025-10-29T07:53:37.306Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/execute/sync
-[0-1] 2025-10-29T07:53:37.306Z INFO webdriver: DATA {
-[0-1]   script: 'isElementDisplayed(...) [8489 bytes]',
-[0-1]   args: [
-[0-1]     {
-[0-1]       'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3',
-[0-1]       ELEMENT: 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3'
-[0-1]     }
-[0-1]   ]
-[0-1] }
-[0-1] 2025-10-29T07:53:37.309Z INFO webdriver: RESULT true
-[0-1] 2025-10-29T07:53:37.309Z INFO webdriver: COMMAND elementClear("f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3")
-[0-1] 2025-10-29T07:53:37.310Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element/f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3/clear
-[0-1] 2025-10-29T07:53:37.325Z INFO webdriver: RESULT null
-[0-1] 2025-10-29T07:53:37.325Z INFO webdriver: COMMAND elementSendKeys("f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3", "<Screenshot[base64]>")
-[0-1] 2025-10-29T07:53:37.326Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element/f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.3/value
-[0-1] 2025-10-29T07:53:37.326Z INFO webdriver: DATA { text: 'starships/5/' }
-[0-1] 2025-10-29T07:53:37.417Z INFO webdriver: RESULT null
-[0-1] 2025-10-29T07:53:37.418Z INFO webdriver: COMMAND findElement("css selector", ".btn.btn-primary")
-[0-1] 2025-10-29T07:53:37.419Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element
-[0-1] 2025-10-29T07:53:37.419Z INFO webdriver: DATA { using: 'css selector', value: '.btn.btn-primary' }
-[0-1] 2025-10-29T07:53:37.426Z INFO webdriver: RESULT {
-[0-1]   'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.8'
-[0-1] }
-[0-1] 2025-10-29T07:53:37.430Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
-[0-1] 2025-10-29T07:53:37.442Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/execute/sync
-[0-1] 2025-10-29T07:53:37.442Z INFO webdriver: DATA {
-[0-1]   script: 'isElementDisplayed(...) [8489 bytes]',
-[0-1]   args: [
-[0-1]     {
-[0-1]       'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.8',
-[0-1]       ELEMENT: 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.8'
-[0-1]     }
-[0-1]   ]
-[0-1] }
-[0-1] 2025-10-29T07:53:37.452Z INFO webdriver: RESULT true
-[0-1] 2025-10-29T07:53:37.452Z INFO webdriver: COMMAND elementClick("f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.8")
-[0-1] 2025-10-29T07:53:37.452Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element/f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.8/click
-[0-1] 2025-10-29T07:53:37.496Z INFO webdriver: RESULT null
-[0-1] 2025-10-29T07:53:40.498Z INFO webdriver: COMMAND findElement("css selector", "#interactive_output")
-[0-1] 2025-10-29T07:53:40.500Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element
-[0-1] 2025-10-29T07:53:40.501Z INFO webdriver: DATA { using: 'css selector', value: '#interactive_output' }
-[0-1] 2025-10-29T07:53:40.524Z INFO webdriver: RESULT {
-[0-1]   'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.9'
-[0-1] }
-[0-1] 2025-10-29T07:53:40.528Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
-[0-1] 2025-10-29T07:53:40.529Z INFO webdriver: [POST] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/execute/sync
-[0-1] 2025-10-29T07:53:40.529Z INFO webdriver: DATA {
-[0-1]   script: 'isElementDisplayed(...) [8489 bytes]',
-[0-1]   args: [
-[0-1]     {
-[0-1]       'element-6066-11e4-a52e-4f735466cecf': 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.9',
-[0-1]       ELEMENT: 'f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.9'
-[0-1]     }
-[0-1]   ]
-[0-1] }
-[0-1] 2025-10-29T07:53:40.534Z INFO webdriver: RESULT true
-[0-1] 2025-10-29T07:53:40.535Z INFO webdriver: COMMAND getElementText("f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.9")
-[0-1] 2025-10-29T07:53:40.535Z INFO webdriver: [GET] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60/element/f.6546BEB175FC51204FB380A22235B045.d.3F81C881E31E706DDC23BD9F76EC806A.e.9/text
-[0-1] 2025-10-29T07:53:40.545Z INFO webdriver: RESULT {
-[0-1]  "name": "Sentinel-class landing craft",
-[0-1]  "model": "Sentinel-class landing craft",
-[0-1]  "manufacturer": "Sienar Fleet Systems, Cyngus Spaceworks",
-[0-1]  "cost_in_credits": "240000",
-[0-1]  "length": "38",
-[0-1]  "max_atmosphering_speed": "1000",
-[0-1]  "crew": "5",
-[0-1]  "passengers": "75",
-[0-1]  "cargo_capacity": "180000",
-[0-1]  "consumables": "1 month",
-[0-1]  "hyperdrive_rating": "1.0",
-[0-1]  "MGLT": "70",
-[0-1]  "starship_class": "landing craft",
-[0-1]  "pilots": [],
-[0-1]  "films": [
-[0-1]   "https://swapi.dev/api/films/1/"
-[0-1]  ],
-[0-1]  "created": "2014-12-10T15:48:00.586000Z",
-[0-1]  "edited": "2014-12-20T21:23:49.873000Z",
-[0-1]  "url": "https://swapi.dev/api/starships/5/"
-[0-1] }
-[0-1] 2025-10-29T07:53:40.551Z INFO webdriver: COMMAND deleteSession()
-[0-1] 2025-10-29T07:53:40.551Z INFO webdriver: [DELETE] http://0.0.0.0:58672/session/8fd91724603e31d5316056f1e1401b60
-[0-1] 2025-10-29T07:53:40.604Z INFO webdriver: RESULT null
-[0-1] 2025-10-29T07:53:40.604Z INFO webdriver: Kill driver process with PID 32248
-[0-1] PASSED in chrome - file:///ui/test/Swapi_tests/sendSwapiRequestTest.js
-2025-10-29T07:53:40.715Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2025-10-29T07:53:40.716Z INFO @wdio/cli:launcher: Run onComplete hook
-
- "spec" Reporter:
-------------------------------------------------------------------
-[chrome 141.0.7390.123 mac #0-0] Running: chrome (v141.0.7390.123) on mac
-[chrome 141.0.7390.123 mac #0-0] Session ID: b0f2cc1dc94070d72715f057f548ee17
-[chrome 141.0.7390.123 mac #0-0]
-[chrome 141.0.7390.123 mac #0-0] » /ui/test/Conduit_tests/signUpConduitTest.js
-[chrome 141.0.7390.123 mac #0-0] Sign up Conduit
-[chrome 141.0.7390.123 mac #0-0]    ✓ Should open Conduit page
-[chrome 141.0.7390.123 mac #0-0]
-[chrome 141.0.7390.123 mac #0-0] 1 passing (3s)
-------------------------------------------------------------------
-[chrome 141.0.7390.123 mac #0-1] Running: chrome (v141.0.7390.123) on mac
-[chrome 141.0.7390.123 mac #0-1] Session ID: 8fd91724603e31d5316056f1e1401b60
-[chrome 141.0.7390.123 mac #0-1]
-[chrome 141.0.7390.123 mac #0-1] » /ui/test/Swapi_tests/sendSwapiRequestTest.js
-[chrome 141.0.7390.123 mac #0-1] Send Swapi request using "Try it out" functionality
-[chrome 141.0.7390.123 mac #0-1]    ✓ Should send a request using "Try it out" functionality
-[chrome 141.0.7390.123 mac #0-1]
-[chrome 141.0.7390.123 mac #0-1] 1 passing (6.4s)
-
-
-Spec Files:	 2 passed, 2 total (100% completed) in 00:00:20  
-
-2025-10-29T07:53:40.716Z INFO @wdio/local-runner: Shutting down spawned worker
-2025-10-29T07:53:40.968Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
-2025-10-29T07:53:40.969Z INFO @wdio/local-runner: shutting down
+2025-10-30T08:42:55.554Z INFO @wdio/local-runner: Shutting down spawned worker
+2025-10-30T08:42:55.806Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2025-10-30T08:42:55.806Z INFO @wdio/local-runner: shutting down
+Error: Error: Failed to initilialise launcher service unknown: Error: Couldn't initialize "wdio-image-comparison-service".
+Error: The module '/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/canvas/build/Release/canvas.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 115. This version of Node.js requires
+NODE_MODULE_VERSION 127. Please try re-compiling or re-installing
+the module (for instance, using `npm rebuild` or `npm install`).
+    at Object..node (node:internal/modules/cjs/loader:1865:18)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.require (node:internal/modules/cjs/loader:1463:12)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/canvas/lib/bindings.js:3:18)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at safeImport (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/utils.js:223:15)
+    at async initializePlugin (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializePlugin.js:31:20)
+    at async initializeServices (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializeServices.js:53:25)
+    at async initializeLauncherService (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializeServices.js:81:26)
+    at async Launcher.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/launcher.js:85:65)
+    at async Module.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/run.js:64:20)
+    at initializeLauncherService (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializeServices.js:118:15)
+    at async Launcher.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/launcher.js:85:65)
+    at async Module.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/run.js:64:20)
+Error: Failed to initilialise launcher service unknown: Error: Couldn't initialize "wdio-image-comparison-service".
+Error: The module '/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/canvas/build/Release/canvas.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 115. This version of Node.js requires
+NODE_MODULE_VERSION 127. Please try re-compiling or re-installing
+the module (for instance, using `npm rebuild` or `npm install`).
+    at Object..node (node:internal/modules/cjs/loader:1865:18)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.require (node:internal/modules/cjs/loader:1463:12)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/canvas/lib/bindings.js:3:18)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at safeImport (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/utils.js:223:15)
+    at async initializePlugin (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializePlugin.js:31:20)
+    at async initializeServices (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializeServices.js:53:25)
+    at async initializeLauncherService (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializeServices.js:81:26)
+    at async Launcher.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/launcher.js:85:65)
+    at async Module.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/run.js:64:20)
+    at initializeLauncherService (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/utils/build/initializeServices.js:118:15)
+    at async Launcher.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/launcher.js:85:65)
+    at async Module.run (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/@wdio/cli/build/run.js:64:20)
