@@ -38,6 +38,7 @@ class RequestDataGenerator {
             phone: faker.phone.phoneNumber(),
             email: faker.internet.email(),
             username: faker.internet.userName(),
+            password: faker.internet.password(),
             jobTitle: faker.name.jobTitle(),
             company: faker.company.companyName()
         };

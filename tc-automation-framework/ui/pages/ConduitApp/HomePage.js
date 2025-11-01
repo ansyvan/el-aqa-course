@@ -25,6 +25,10 @@ class HomePage extends BasePage {
         return this.navigateTo(testConfig.CONDUIT_APP_URL, this.homePage);
     }
 
+    async isOpened() {
+        expect(await this.root.isDisplayed()).to.be.true;
+    }
+
     async confirmNavigationForLoggedOutUser() {
         await this.waitForElementVisible(this.signInButton);
         await this.waitForElementVisible(this.signUpButton);
