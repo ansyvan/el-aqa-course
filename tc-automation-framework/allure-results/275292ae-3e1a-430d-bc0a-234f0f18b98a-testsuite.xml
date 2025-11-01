@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762004303084' stop='1762004319386'>
+    <name>Sign in Conduit</name>
+    <title>Sign in Conduit</title>
+    <test-cases>
+        <test-case start='1762004304907' status='broken' stop='1762004319082'>
+            <name>Should login user</name>
+            <title>Should login user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762004319385' status='passed' stop='1762004319385'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='42ffa814-56d0-41ea-bee6-16bc7e300e4d-attachment.png' type='image/png' size='294234'/>
+                <attachment title='Screenshot' source='196a4e36-1c85-4325-a0f7-8e70193d19c6-attachment.png' type='image/png' size='294234'/>
+            </attachments>
+            <failure>
+                <message>Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error</message>
+                <stack-trace>Error: Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error
+                    at HomePage.waitForElementVisible (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:49:15)
+                    at async HomePage.confirmNavigationForLoggedInUser (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/HomePage.js:41:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/signInConduitTest.js:26:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

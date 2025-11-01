@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1761990543808' stop='1761990547169'>
+    <name>Sign up Conduit</name>
+    <title>Sign up Conduit</title>
+    <test-cases>
+        <test-case start='1761990546806' status='broken' stop='1761990547018'>
+            <name>Should navigate to Registration page</name>
+            <title>Should navigate to Registration page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1761990546824' status='passed' stop='1761990546824'>
+                    <name>Clicking on element .nav-link[href="/register"]</name>
+                    <title>Clicking on element .nav-link[href="/register"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1761990547168' status='passed' stop='1761990547168'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='8daaf2f2-0ce9-4b88-95b5-aff3bb111629-attachment.png' type='image/png' size='75469'/>
+                <attachment title='Screenshot' source='ff4d5769-2fea-43c1-a0ca-eaf17236f95e-attachment.png' type='image/png' size='75469'/>
+            </attachments>
+            <failure>
+                <message>Can't call "fill" on element with selector "input[placeholder="Username"]", it is not a function</message>
+                <stack-trace>Error: Can't call "fill" on element with selector "input[placeholder="Username"]", it is not a function
+                    at async RegistrationPage.registerUser (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/RegistrationPage.js:18:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/signUpConduitTest.js:28:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

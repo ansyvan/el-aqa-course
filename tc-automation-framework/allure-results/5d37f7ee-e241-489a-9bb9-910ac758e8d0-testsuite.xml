@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1761994505670' stop='1761994509128'>
+    <name>Sign up Conduit</name>
+    <title>Sign up Conduit</title>
+    <test-cases>
+        <test-case start='1761994508668' status='passed' stop='1761994509128'>
+            <name>Should register user</name>
+            <title>Should register user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1761994508692' status='passed' stop='1761994508692'>
+                    <name>Clicking on element .nav-link[href="/register"]</name>
+                    <title>Clicking on element .nav-link[href="/register"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1761994509077' status='passed' stop='1761994509077'>
+                    <name>Clicking on element button=Sign up</name>
+                    <title>Clicking on element button=Sign up</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

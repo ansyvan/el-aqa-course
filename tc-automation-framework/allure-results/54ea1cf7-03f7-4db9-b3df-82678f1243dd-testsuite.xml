@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762000299978' stop='1762000317454'>
+    <name>Sign up Conduit</name>
+    <title>Sign up Conduit</title>
+    <test-cases>
+        <test-case start='1762000301987' status='broken' stop='1762000316974'>
+            <name>Should register user</name>
+            <title>Should register user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762000302039' status='passed' stop='1762000302039'>
+                    <name>Clicking on element .nav-link[href="/register"]</name>
+                    <title>Clicking on element .nav-link[href="/register"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762000302426' status='passed' stop='1762000302426'>
+                    <name>Clicking on element button=Sign up</name>
+                    <title>Clicking on element button=Sign up</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762000317310' status='passed' stop='1762000317310'>
+                    <name>Browser requests artifact</name>
+                    <title>Browser requests artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762000317452' status='passed' stop='1762000317452'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Browser requests' source='bbe95541-6c91-4b1c-8405-a0a96c8864fe-attachment.txt' type='text/plain' size='7806'/>
+                <attachment title='Screenshot' source='06e9b6bc-41f5-4596-ae57-5de9f8a74013-attachment.png' type='image/png' size='301131'/>
+                <attachment title='Screenshot' source='f1d64c32-52d2-43b2-ae9e-c4abfd55944b-attachment.png' type='image/png' size='301131'/>
+            </attachments>
+            <failure>
+                <message>Element .nav-link[href^="/@ArjunRoberts2"] is not visible
+                        after maximum retries (3), Error message: Error</message>
+                <stack-trace>Error: Element .nav-link[href^="/@ArjunRoberts2"] is not visible
+                        after maximum retries (3), Error message: Error
+                    at HomePage.waitForElementVisible (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:49:15)
+                    at async HomePage.confirmNavigationForLoggedInUser (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/HomePage.js:46:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/signUpConduitTest.js:33:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

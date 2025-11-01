@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762007223482' stop='1762007225254'>
+    <name>Sign in Conduit</name>
+    <title>Sign in Conduit</title>
+    <test-cases>
+        <test-case start='1762007225002' status='broken' stop='1762007225086'>
+            <name>Should login user</name>
+            <title>Should login user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762007225048' status='passed' stop='1762007225048'>
+                    <name>Clicking on element .nav-link[href="/login"]</name>
+                    <title>Clicking on element .nav-link[href="/login"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762007225253' status='passed' stop='1762007225253'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='3801d684-e363-4ddc-91d0-3f2ff42a70de-attachment.png' type='image/png' size='294530'/>
+                <attachment title='Screenshot' source='bf4832e3-ad68-4d86-afc6-d86ebbe09cee-attachment.png' type='image/png' size='294530'/>
+            </attachments>
+            <failure>
+                <message>Cannot read properties of undefined (reading 'selector')</message>
+                <stack-trace>TypeError: Cannot read properties of undefined (reading 'selector')
+                    at HomePage.waitForElementVisible (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:49:44)
+                    at async HomePage.navigateToLoginPage (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/HomePage.js:52:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/signInConduitTest.js:46:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

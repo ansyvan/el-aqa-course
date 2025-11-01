@@ -1,17 +1,23 @@
-const testConfig = require('../../../config/test-config');
 const BasePage = require('../BasePage');
 
 class RegistrationPage extends BasePage {
 
     get root() { return $('.auth-page'); }
-    // get signUpButton() { return $('.nav-link[href="/register"]'); }
+    get title() { return this.root.$('h1=Sign up'); }
+    get usernameInput() { return $('input[placeholder="Username"]'); }
+    get emailInput() {return $('input[placeholder="Email"]'); }
+    get passwordInput() { return $('input[placeholder="Password"]'); }
+    get signUpButton() { return $('button=Sign up'); }
 
     constructor() {
         super();
     }
 
-    registerUser() {
-        return this.navigateTo(testConfig.CONDUIT_APP_URL, this.registrationPage);
+    async registerUser(username, email, password) {
+        await this.usernameInput.setValue(username);
+        await this.emailInput.setValue(email);
+        await this.passwordInput.setValue(password);
+        await this.clickOnElement(this.signUpButton);
     }
 }
 
