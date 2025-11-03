@@ -1,43 +1,51 @@
 
-Execution of 2 workers started at 2025-11-01T20:24:09.294Z
+Execution of 2 workers started at 2025-11-03T08:23:31.145Z
 
 [0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/signInConduitTest.js
-[0-0] 22:24:15 [[32minfo[39m]: Generated user data for login: {
-[0-0]   "username": "kristofferkuhic",
-[0-0]   "email": "denis_cartwright1@gmail.com",
-[0-0]   "password": "x1Rw0tT4wb6nJU2"
+[0-0] 10:23:35 [[32minfo[39m]: Generated user data for login: {
+[0-0]   "username": "stewartnikolaus69",
+[0-0]   "email": "olga.braun68@yahoo.com",
+[0-0]   "password": "NqeWFWxMS6wmXou"
 [0-0] }
-[0-0] 22:24:15 [[32minfo[39m]: [API] Create user: kristofferkuhic
-[0-0] 22:24:16 [[32minfo[39m]: [API] User kristofferkuhic created.
+[0-0] 10:23:35 [[32minfo[39m]: [API] Create user: stewartnikolaus69
+[0-0] 10:23:36 [[32minfo[39m]: [API] User stewartnikolaus69 created.
 [0-0] PASSED in chrome - file:///ui/test/Conduit_tests/signInConduitTest.js
 [0-1] RUNNING in chrome - file:///ui/test/Conduit_tests/signUpConduitTest.js
-[0-1] 22:25:41 [[32minfo[39m]: Generated user data for registration: {
-[0-1]   "username": "donatoreinger",
-[0-1]   "email": "bradford78@yahoo.com",
-[0-1]   "password": "Ls6YhJEKodrWNQc"
+[0-1] 10:23:50 [[32minfo[39m]: Generated user data for registration: {
+[0-1]   "username": "orlandobauch",
+[0-1]   "email": "nola.borer86@yahoo.com",
+[0-1]   "password": "DuGKXcDPYYLPOdL"
 [0-1] }
 [0-1] PASSED in chrome - file:///ui/test/Conduit_tests/signUpConduitTest.js
 
  "spec" Reporter:
 ------------------------------------------------------------------
 [chrome 142.0.7444.60 mac #0-0] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-0] Session ID: 302de7805ab8bf88da1622b71358aea4
+[chrome 142.0.7444.60 mac #0-0] Session ID: f0b773429730ecc8b5716459f3d0fa6c
 [chrome 142.0.7444.60 mac #0-0]
 [chrome 142.0.7444.60 mac #0-0] » /ui/test/Conduit_tests/signInConduitTest.js
 [chrome 142.0.7444.60 mac #0-0] Sign in Conduit
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should login user
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm navigation bar in header is visible as for logged out user
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should navigate to Sign In page
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should sign in existing user
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm user is redirected to Home page after sign in
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm navigation bar in header is visible as for logged in user
 [chrome 142.0.7444.60 mac #0-0]
-[chrome 142.0.7444.60 mac #0-0] 1 passing (1m 20.2s)
+[chrome 142.0.7444.60 mac #0-0] 5 passing (10.6s)
 ------------------------------------------------------------------
 [chrome 142.0.7444.60 mac #0-1] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-1] Session ID: 6099a39e0f318efa9c68ea1ffb40d64b
+[chrome 142.0.7444.60 mac #0-1] Session ID: 1e7a8c3c84134f83006cedaaf420b312
 [chrome 142.0.7444.60 mac #0-1]
 [chrome 142.0.7444.60 mac #0-1] » /ui/test/Conduit_tests/signUpConduitTest.js
 [chrome 142.0.7444.60 mac #0-1] Sign up Conduit
-[chrome 142.0.7444.60 mac #0-1]    ✓ Should register user
+[chrome 142.0.7444.60 mac #0-1]    ✓ Should confirm navigation bar in header is visible as for logged out user
+[chrome 142.0.7444.60 mac #0-1]    ✓ Should navigate to Registration page
+[chrome 142.0.7444.60 mac #0-1]    ✓ Should register new user
+[chrome 142.0.7444.60 mac #0-1]    ✓ Should confirm user is redirected to Home page after registration
+[chrome 142.0.7444.60 mac #0-1]    ✓ Should confirm navigation bar in header is visible as for logged in user
 [chrome 142.0.7444.60 mac #0-1]
-[chrome 142.0.7444.60 mac #0-1] 1 passing (9.9s)
+[chrome 142.0.7444.60 mac #0-1] 5 passing (9.9s)
 
 
-Spec Files:	 2 passed, 2 total (100% completed) in 00:01:42  
+Spec Files:	 2 passed, 2 total (100% completed) in 00:00:29  
 

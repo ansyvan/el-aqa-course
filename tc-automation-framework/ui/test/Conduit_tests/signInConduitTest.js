@@ -23,12 +23,23 @@ describe('Sign in Conduit', () => {
         await browserUtils.enableRequestInterceptor();
     });
 
-    it('Should login user', async() => {
+    it('Should confirm navigation bar in header is visible as for logged out user', async() => {
         await HomePage.confirmNavigationForLoggedOutUser();
-        await HomePage.navigateToSignInPage();
+    });
 
+    it('Should navigate to Sign In page', async() => {
+        await HomePage.navigateToSignInPage();
+    });
+
+    it('Should sign in existing user', async() => {
         await SignInPage.loginUser(user.email, user.password);
+    });
+
+    it('Should confirm user is redirected to Home page after sign in', async() => {
         await HomePage.isOpened();
+    });
+
+    it('Should confirm navigation bar in header is visible as for logged in user', async() => {
         await HomePage.confirmNavigationForLoggedInUser(user.username);
     });
 });

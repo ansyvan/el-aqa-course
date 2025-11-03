@@ -1,0 +1,130 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762156723315' stop='1762156747540'>
+    <name>Sign up Conduit</name>
+    <title>Sign up Conduit</title>
+    <test-cases>
+        <test-case start='1762156724191' status='broken' stop='1762156738266'>
+            <name>Should confirm navigation bar in header is visible as for logged out user</name>
+            <title>Should confirm navigation bar in header is visible as for logged out user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762156738615' status='passed' stop='1762156738615'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='188c7cd0-573e-473d-aadf-a7b679adff93-attachment.png' type='image/png' size='316088'/>
+                <attachment title='Screenshot' source='f736c974-0078-44ec-8cd9-4c9515f17377-attachment.png' type='image/png' size='316088'/>
+            </attachments>
+            <failure>
+                <message>Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error</message>
+                <stack-trace>Error: Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error
+                    at HomePage.waitForElementVisible (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:49:15)
+                    at async HomePage.confirmNavigationForLoggedOutUser (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/HomePage.js:35:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/signUpConduitTest.js:24:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1762156738616' status='passed' stop='1762156738779'>
+            <name>Should navigate to Registration page</name>
+            <title>Should navigate to Registration page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762156738626' status='passed' stop='1762156738626'>
+                    <name>Clicking on element .nav-link[href="/register"]</name>
+                    <title>Clicking on element .nav-link[href="/register"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762156738780' status='passed' stop='1762156738980'>
+            <name>Should register new user</name>
+            <title>Should register new user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762156738953' status='passed' stop='1762156738953'>
+                    <name>Clicking on element button=Sign up</name>
+                    <title>Clicking on element button=Sign up</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762156738980' status='passed' stop='1762156739347'>
+            <name>Should confirm user is redirected to Home page after registration</name>
+            <title>Should confirm user is redirected to Home page after registration</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762156739347' status='passed' stop='1762156747538'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
