@@ -1,0 +1,111 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762161684808' stop='1762161694632'>
+    <name>Sign up Conduit</name>
+    <title>Sign up Conduit</title>
+    <test-cases>
+        <test-case start='1762161685703' status='passed' stop='1762161685736'>
+            <name>Should confirm navigation bar in header is visible as for logged out user</name>
+            <title>Should confirm navigation bar in header is visible as for logged out user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762161685736' status='passed' stop='1762161685910'>
+            <name>Should navigate to Registration page</name>
+            <title>Should navigate to Registration page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762161685745' status='passed' stop='1762161685745'>
+                    <name>Clicking on element .nav-link[href="/register"]</name>
+                    <title>Clicking on element .nav-link[href="/register"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762161685910' status='passed' stop='1762161686114'>
+            <name>Should register new user</name>
+            <title>Should register new user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762161686091' status='passed' stop='1762161686091'>
+                    <name>Clicking on element button=Sign up</name>
+                    <title>Clicking on element button=Sign up</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762161686114' status='passed' stop='1762161686479'>
+            <name>Should confirm user is redirected to Home page after registration</name>
+            <title>Should confirm user is redirected to Home page after registration</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762161686479' status='passed' stop='1762161694631'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

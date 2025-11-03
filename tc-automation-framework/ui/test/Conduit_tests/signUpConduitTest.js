@@ -20,7 +20,7 @@ describe('Sign up Conduit', () => {
         await browserUtils.enableRequestInterceptor();
     });
 
-    it('Should confirm navigation bar in header is visible as for logged out user', async() => {
+    it('Should verify navigation bar in header is visible as for logged out user', async() => {
         await HomePage.confirmNavigationForLoggedOutUser();
     });
 
@@ -32,11 +32,11 @@ describe('Sign up Conduit', () => {
         await RegistrationPage.registerUser(user.username, user.email, user.password);
     });
 
-    it('Should confirm user is redirected to Home page after registration', async() => {
+    it('Should verify user is redirected to Home page after registration', async() => {
         await HomePage.isOpened();
     });
 
-    it('Should confirm navigation bar in header is visible as for logged in user', async() => {
+    it('Should verify navigation bar in header is visible as for logged in user', async() => {
         await HomePage.confirmNavigationForLoggedInUser(user.username);
     });
 });

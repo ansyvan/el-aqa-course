@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762163367075' stop='1762163379690'>
+    <name>New Article CRUD</name>
+    <title>New Article CRUD</title>
+    <test-cases>
+        <test-case start='1762163370639' status='passed' stop='1762163378827'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762163378828' status='passed' stop='1762163379134'>
+            <name>Should navigate to New Article page</name>
+            <title>Should navigate to New Article page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762163378838' status='passed' stop='1762163378838'>
+                    <name>Clicking on element .nav-link[href="/editor"]</name>
+                    <title>Clicking on element .nav-link[href="/editor"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762163379134' status='broken' stop='1762163379309'>
+            <name>Should create a new article</name>
+            <title>Should create a new article</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762163379313' status='passed' stop='1762163379313'>
+                    <name>Browser requests artifact</name>
+                    <title>Browser requests artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762163379689' status='passed' stop='1762163379689'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Browser requests' source='0bc8ec15-b147-4303-acb5-6e47c35b0166-attachment.txt' type='text/plain' size='792'/>
+                <attachment title='Screenshot' source='b10ca36f-75d4-4d4f-aa4c-a0ffd817cdfb-attachment.png' type='image/png' size='86609'/>
+                <attachment title='Screenshot' source='5da0429f-3a40-4006-b1c3-5ec5f9382175-attachment.png' type='image/png' size='86609'/>
+            </attachments>
+            <failure>
+                <message>invalid element state
+                  (Session info: chrome=142.0.7444.60)</message>
+                <stack-trace>invalid element state: invalid element state
+                  (Session info: chrome=142.0.7444.60)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

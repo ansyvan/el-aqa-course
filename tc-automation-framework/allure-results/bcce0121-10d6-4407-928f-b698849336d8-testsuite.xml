@@ -1,0 +1,121 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762162715363' stop='1762162746321'>
+    <name>New Article CRUD</name>
+    <title>New Article CRUD</title>
+    <test-cases>
+        <test-case start='1762162717476' status='broken' stop='1762162731590'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762162731810' status='passed' stop='1762162731810'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='e8a113f2-9232-4c18-83b1-d99e6127d33c-attachment.png' type='image/png' size='322473'/>
+                <attachment title='Screenshot' source='69e93eac-f982-4422-855f-53b9febef0e6-attachment.png' type='image/png' size='322473'/>
+            </attachments>
+            <failure>
+                <message>Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error</message>
+                <stack-trace>Error: Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error
+                    at HomePage.waitForElementVisible (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:49:15)
+                    at async HomePage.confirmNavigationForLoggedInUser (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/HomePage.js:41:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/newArticleCrudTest.js:32:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1762162731811' status='broken' stop='1762162745846'>
+            <name>Should navigate to New Article page</name>
+            <title>Should navigate to New Article page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762162733839' status='passed' stop='1762162733839'>
+                    <name>Clicking on element .nav-link[href="/editor"]</name>
+                    <title>Clicking on element .nav-link[href="/editor"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762162746186' status='passed' stop='1762162746186'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='edece77c-90d0-49ee-9db8-a2479a38a3f9-attachment.png' type='image/png' size='322473'/>
+                <attachment title='Screenshot' source='7b499bd4-3468-4208-8139-1b2767a05183-attachment.png' type='image/png' size='322473'/>
+            </attachments>
+            <failure>
+                <message>Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error</message>
+                <stack-trace>Error: Element .nav-link[href="/editor"] is not visible
+                        after maximum retries (3), Error message: Error
+                    at HomePage.waitForElementVisible (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:49:15)
+                    at async HomePage.clickOnElement (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/BasePage.js:187:9)
+                    at async HomePage.navigateToNewArticlePage (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/HomePage.js:62:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/newArticleCrudTest.js:36:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1762162746187' status='broken' stop='1762162746188'>
+            <name>Should create a new article</name>
+            <title>Should create a new article</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762162746320' status='passed' stop='1762162746320'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='0d6dcc7d-2826-485f-998a-02d1eec0dfa4-attachment.png' type='image/png' size='322473'/>
+                <attachment title='Screenshot' source='b827aca8-32ff-417e-9097-c4de3536e92f-attachment.png' type='image/png' size='322473'/>
+            </attachments>
+            <failure>
+                <message>NewArticlePage.createNewArticle is not a function</message>
+                <stack-trace>TypeError: NewArticlePage.createNewArticle is not a function
+                    at Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/newArticleCrudTest.js:40:30)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

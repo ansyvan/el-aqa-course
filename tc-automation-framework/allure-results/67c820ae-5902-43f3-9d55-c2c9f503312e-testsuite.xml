@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762195860482' stop='1762195873238'>
+    <name>New Article CRUD</name>
+    <title>New Article CRUD</title>
+    <test-cases>
+        <test-case start='1762195862492' status='passed' stop='1762195870687'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762195870688' status='passed' stop='1762195870879'>
+            <name>Should navigate to New Article page</name>
+            <title>Should navigate to New Article page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762195870706' status='passed' stop='1762195870706'>
+                    <name>Clicking on element .nav-link[href="/editor"]</name>
+                    <title>Clicking on element .nav-link[href="/editor"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762195870879' status='broken' stop='1762195873112'>
+            <name>Should create a new article</name>
+            <title>Should create a new article</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762195873115' status='passed' stop='1762195873115'>
+                    <name>Browser requests artifact</name>
+                    <title>Browser requests artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762195873237' status='passed' stop='1762195873237'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Browser requests' source='58541839-9021-48cf-abe3-ccd7fc653f93-attachment.txt' type='text/plain' size='803'/>
+                <attachment title='Screenshot' source='87ba94ba-666e-48cf-aa58-bfc3fcfde119-attachment.png' type='image/png' size='108782'/>
+                <attachment title='Screenshot' source='6d1eddc6-3fbd-4386-94c8-d090ce70bd1d-attachment.png' type='image/png' size='108782'/>
+            </attachments>
+            <failure>
+                <message>The setValue/addValue command only take string or number values. If you like to use special characters, use the "keys" command.</message>
+                <stack-trace>Error: The setValue/addValue command only take string or number values. If you like to use special characters, use the "keys" command.
+                    at async NewArticlePage.addNewArticle (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/pages/ConduitApp/NewArticlePage.js:23:9)
+                    at async Context.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/ui/test/Conduit_tests/newArticleCrudTest.js:40:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,196 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762199456445' stop='1762199467903'>
+    <name>New Article CRUD</name>
+    <title>New Article CRUD</title>
+    <test-cases>
+        <test-case start='1762199458582' status='passed' stop='1762199466744'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199466745' status='passed' stop='1762199466953'>
+            <name>Should navigate to New Article page</name>
+            <title>Should navigate to New Article page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762199466760' status='passed' stop='1762199466760'>
+                    <name>Clicking on element .nav-link[href="/editor"]</name>
+                    <title>Clicking on element .nav-link[href="/editor"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199466953' status='passed' stop='1762199467323'>
+            <name>Should create a new article</name>
+            <title>Should create a new article</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762199467301' status='passed' stop='1762199467301'>
+                    <name>Clicking on element [data-qa-id="editor-publish"]</name>
+                    <title>Clicking on element [data-qa-id="editor-publish"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199467323' status='passed' stop='1762199467739'>
+            <name>Should confirm the created article page is opened</name>
+            <title>Should confirm the created article page is opened</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199467739' status='passed' stop='1762199467753'>
+            <name>Should verify the created article title</name>
+            <title>Should verify the created article title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199467753' status='passed' stop='1762199467762'>
+            <name>Should verify the created article body</name>
+            <title>Should verify the created article body</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199467762' status='passed' stop='1762199467771'>
+            <name>Should verify the created article author</name>
+            <title>Should verify the created article author</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762199467771' status='failed' stop='1762199467790'>
+            <name>Should verify the created article tags</name>
+            <title>Should verify the created article tags</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1014'/>
+            </parameters>
+            <steps>
+                <step start='1762199467795' status='passed' stop='1762199467795'>
+                    <name>Browser requests artifact</name>
+                    <title>Browser requests artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762199467902' status='passed' stop='1762199467902'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Browser requests' source='ce8a2c94-2738-4264-8c7c-9e100f6bb112-attachment.txt' type='text/plain' size='4450'/>
+                <attachment title='Screenshot' source='422195a8-e600-4099-9867-a151c4fb48d9-attachment.png' type='image/png' size='137164'/>
+                <attachment title='Screenshot' source='893721b4-299b-4541-b869-1a8d946edbc0-attachment.png' type='image/png' size='137164'/>
+            </attachments>
+            <failure>
+                <message>expected undefined to be an array</message>
+                <stack-trace>AssertionError: expected undefined to be an array
+                    at Proxy.an (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai/lib/chai/core/assertions.js:307:10)
+                    at doAsserterAsyncAndAddThen (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai-as-promised/lib/chai-as-promised.js:340:16)
+                    at Proxy.&lt;anonymous> (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai-as-promised/lib/chai-as-promised.js:316:20)
+                    at Proxy.overwritingChainableMethodWrapper (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai/lib/chai/utils/overwriteChainableMethod.js:60:34)
+                    at Proxy.chainableMethodWrapper (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai/lib/chai/utils/addChainableMethod.js:113:49)
+                    at Proxy.&lt;anonymous> (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai/lib/chai/core/assertions.js:3094:54)
+                    at Proxy.methodWrapper (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+                    at doAsserterAsyncAndAddThen (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai-as-promised/lib/chai-as-promised.js:340:16)
+                    at Proxy.&lt;anonymous> (file:///Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai-as-promised/lib/chai-as-promised.js:294:18)
+                    at Proxy.overwritingMethodWrapper (/Users/asyvanych/Documents/GitHub/el-aqa-course/tc-automation-framework/node_modules/chai/lib/chai/utils/overwriteMethod.js:78:33)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

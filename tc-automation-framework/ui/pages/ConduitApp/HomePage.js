@@ -3,6 +3,7 @@ const testConfig = require('../../../config/test-config');
 const BasePage = require('../BasePage');
 const RegistrationPage = require('./RegistrationPage');
 const SignInPage = require('./SignInPage');
+const NewArticlePage = require('./NewArticlePage');
 
 class HomePage extends BasePage {
 
@@ -55,6 +56,12 @@ class HomePage extends BasePage {
         await this.clickOnElement(this.signInButton);
         await this.waitForElementVisible(SignInPage.root);
         return SignInPage;
+    }
+
+    async navigateToNewArticlePage() {
+        await this.clickOnElement(this.newArticleButton);
+        await this.waitForElementVisible(NewArticlePage.root);
+        return NewArticlePage;
     }
 }
 

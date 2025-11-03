@@ -1,51 +1,39 @@
 
-Execution of 2 workers started at 2025-11-03T08:23:31.145Z
+Execution of 1 workers started at 2025-11-03T20:14:13.878Z
 
-[0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/signInConduitTest.js
-[0-0] 10:23:35 [[32minfo[39m]: Generated user data for login: {
-[0-0]   "username": "stewartnikolaus69",
-[0-0]   "email": "olga.braun68@yahoo.com",
-[0-0]   "password": "NqeWFWxMS6wmXou"
+[0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
+[0-0] 22:14:18 [[32minfo[39m]: Generated user data for login: {
+[0-0]   "username": "itzel15",
+[0-0]   "email": "consuelo_greenholt@gmail.com",
+[0-0]   "password": "VSVuUsznwQkhpDV"
 [0-0] }
-[0-0] 10:23:35 [[32minfo[39m]: [API] Create user: stewartnikolaus69
-[0-0] 10:23:36 [[32minfo[39m]: [API] User stewartnikolaus69 created.
-[0-0] PASSED in chrome - file:///ui/test/Conduit_tests/signInConduitTest.js
-[0-1] RUNNING in chrome - file:///ui/test/Conduit_tests/signUpConduitTest.js
-[0-1] 10:23:50 [[32minfo[39m]: Generated user data for registration: {
-[0-1]   "username": "orlandobauch",
-[0-1]   "email": "nola.borer86@yahoo.com",
-[0-1]   "password": "DuGKXcDPYYLPOdL"
-[0-1] }
-[0-1] PASSED in chrome - file:///ui/test/Conduit_tests/signUpConduitTest.js
+[0-0] 22:14:18 [[32minfo[39m]: [API] Create user: itzel15
+[0-0] 22:14:18 [[32minfo[39m]: [API] User itzel15 created.
+[0-0] 22:14:18 [[32minfo[39m]: [API] Login user with email: consuelo_greenholt@gmail.com
+[0-0] 22:14:18 [[32minfo[39m]: [API] User with email consuelo_greenholt@gmail.com logged in.
+[0-0] 22:14:29 [[32minfo[39m]: Article created with slug: automation-article-title-nwrbys
+[0-0] 22:14:29 [[32minfo[39m]: [API] Deleting article: automation-article-title-nwrbys
+[0-0] 22:14:29 [[32minfo[39m]: [API] Article automation-article-title-nwrbys deleted.
+[0-0] PASSED in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
 
  "spec" Reporter:
 ------------------------------------------------------------------
 [chrome 142.0.7444.60 mac #0-0] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-0] Session ID: f0b773429730ecc8b5716459f3d0fa6c
+[chrome 142.0.7444.60 mac #0-0] Session ID: d174ce41d0d54e3415ac8affac11df97
 [chrome 142.0.7444.60 mac #0-0]
-[chrome 142.0.7444.60 mac #0-0] » /ui/test/Conduit_tests/signInConduitTest.js
-[chrome 142.0.7444.60 mac #0-0] Sign in Conduit
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm navigation bar in header is visible as for logged out user
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should navigate to Sign In page
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should sign in existing user
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm user is redirected to Home page after sign in
+[chrome 142.0.7444.60 mac #0-0] » /ui/test/Conduit_tests/newArticleCrudTest.js
+[chrome 142.0.7444.60 mac #0-0] New Article CRUD
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm navigation bar in header is visible as for logged in user
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should navigate to New Article page
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should create a new article
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm the created article page is opened
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article title
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article body
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article author
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article tags
 [chrome 142.0.7444.60 mac #0-0]
-[chrome 142.0.7444.60 mac #0-0] 5 passing (10.6s)
-------------------------------------------------------------------
-[chrome 142.0.7444.60 mac #0-1] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-1] Session ID: 1e7a8c3c84134f83006cedaaf420b312
-[chrome 142.0.7444.60 mac #0-1]
-[chrome 142.0.7444.60 mac #0-1] » /ui/test/Conduit_tests/signUpConduitTest.js
-[chrome 142.0.7444.60 mac #0-1] Sign up Conduit
-[chrome 142.0.7444.60 mac #0-1]    ✓ Should confirm navigation bar in header is visible as for logged out user
-[chrome 142.0.7444.60 mac #0-1]    ✓ Should navigate to Registration page
-[chrome 142.0.7444.60 mac #0-1]    ✓ Should register new user
-[chrome 142.0.7444.60 mac #0-1]    ✓ Should confirm user is redirected to Home page after registration
-[chrome 142.0.7444.60 mac #0-1]    ✓ Should confirm navigation bar in header is visible as for logged in user
-[chrome 142.0.7444.60 mac #0-1]
-[chrome 142.0.7444.60 mac #0-1] 5 passing (9.9s)
+[chrome 142.0.7444.60 mac #0-0] 8 passing (11.4s)
 
 
-Spec Files:	 2 passed, 2 total (100% completed) in 00:00:29  
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:15  
 

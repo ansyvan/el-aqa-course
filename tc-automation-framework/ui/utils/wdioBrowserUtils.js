@@ -1,5 +1,3 @@
-const log = require('../../api/utils/test-logger.js');
-
 class WdioBrowserUtils {
 
     static getCurrentUrl() {
@@ -9,6 +7,13 @@ class WdioBrowserUtils {
 
     static addCookie({cookieName, value} = {}) {
         return browser.setCookies({name: cookieName, value: encodeURIComponent(value)});
+    }
+
+    static async setAuthTokenInLocalStorage(token) {
+        log.debug('Setting auth token in local storage');
+        await browser.execute(function(authToken) {
+            window.localStorage.setItem('id_token', authToken);
+        }, token);
     }
 
     static refreshPage() {

@@ -15,14 +15,55 @@ async function createUser(user) {
         return response.data;
     } catch (err) {
         if (err.response) {
-            log.info('error', 'Failed to create user (Server error):', err.response.data);
+            log.error('Failed to create user (Server error):', err.response.data);
         } else {
-            log.info('error', 'Failed to create user (No response from Server):', err.message);
+            log.error('Failed to create user (No response from Server):', err.message);
         }
         throw new Error('Failed to create user beforehand');
     }
 }
 
+async function loginUser(email, password) {
+    log.info(`[API] Login user with email: ${email}`);
+    try {
+        const response = await axios.post(`${API_URL}/users/login`, {
+            user: {
+                email: email,
+                password: password
+            }
+        });
+        log.info(`[API] User with email ${email} logged in.`);
+        return response.data;
+    } catch (err) {
+        if (err.response) {
+            log.error('Failed to login user (Server error):', err.response.data);
+        } else {
+            log.error('Failed to login user (No response from Server):', err.message);
+        }
+        throw new Error('Failed to login user beforehand');
+    }
+}
+
+async function deleteArticle(slug, token) {
+    if (!slug || !token) {
+        log.warn('[API] Failed to delete article: missing slug or token.');
+        return;
+    }
+    log.info(`[API] Deleting article: ${slug}`);
+    try {
+        await axios.delete(`${API_URL}/articles/${slug}`, {
+            headers: {
+                'Authorization': `Token ${token}`
+            }
+        });
+        log.info(`[API] Article ${slug} deleted.`);
+    } catch (err) {
+        log.error(`[API] Failed to delete article ${slug}:`, err.response ? err.response.data : err.message);
+    }
+}
+
 module.exports = {
-    createUser
+    createUser,
+    loginUser,
+    deleteArticle
 };

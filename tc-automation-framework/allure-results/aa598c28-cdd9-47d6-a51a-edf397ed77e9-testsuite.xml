@@ -1,0 +1,109 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762164151352' stop='1762164162058'>
+    <name>New Article CRUD</name>
+    <title>New Article CRUD</title>
+    <test-cases>
+        <test-case start='1762164153293' status='passed' stop='1762164161454'>
+            <name>Should confirm navigation bar in header is visible as for logged in user</name>
+            <title>Should confirm navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762164161455' status='passed' stop='1762164161635'>
+            <name>Should navigate to New Article page</name>
+            <title>Should navigate to New Article page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762164161474' status='passed' stop='1762164161474'>
+                    <name>Clicking on element .nav-link[href="/editor"]</name>
+                    <title>Clicking on element .nav-link[href="/editor"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762164161636' status='broken' stop='1762164161888'>
+            <name>Should create a new article</name>
+            <title>Should create a new article</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762164161642' status='passed' stop='1762164161642'>
+                    <name>Clicking on element [data-qa-id="editor-title"]</name>
+                    <title>Clicking on element [data-qa-id="editor-title"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762164161768' status='passed' stop='1762164161768'>
+                    <name>Clicking on element [data-qa-id="editor-description"]</name>
+                    <title>Clicking on element [data-qa-id="editor-description"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762164161828' status='passed' stop='1762164161828'>
+                    <name>Clicking on element [data-qa-id="editor-body"]</name>
+                    <title>Clicking on element [data-qa-id="editor-body"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762164161892' status='passed' stop='1762164161892'>
+                    <name>Browser requests artifact</name>
+                    <title>Browser requests artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1762164162058' status='passed' stop='1762164162058'>
+                    <name>Screenshot artifact</name>
+                    <title>Screenshot artifact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Browser requests' source='2c2145f9-077b-448f-a5cc-e0cd197ea267-attachment.txt' type='text/plain' size='775'/>
+                <attachment title='Screenshot' source='e9d7ff57-9930-405d-9cb4-7d119ee2440d-attachment.png' type='image/png' size='89700'/>
+                <attachment title='Screenshot' source='49f5c8b3-f42b-496f-96ba-7f36bb76a5ac-attachment.png' type='image/png' size='89700'/>
+            </attachments>
+            <failure>
+                <message>invalid element state
+                  (Session info: chrome=142.0.7444.60)</message>
+                <stack-trace>invalid element state: invalid element state
+                  (Session info: chrome=142.0.7444.60)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
