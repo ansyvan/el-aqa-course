@@ -41,9 +41,10 @@ exports.config = {
         inlineDiffs: true
     },
     capabilities:
-        testConfig.BROWSER_NAME === 'firefox'
-            ? [capabilities.firefox]
-            : [capabilities.chrome],
+        [
+            capabilities.chrome,
+            capabilities.firefox
+        ],
     baseUrl: testConfig.UI_BASE_URL,
     logLevel:  testConfig.LOG_LEVEL,
     specs: [
@@ -64,7 +65,6 @@ exports.config = {
     ],
     services: [
         'intercept',
-        // testConfig.BROWSER_NAME === 'firefox' ? 'geckodriver' : 'chromedriver',
         ['image-comparison',
             {
                 baselineFolder: path.join(__dirname, '../data/TestsImages/ImagesOrigin'),

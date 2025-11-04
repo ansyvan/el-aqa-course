@@ -1,6 +1,7 @@
 node_modules/
 allure-results/
 report.json
+test-logs.log
 
 .env
 .vscode/

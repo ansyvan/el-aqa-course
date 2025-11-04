@@ -4,6 +4,7 @@ const BasePage = require('../BasePage');
 const RegistrationPage = require('./RegistrationPage');
 const SignInPage = require('./SignInPage');
 const NewArticlePage = require('./NewArticlePage');
+const ArticlePage = require('./ArticlePage');
 
 class HomePage extends BasePage {
 
@@ -19,11 +20,10 @@ class HomePage extends BasePage {
     get tableOfContents() { return $('.container.page'); }
     get feedTabs() {return this.tableOfContents.$('[data-qa-id="feed-tabs"]'); }
     get globalFeedTab() { return this.feedTabs.$('.nav-link[href="/"]'); }
-    get yourFeedTab() { return this.feedTabs.$('.nav-link[href="/my-feed"]'); }
     get articleList() { return $('[data-qa-type="article-list"]'); }
     get articlePreviews() { return $$('[data-qa-type="article-preview"]'); }
-    readMoreButton(articleTitle) {
-        return this.articleList.$(`h1[data-qa-type="preview-title"]=${articleTitle}`).parentElement();
+    articleItem(articleTitle) {
+        return $(`//h1[@data-qa-type="preview-title" and normalize-space(text())="${articleTitle.trim()}"]`);
     }
 
     constructor() {
@@ -102,8 +102,10 @@ class HomePage extends BasePage {
         return false;
     }
 
-    async clickReadMoreButton(articleTitle) {
-        await this.clickOnElement(this.readMoreButton(articleTitle));
+    async clickArticleToReadMore(articleTitle) {
+        await this.clickOnElement(this.articleItem(articleTitle));
+        await this.waitForElementVisible(ArticlePage.root);
+        return ArticlePage;
     }
 }
 

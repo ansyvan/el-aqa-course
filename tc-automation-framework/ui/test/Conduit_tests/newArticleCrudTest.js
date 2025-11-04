@@ -101,12 +101,12 @@ describe('New Article CRUD', () => {
         expect(isVisible).to.be.true;
     });
 
-    it('Should navigate to the created article via "Read more" button', async() => {
-        await HomePage.clickReadMoreButton(article.title);
+    it('Should navigate to the created article page', async() => {
+        await HomePage.clickArticleToReadMore(article.title);
         await ArticlePage.isOpened();
     });
 
-    it('Should navigate to the Article edit mode', async() => {
+    it('Should navigate to the article edit mode', async() => {
         await ArticlePage.navigateToEditArticlePage();
         await NewArticlePage.isOpened();
     });
@@ -151,7 +151,7 @@ describe('New Article CRUD', () => {
     });
 
     it('Should delete the article', async() => {
-        await HomePage.clickReadMoreButton(updatedArticle.title);
+        await HomePage.clickArticleToReadMore(updatedArticle.title);
         await ArticlePage.isOpened();
         await ArticlePage.deleteArticle();
         articleDeleted = true;

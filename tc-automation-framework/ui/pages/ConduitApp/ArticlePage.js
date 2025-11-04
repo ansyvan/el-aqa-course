@@ -1,5 +1,4 @@
 const BasePage = require('../BasePage');
-const HomePage = require('./HomePage');
 const NewArticlePage = require('./NewArticlePage');
 
 class ArticlePage extends BasePage {
@@ -64,8 +63,6 @@ class ArticlePage extends BasePage {
 
     async deleteArticle() {
         await this.clickOnElement(this.deleteArticleButton);
-        await this.waitForElementVisible(HomePage.root);
-        return HomePage;
     }
 }
 
