@@ -13,6 +13,10 @@ class NewArticlePage extends BasePage {
         super();
     }
 
+    async isOpened() {
+        expect(await this.root.isDisplayed()).to.be.true;
+    }
+
     async addNewArticle(title, description, body, tagsArray) {
         await this.articleTitleInput.setValue(title);
         await this.articleDescriptionInput.setValue(description);

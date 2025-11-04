@@ -21,11 +21,10 @@ class HomePage extends BasePage {
     get globalFeedTab() { return this.feedTabs.$('.nav-link[href="/"]'); }
     get yourFeedTab() { return this.feedTabs.$('.nav-link[href="/my-feed"]'); }
     get articleList() { return $('[data-qa-type="article-list"]'); }
-    articleItem(index = 0) { return this.articleList.$$('[data-qa-type="article-preview"]')[index]; }
     get articlePreviews() { return $$('[data-qa-type="article-preview"]'); }
-    get articleAuthor() { return $('[data-qa-type="author-name"]'); }
-    get articleTitle() { return $('[data-qa-type="preview-title"]'); }
-    get articleDescription() { return $('[data-qa-type="preview-description"]'); }
+    readMoreButton(articleTitle) {
+        return this.articleList.$(`h1[data-qa-type="preview-title"]=${articleTitle}`).parentElement();
+    }
 
     constructor() {
         super();
@@ -100,6 +99,10 @@ class HomePage extends BasePage {
                 return expect(true).to.be.true;
             }
         }
+    }
+
+    async clickReadMoreButton(articleTitle) {
+        await this.clickOnElement(this.readMoreButton(articleTitle));
     }
 }
 

@@ -1,4 +1,5 @@
 const BasePage = require('../BasePage');
+const NewArticlePage = require('./NewArticlePage');
 
 class ArticlePage extends BasePage {
 
@@ -7,6 +8,7 @@ class ArticlePage extends BasePage {
     get articleBody() { return $('[data-qa-id="article-body"]'); }
     get articleAuthor() { return $('[data-qa-type="author-name"]'); }
     get articleTags() { return $$('[data-qa-type="article-tag"] a'); }
+    get editArticleButton() { return $$('.ion-edit')[0]; }
 
     constructor() {
         super();
@@ -50,6 +52,12 @@ class ArticlePage extends BasePage {
         }
         expect(actualTags).to.have.members(tagsArray)
             .and.to.have.lengthOf(tagsArray.length);
+    }
+
+    async navigateToEditArticlePage() {
+        await this.clickOnElement(this.editArticleButton);
+        await this.waitForElementVisible(NewArticlePage.root);
+        return NewArticlePage;
     }
 }
 

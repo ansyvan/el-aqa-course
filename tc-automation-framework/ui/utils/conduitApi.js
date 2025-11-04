@@ -49,14 +49,14 @@ async function deleteArticle(slug, token) {
         log.warn('[API] Failed to delete article: missing slug or token.');
         return;
     }
-    log.info(`[API] Deleting article: ${slug}`);
+
     try {
         await axios.delete(`${API_URL}/articles/${slug}`, {
             headers: {
                 'Authorization': `Token ${token}`
             }
         });
-        log.info(`[API] Article ${slug} deleted.`);
+        log.info(`[API] Deleted article with slug: ${slug}.`);
     } catch (err) {
         log.error(`[API] Failed to delete article ${slug}:`, err.response ? err.response.data : err.message);
     }

@@ -60,6 +60,12 @@ class WdioBrowserUtils {
     static enableRequestInterceptor() {
         return browser.setupInterceptor();
     }
+
+    static async getSlugFromUrl() {
+        log.debug('Getting slug from current URL');
+        const url = await browser.getUrl();
+        return url.split('/articles/').pop().replace(/\/$/, '');
+    }
 }
 
 module.exports = WdioBrowserUtils;

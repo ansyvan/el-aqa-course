@@ -38,6 +38,13 @@ describe('New Article CRUD', () => {
             tags: articleData.tags
         };
         log.info('Generated article data for creation:', article);
+
+        updatedArticle = {
+            title: article.title + ' Updated',
+            description: article.description + ' Updated',
+            body: article.body + '\n\nAdditional content added to the body.',
+            tags: ['updated']
+        };
     });
 
     it('Should verify navigation bar in header is visible as for logged in user', async() => {
@@ -59,8 +66,7 @@ describe('New Article CRUD', () => {
 
     it('Should verify the created article page is opened', async() => {
         await ArticlePage.isOpened();
-        const url = await browser.getUrl();
-        article.slug = url.split('/articles/').pop();
+        article.slug = await browserUtils.getSlugFromUrl();
         log.info(`Article created with slug: ${article.slug}`);
     });
 
@@ -80,11 +86,61 @@ describe('New Article CRUD', () => {
         await ArticlePage.isArticleTagsList(article.tags);
     });
 
-    it('Should verify the article appears in the global feed', async() => {
+    it('Should verify the created article appears in the global feed', async() => {
         await HomePage.openConduitApp();
         await HomePage.isOpened();
         await HomePage.isGlobalFeedTabActive();
-        await HomePage.isArticleInGlobalFeedVisible(user.username, article.title, article.description);
+        await HomePage.isArticleInGlobalFeedVisible(
+            user.username,
+            article.title,
+            article.description
+        );
+    });
+
+    it('Should navigate to the created article via "Read more" button', async() => {
+        await HomePage.clickReadMoreButton(article.title);
+        await ArticlePage.isOpened();
+    });
+
+    it('Should navigate to the Article edit mode', async() => {
+        await ArticlePage.navigateToEditArticlePage();
+        await NewArticlePage.isOpened();
+    });
+
+    it('Should update the article', async() => {
+        await NewArticlePage.addNewArticle(
+            updatedArticle.title,
+            updatedArticle.description,
+            updatedArticle.body,
+            updatedArticle.tags
+        );
+    });
+
+    it('Should verify the updated article page is opened', async() => {
+        await ArticlePage.isOpened();
+    });
+
+    it('Should verify the updated article title', async() => {
+        await ArticlePage.isArticleTitle(updatedArticle.title);
+    });
+
+    it('Should verify the updated article body', async() => {
+        await ArticlePage.isArticleBody(updatedArticle.body);
+    });
+
+    it('Should verify the updated article tags', async() => {
+        await ArticlePage.isArticleTagsList(article.tags.concat(updatedArticle.tags));
+    });
+
+    it('Should verify the updated article appears in the global feed', async() => {
+        await HomePage.openConduitApp();
+        await HomePage.isOpened();
+        await HomePage.isGlobalFeedTabActive();
+        await HomePage.isArticleInGlobalFeedVisible(
+            user.username,
+            updatedArticle.title,
+            updatedArticle.description
+        );
     });
 
     after(async() => {
