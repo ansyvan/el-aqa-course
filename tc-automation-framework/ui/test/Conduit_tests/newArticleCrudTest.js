@@ -9,6 +9,7 @@ const Article = require('../../../data/RequestDataGenerator');
 describe('New Article CRUD', () => {
     let user;
     let article;
+    let articleDeleted = false;
 
     before(async() => {
         const userData = User.generateFakePerson();
@@ -90,11 +91,14 @@ describe('New Article CRUD', () => {
         await HomePage.openConduitApp();
         await HomePage.isOpened();
         await HomePage.isGlobalFeedTabActive();
-        await HomePage.isArticleInGlobalFeedVisible(
+
+        const isVisible = await HomePage.isArticleInGlobalFeedVisible(
             user.username,
             article.title,
             article.description
         );
+
+        expect(isVisible).to.be.true;
     });
 
     it('Should navigate to the created article via "Read more" button', async() => {
@@ -136,16 +140,43 @@ describe('New Article CRUD', () => {
         await HomePage.openConduitApp();
         await HomePage.isOpened();
         await HomePage.isGlobalFeedTabActive();
-        await HomePage.isArticleInGlobalFeedVisible(
+
+        const isVisible = await HomePage.isArticleInGlobalFeedVisible(
             user.username,
             updatedArticle.title,
             updatedArticle.description
         );
+
+        expect(isVisible).to.be.true;
+    });
+
+    it('Should delete the article', async() => {
+        await HomePage.clickReadMoreButton(updatedArticle.title);
+        await ArticlePage.isOpened();
+        await ArticlePage.deleteArticle();
+        articleDeleted = true;
+    });
+
+    it('Should verify the deleted article no longer appears in the global feed', async() => {
+        const isVisible = await HomePage.isArticleInGlobalFeedVisible(
+            user.username,
+            updatedArticle.title,
+            updatedArticle.description
+        );
+
+        expect(isVisible).to.be.false;
     });
 
     after(async() => {
-        if (article.slug && user.token) {
-            await conduitApi.deleteArticle(article.slug, user.token);
+        if (article.slug && user.token && !articleDeleted) {
+            try {
+                await conduitApi.deleteArticle(article.slug, user.token);
+                log.info(`[API] Article ${article.slug} deleted in cleanup.`);
+            } catch (error) {
+                log.warn(`[API] Failed to delete article ${article.slug} in cleanup: ${error.message}`);
+            }
+        } else {
+            log.info('[API] No article deletion needed in cleanup.');
         }
     });
 });

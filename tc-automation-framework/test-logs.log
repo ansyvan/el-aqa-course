@@ -1,35 +1,34 @@
 
-Execution of 1 workers started at 2025-11-04T17:27:48.470Z
+Execution of 1 workers started at 2025-11-04T18:14:30.717Z
 
 [0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
-[0-0] 19:27:54 [[32minfo[39m]: Generated user data for login: {
-[0-0]   "username": "stephan71",
-[0-0]   "email": "dana_hettinger@yahoo.com",
-[0-0]   "password": "VaWdF7nCp6oSUlx"
+[0-0] 20:14:36 [[32minfo[39m]: Generated user data for login: {
+[0-0]   "username": "emmanuelle87",
+[0-0]   "email": "kolby.rutherford29@hotmail.com",
+[0-0]   "password": "tcAuY9GFBaFWryP"
 [0-0] }
-[0-0] 19:27:54 [[32minfo[39m]: [API] Create user: stephan71
-[0-0] 19:27:54 [[32minfo[39m]: [API] User stephan71 created.
-[0-0] 19:27:54 [[32minfo[39m]: [API] Login user with email: dana_hettinger@yahoo.com
-[0-0] 19:27:55 [[32minfo[39m]: [API] User with email dana_hettinger@yahoo.com logged in.
-[0-0] 19:27:56 [[32minfo[39m]: Generated article data for creation: {
-[0-0]   "title": "Ea possimus rerum.",
-[0-0]   "description": "In consectetur dicta ullam provident omnis nam eius doloremque.",
-[0-0]   "body": "Omnis sunt quia suscipit fugiat facere. Iure id voluptas asperiores. Qui itaque quis adipisci temporibus in rem ea.\n \rUt autem dicta. Itaque consequatur autem ut. Harum molestiae quos dolor. Corporis impedit dolores.\n \rLaudantium ducimus unde amet enim reprehenderit quis. Ea quibusdam non est. Odit repellat eius ad aliquam. Eos rem nihil quia quo error porro. At tempora quia qui quia rerum quia. Dolorem rerum sunt aut dolor et enim.",
+[0-0] 20:14:36 [[32minfo[39m]: [API] Create user: emmanuelle87
+[0-0] 20:14:36 [[32minfo[39m]: [API] User emmanuelle87 created.
+[0-0] 20:14:36 [[32minfo[39m]: [API] Login user with email: kolby.rutherford29@hotmail.com
+[0-0] 20:14:36 [[32minfo[39m]: [API] User with email kolby.rutherford29@hotmail.com logged in.
+[0-0] 20:14:38 [[32minfo[39m]: Generated article data for creation: {
+[0-0]   "title": "Vitae at quos enim voluptatum voluptatibus doloremque ex ex.",
+[0-0]   "description": "Aliquid non ipsa mollitia totam asperiores quidem voluptas.",
+[0-0]   "body": "Est in et. Omnis tempore praesentium eos esse quia aut hic quasi at. Quo fugiat molestiae quam. Necessitatibus corporis placeat nulla et id atque. Dolorem quidem quisquam laboriosam aperiam sint qui.\n \rTempore sit minus ut impedit est. Totam omnis natus nam. Perspiciatis magnam quis commodi illum cupiditate. Labore ratione aliquid sunt aliquam cum.\n \rQui quidem fugiat expedita nihil sequi qui ut. Voluptate quia enim dicta voluptas neque molestias. Vel occaecati doloribus occaecati ut voluptatum provident consequatur et officiis. Quia non et perspiciatis quos eum veniam rem. Voluptatibus sit doloremque porro itaque maxime hic odit unde.",
 [0-0]   "tags": [
-[0-0]     "quas",
-[0-0]     "voluptatem",
-[0-0]     "est"
+[0-0]     "iusto",
+[0-0]     "aut",
+[0-0]     "hic"
 [0-0]   ]
 [0-0] }
-[0-0] 19:28:05 [[32minfo[39m]: Article created with slug: ea-possimus-rerum-p7grs4
-[0-0] 19:28:07 [[32minfo[39m]: Article updated with slug: ea-possimus-rerum-p7grs4
-[0-0] 19:28:07 [[32minfo[39m]: [API] Deleted article with slug: ea-possimus-rerum-p7grs4.
+[0-0] 20:14:47 [[32minfo[39m]: Article created with slug: vitae-at-quos-enim-voluptatum-voluptatibus-doloremque-ex-ex-7k4the
+[0-0] 20:14:50 [[32minfo[39m]: [API] No article deletion needed in cleanup.
 [0-0] PASSED in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
 
  "spec" Reporter:
 ------------------------------------------------------------------
 [chrome 142.0.7444.60 mac #0-0] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-0] Session ID: e6df711b59b2e8d45999d17489a4dc17
+[chrome 142.0.7444.60 mac #0-0] Session ID: 834fc1004e2388e27883fd1b029da0ef
 [chrome 142.0.7444.60 mac #0-0]
 [chrome 142.0.7444.60 mac #0-0] » /ui/test/Conduit_tests/newArticleCrudTest.js
 [chrome 142.0.7444.60 mac #0-0] New Article CRUD
@@ -50,8 +49,10 @@ Execution of 1 workers started at 2025-11-04T17:27:48.470Z
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the updated article body
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the updated article tags
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the updated article appears in the global feed
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should delete the article
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the deleted article no longer appears in the global feed
 [chrome 142.0.7444.60 mac #0-0]
-[chrome 142.0.7444.60 mac #0-0] 17 passing (13.6s)
+[chrome 142.0.7444.60 mac #0-0] 19 passing (13.9s)
 
 
 Spec Files:	 1 passed, 1 total (100% completed) in 00:00:19  

@@ -1,4 +1,5 @@
 const BasePage = require('../BasePage');
+const HomePage = require('./HomePage');
 const NewArticlePage = require('./NewArticlePage');
 
 class ArticlePage extends BasePage {
@@ -9,6 +10,7 @@ class ArticlePage extends BasePage {
     get articleAuthor() { return $('[data-qa-type="author-name"]'); }
     get articleTags() { return $$('[data-qa-type="article-tag"] a'); }
     get editArticleButton() { return $$('.ion-edit')[0]; }
+    get deleteArticleButton() { return $$('[data-qa-id="article-delete"]')[0]; }
 
     constructor() {
         super();
@@ -58,6 +60,12 @@ class ArticlePage extends BasePage {
         await this.clickOnElement(this.editArticleButton);
         await this.waitForElementVisible(NewArticlePage.root);
         return NewArticlePage;
+    }
+
+    async deleteArticle() {
+        await this.clickOnElement(this.deleteArticleButton);
+        await this.waitForElementVisible(HomePage.root);
+        return HomePage;
     }
 }
 

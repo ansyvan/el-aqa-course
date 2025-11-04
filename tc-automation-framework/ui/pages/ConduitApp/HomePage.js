@@ -86,7 +86,6 @@ class HomePage extends BasePage {
 
     async isArticleInGlobalFeedVisible(articleAuthor, articleTitle, articleDescription) {
         const articles = await this.articlePreviews;
-        expect(articles).to.have.lengthOf.at.least(1);
 
         for (const article of articles) {
             const [author, title, description] = await this.getArticleData(article);
@@ -96,9 +95,11 @@ class HomePage extends BasePage {
                 title === articleTitle &&
                 description === articleDescription
             ) {
-                return expect(true).to.be.true;
+                return true;
             }
         }
+
+        return false;
     }
 
     async clickReadMoreButton(articleTitle) {
