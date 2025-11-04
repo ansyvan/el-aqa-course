@@ -1,5 +1,6 @@
 node_modules/
 allure-results/
+report.json
 
 .env
 .vscode/
