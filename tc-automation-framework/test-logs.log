@@ -1,35 +1,35 @@
 
-Execution of 1 workers started at 2025-11-04T06:21:18.199Z
+Execution of 1 workers started at 2025-11-04T10:33:43.351Z
 
 [0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
-[0-0] 08:21:23 [[32minfo[39m]: Generated user data for login: {
-[0-0]   "username": "margaretta27",
-[0-0]   "email": "antwan_schinner@gmail.com",
-[0-0]   "password": "XC_hOc7DgQ_IyUH"
+[0-0] 12:33:48 [[32minfo[39m]: Generated user data for login: {
+[0-0]   "username": "trenton80",
+[0-0]   "email": "elijah18@yahoo.com",
+[0-0]   "password": "8f8PprvWNH0dt2j"
 [0-0] }
-[0-0] 08:21:23 [[32minfo[39m]: [API] Create user: margaretta27
-[0-0] 08:21:24 [[32minfo[39m]: [API] User margaretta27 created.
-[0-0] 08:21:24 [[32minfo[39m]: [API] Login user with email: antwan_schinner@gmail.com
-[0-0] 08:21:24 [[32minfo[39m]: [API] User with email antwan_schinner@gmail.com logged in.
-[0-0] 08:21:28 [[32minfo[39m]: Generated article data for creation: {
-[0-0]   "title": "Repellendus qui rerum natus quia accusantium consequatur et.",
-[0-0]   "description": "Iusto fugit alias voluptas voluptate fugiat modi.",
-[0-0]   "body": "Totam in cupiditate quam voluptatibus voluptas cum pariatur dolores. Ut optio odit omnis. Inventore necessitatibus nam. Sequi quis voluptatibus. Sunt rerum quo veritatis totam.\n \rUt et ea voluptatem quia architecto omnis sit minima. Consequatur officia saepe magnam minus et eligendi itaque dolor. Et vero consequatur maxime est repellendus impedit inventore ex quo. Sed cumque ipsa. Quod accusamus molestias.\n \rAutem est ut totam. Debitis sapiente quo ratione et qui sed ducimus molestias exercitationem. Distinctio vel facilis aliquid omnis eum. Reiciendis delectus totam expedita cupiditate natus dicta. Dignissimos velit debitis perspiciatis sed cumque itaque vel laudantium. Inventore et vitae aut.",
+[0-0] 12:33:48 [[32minfo[39m]: [API] Create user: trenton80
+[0-0] 12:33:49 [[32minfo[39m]: [API] User trenton80 created.
+[0-0] 12:33:49 [[32minfo[39m]: [API] Login user with email: elijah18@yahoo.com
+[0-0] 12:33:49 [[32minfo[39m]: [API] User with email elijah18@yahoo.com logged in.
+[0-0] 12:33:51 [[32minfo[39m]: Generated article data for creation: {
+[0-0]   "title": "Et aliquid a.",
+[0-0]   "description": "Quia commodi ullam amet.",
+[0-0]   "body": "Cum commodi error omnis quam rerum reprehenderit ipsum debitis quaerat. Modi veniam minus. Culpa delectus magni sit mollitia voluptas. Dolores sunt itaque molestiae dolores itaque veritatis. Iste enim recusandae dolor culpa aspernatur.\n \rEst rem cum. Porro ut nisi sed in porro. Ea animi exercitationem voluptatum provident et pariatur eius.\n \rSed aut magnam consequatur. Eos et molestiae sunt deleniti velit provident quaerat architecto. Quia possimus dolorem consequatur consequuntur cum. Eligendi similique amet aut aut optio. Labore accusamus reprehenderit deleniti nam itaque qui consectetur qui. Voluptas itaque ipsa placeat atque blanditiis.",
 [0-0]   "tags": [
-[0-0]     "molestiae",
 [0-0]     "et",
-[0-0]     "maiores"
+[0-0]     "labore",
+[0-0]     "praesentium"
 [0-0]   ]
 [0-0] }
-[0-0] 08:21:37 [[32minfo[39m]: Article created with slug: repellendus-qui-rerum-natus-quia-accusantium-consequatur-et-rmbsjq
-[0-0] 08:21:37 [[32minfo[39m]: [API] Deleting article: repellendus-qui-rerum-natus-quia-accusantium-consequatur-et-rmbsjq
-[0-0] 08:21:38 [[32minfo[39m]: [API] Article repellendus-qui-rerum-natus-quia-accusantium-consequatur-et-rmbsjq deleted.
+[0-0] 12:34:01 [[32minfo[39m]: Article created with slug: et-aliquid-a-ci49eq
+[0-0] 12:34:01 [[32minfo[39m]: [API] Deleting article: et-aliquid-a-ci49eq
+[0-0] 12:34:02 [[32minfo[39m]: [API] Article et-aliquid-a-ci49eq deleted.
 [0-0] PASSED in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
 
  "spec" Reporter:
 ------------------------------------------------------------------
 [chrome 142.0.7444.60 mac #0-0] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-0] Session ID: b6f3d0f2fa921a73ed9b1d65332fadea
+[chrome 142.0.7444.60 mac #0-0] Session ID: 960f992de4dee96a417799a9ea08fbf3
 [chrome 142.0.7444.60 mac #0-0]
 [chrome 142.0.7444.60 mac #0-0] » /ui/test/Conduit_tests/newArticleCrudTest.js
 [chrome 142.0.7444.60 mac #0-0] New Article CRUD
@@ -41,9 +41,10 @@ Execution of 1 workers started at 2025-11-04T06:21:18.199Z
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article body
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article author
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article tags
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the article appears in the global feed
 [chrome 142.0.7444.60 mac #0-0]
-[chrome 142.0.7444.60 mac #0-0] 8 passing (14.4s)
+[chrome 142.0.7444.60 mac #0-0] 9 passing (13.4s)
 
 
-Spec Files:	 1 passed, 1 total (100% completed) in 00:00:20  
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:18  
 

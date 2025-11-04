@@ -80,6 +80,13 @@ describe('New Article CRUD', () => {
         await ArticlePage.isArticleTagsList(article.tags);
     });
 
+    it('Should verify the article appears in the global feed', async() => {
+        await HomePage.openConduitApp();
+        await HomePage.isOpened();
+        await HomePage.isGlobalFeedTabActive();
+        await HomePage.isArticleInGlobalFeedVisible(user.username, article.title, article.description);
+    });
+
     after(async() => {
         if (article.slug && user.token) {
             await conduitApi.deleteArticle(article.slug, user.token);

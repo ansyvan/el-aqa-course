@@ -1,0 +1,190 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1762252428746' stop='1762252442161'>
+    <name>New Article CRUD</name>
+    <title>New Article CRUD</title>
+    <test-cases>
+        <test-case start='1762252431715' status='passed' stop='1762252439930'>
+            <name>Should verify navigation bar in header is visible as for logged in user</name>
+            <title>Should verify navigation bar in header is visible as for logged in user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252439931' status='passed' stop='1762252440120'>
+            <name>Should navigate to New Article page</name>
+            <title>Should navigate to New Article page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762252439949' status='passed' stop='1762252439949'>
+                    <name>Clicking on element .nav-link[href="/editor"]</name>
+                    <title>Clicking on element .nav-link[href="/editor"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252440121' status='passed' stop='1762252440688'>
+            <name>Should create a new article</name>
+            <title>Should create a new article</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762252440667' status='passed' stop='1762252440667'>
+                    <name>Clicking on element [data-qa-id="editor-publish"]</name>
+                    <title>Clicking on element [data-qa-id="editor-publish"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252440688' status='passed' stop='1762252441378'>
+            <name>Should verify the created article page is opened</name>
+            <title>Should verify the created article page is opened</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252441378' status='passed' stop='1762252441395'>
+            <name>Should verify the created article title</name>
+            <title>Should verify the created article title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252441395' status='passed' stop='1762252441406'>
+            <name>Should verify the created article body</name>
+            <title>Should verify the created article body</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252441406' status='passed' stop='1762252441418'>
+            <name>Should verify the created article author</name>
+            <title>Should verify the created article author</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252441418' status='passed' stop='1762252441441'>
+            <name>Should verify the created article tags</name>
+            <title>Should verify the created article tags</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1762252441441' status='passed' stop='1762252441959'>
+            <name>Should verify the article appears in the global feed</name>
+            <title>Should verify the article appears in the global feed</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='story' value='Conduit_tests'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-142.0.7444.60'/>
+                <parameter kind='environment-variable' name='browserName' value='chrome'/>
+                <parameter kind='environment-variable' name='browserVersion' value='142.0.7444.60'/>
+                <parameter kind='environment-variable' name='windowSize' value='1920,1055'/>
+            </parameters>
+            <steps>
+                <step start='1762252441442' status='passed' stop='1762252441442'>
+                    <name>Navigating to https://demo.learnwebdriverio.com/</name>
+                    <title>Navigating to https://demo.learnwebdriverio.com/</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -16,7 +16,16 @@ class HomePage extends BasePage {
     get newArticleButton() {return this.navBar.$('.nav-link[href="/editor"]'); }
     get settingsButton() {return this.navBar.$('.nav-link[href="/settings"]'); }
     userProfileButton(username) {return this.navBar.$(`.nav-link[href^="/@${username}"]`); }
-    get tableOfContents() { return $('.container page'); }
+    get tableOfContents() { return $('.container.page'); }
+    get feedTabs() {return this.tableOfContents.$('[data-qa-id="feed-tabs"]'); }
+    get globalFeedTab() { return this.feedTabs.$('.nav-link[href="/"]'); }
+    get yourFeedTab() { return this.feedTabs.$('.nav-link[href="/my-feed"]'); }
+    get articleList() { return $('[data-qa-type="article-list"]'); }
+    articleItem(index = 0) { return this.articleList.$$('[data-qa-type="article-preview"]')[index]; }
+    get articlePreviews() { return $$('[data-qa-type="article-preview"]'); }
+    get articleAuthor() { return $('[data-qa-type="author-name"]'); }
+    get articleTitle() { return $('[data-qa-type="preview-title"]'); }
+    get articleDescription() { return $('[data-qa-type="preview-description"]'); }
 
     constructor() {
         super();
@@ -62,6 +71,35 @@ class HomePage extends BasePage {
         await this.clickOnElement(this.newArticleButton);
         await this.waitForElementVisible(NewArticlePage.root);
         return NewArticlePage;
+    }
+
+    async isGlobalFeedTabActive() {
+        expect(await this.globalFeedTab.getAttribute('class')).to.include('active');
+    }
+
+    async getArticleData(preview) {
+        return Promise.all([
+            preview.$('[data-qa-type="author-name"]').getText(),
+            preview.$('[data-qa-type="preview-title"]').getText(),
+            preview.$('[data-qa-type="preview-description"]').getText()
+        ]);
+    }
+
+    async isArticleInGlobalFeedVisible(articleAuthor, articleTitle, articleDescription) {
+        const articles = await this.articlePreviews;
+        expect(articles).to.have.lengthOf.at.least(1);
+
+        for (const article of articles) {
+            const [author, title, description] = await this.getArticleData(article);
+            
+            if (
+                author === articleAuthor &&
+                title === articleTitle &&
+                description === articleDescription
+            ) {
+                return expect(true).to.be.true;
+            }
+        }
     }
 }
 
