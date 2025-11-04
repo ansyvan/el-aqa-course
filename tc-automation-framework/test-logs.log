@@ -1,39 +1,49 @@
 
-Execution of 1 workers started at 2025-11-03T20:14:13.878Z
+Execution of 1 workers started at 2025-11-04T06:21:18.199Z
 
 [0-0] RUNNING in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
-[0-0] 22:14:18 [[32minfo[39m]: Generated user data for login: {
-[0-0]   "username": "itzel15",
-[0-0]   "email": "consuelo_greenholt@gmail.com",
-[0-0]   "password": "VSVuUsznwQkhpDV"
+[0-0] 08:21:23 [[32minfo[39m]: Generated user data for login: {
+[0-0]   "username": "margaretta27",
+[0-0]   "email": "antwan_schinner@gmail.com",
+[0-0]   "password": "XC_hOc7DgQ_IyUH"
 [0-0] }
-[0-0] 22:14:18 [[32minfo[39m]: [API] Create user: itzel15
-[0-0] 22:14:18 [[32minfo[39m]: [API] User itzel15 created.
-[0-0] 22:14:18 [[32minfo[39m]: [API] Login user with email: consuelo_greenholt@gmail.com
-[0-0] 22:14:18 [[32minfo[39m]: [API] User with email consuelo_greenholt@gmail.com logged in.
-[0-0] 22:14:29 [[32minfo[39m]: Article created with slug: automation-article-title-nwrbys
-[0-0] 22:14:29 [[32minfo[39m]: [API] Deleting article: automation-article-title-nwrbys
-[0-0] 22:14:29 [[32minfo[39m]: [API] Article automation-article-title-nwrbys deleted.
+[0-0] 08:21:23 [[32minfo[39m]: [API] Create user: margaretta27
+[0-0] 08:21:24 [[32minfo[39m]: [API] User margaretta27 created.
+[0-0] 08:21:24 [[32minfo[39m]: [API] Login user with email: antwan_schinner@gmail.com
+[0-0] 08:21:24 [[32minfo[39m]: [API] User with email antwan_schinner@gmail.com logged in.
+[0-0] 08:21:28 [[32minfo[39m]: Generated article data for creation: {
+[0-0]   "title": "Repellendus qui rerum natus quia accusantium consequatur et.",
+[0-0]   "description": "Iusto fugit alias voluptas voluptate fugiat modi.",
+[0-0]   "body": "Totam in cupiditate quam voluptatibus voluptas cum pariatur dolores. Ut optio odit omnis. Inventore necessitatibus nam. Sequi quis voluptatibus. Sunt rerum quo veritatis totam.\n \rUt et ea voluptatem quia architecto omnis sit minima. Consequatur officia saepe magnam minus et eligendi itaque dolor. Et vero consequatur maxime est repellendus impedit inventore ex quo. Sed cumque ipsa. Quod accusamus molestias.\n \rAutem est ut totam. Debitis sapiente quo ratione et qui sed ducimus molestias exercitationem. Distinctio vel facilis aliquid omnis eum. Reiciendis delectus totam expedita cupiditate natus dicta. Dignissimos velit debitis perspiciatis sed cumque itaque vel laudantium. Inventore et vitae aut.",
+[0-0]   "tags": [
+[0-0]     "molestiae",
+[0-0]     "et",
+[0-0]     "maiores"
+[0-0]   ]
+[0-0] }
+[0-0] 08:21:37 [[32minfo[39m]: Article created with slug: repellendus-qui-rerum-natus-quia-accusantium-consequatur-et-rmbsjq
+[0-0] 08:21:37 [[32minfo[39m]: [API] Deleting article: repellendus-qui-rerum-natus-quia-accusantium-consequatur-et-rmbsjq
+[0-0] 08:21:38 [[32minfo[39m]: [API] Article repellendus-qui-rerum-natus-quia-accusantium-consequatur-et-rmbsjq deleted.
 [0-0] PASSED in chrome - file:///ui/test/Conduit_tests/newArticleCrudTest.js
 
  "spec" Reporter:
 ------------------------------------------------------------------
 [chrome 142.0.7444.60 mac #0-0] Running: chrome (v142.0.7444.60) on mac
-[chrome 142.0.7444.60 mac #0-0] Session ID: d174ce41d0d54e3415ac8affac11df97
+[chrome 142.0.7444.60 mac #0-0] Session ID: b6f3d0f2fa921a73ed9b1d65332fadea
 [chrome 142.0.7444.60 mac #0-0]
 [chrome 142.0.7444.60 mac #0-0] » /ui/test/Conduit_tests/newArticleCrudTest.js
 [chrome 142.0.7444.60 mac #0-0] New Article CRUD
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm navigation bar in header is visible as for logged in user
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify navigation bar in header is visible as for logged in user
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should navigate to New Article page
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should create a new article
-[chrome 142.0.7444.60 mac #0-0]    ✓ Should confirm the created article page is opened
+[chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article page is opened
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article title
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article body
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article author
 [chrome 142.0.7444.60 mac #0-0]    ✓ Should verify the created article tags
 [chrome 142.0.7444.60 mac #0-0]
-[chrome 142.0.7444.60 mac #0-0] 8 passing (11.4s)
+[chrome 142.0.7444.60 mac #0-0] 8 passing (14.4s)
 
 
-Spec Files:	 1 passed, 1 total (100% completed) in 00:00:15  
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:20  
 

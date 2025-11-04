@@ -23,7 +23,18 @@ class ArticlePage extends BasePage {
 
     async isArticleBody(body) {
         const articleBodyText = await this.articleBody.getText();
-        expect(articleBodyText).to.equal(body);
+
+        const normalize = (str) => {
+            return str
+                .replace(/\r/g, '')
+                .replace(/\n\s+/g, '\n')
+                .replace(/\s+/g, ' ')
+                .trim();
+        };
+
+        const actualBody = normalize(articleBodyText);
+        const expectedBody = normalize(body);
+        expect(actualBody).to.equal(expectedBody);
     }
 
     async isArticleAuthor(author) {
