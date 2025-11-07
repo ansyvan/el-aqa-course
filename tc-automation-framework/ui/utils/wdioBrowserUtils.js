@@ -64,6 +64,9 @@ class WdioBrowserUtils {
     static async getSlugFromUrl() {
         log.debug('Getting slug from current URL');
         const url = await browser.getUrl();
+        if (!url.includes('/articles/')) {
+            return null;
+        }
         return url.split('/articles/').pop().replace(/\/$/, '');
     }
 }
