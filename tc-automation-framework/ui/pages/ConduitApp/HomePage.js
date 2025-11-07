@@ -31,7 +31,7 @@ class HomePage extends BasePage {
     }
 
     openConduitApp() {
-        return this.navigateTo(testConfig.CONDUIT_APP_URL, this.homePage);
+        return this.navigateTo(testConfig.CONDUIT_APP_URL, this.root);
     }
 
     async isOpened() {
