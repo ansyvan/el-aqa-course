@@ -1,6 +1,38 @@
+const winston = require('winston');
 const ContentType = require('../../config/test-config').CONTENT_TYPE;
 const allureReporter = require('@wdio/allure-reporter').default;
 const logProcessor = require('./browserLogsProcessor');
+
+const logFormat = winston.format.printf(({ level, message, timestamp, ...metadata }) => {
+    let msg = `${timestamp} [${level}]: ${message}`;
+    
+    if (metadata[Symbol.for('splat')] && metadata[Symbol.for('splat')][0]) {
+        try {
+            if (!(metadata[Symbol.for('splat')][0] instanceof Error)) {
+                msg += ` ${JSON.stringify(metadata[Symbol.for('splat')][0], null, 2)}`;
+            }
+        } catch {
+            // ...
+        }
+    }
+    
+    return msg;
+});
+
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.timestamp({ format: 'HH:mm:ss' }),
+        winston.format.errors({ stack: true }),
+        logFormat
+    ),
+    transports: [
+        new winston.transports.Console()
+    ]
+});
+
+global.log = logger;
 
 global.testReporter = allureReporter;
 beforeEach('', function() {

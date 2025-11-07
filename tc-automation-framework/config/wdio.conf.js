@@ -41,9 +41,10 @@ exports.config = {
         inlineDiffs: true
     },
     capabilities:
-        testConfig.BROWSER_NAME === 'firefox'
-            ? [capabilities.firefox]
-            : [capabilities.chrome],
+        [
+            capabilities.chrome,
+            capabilities.firefox
+        ],
     baseUrl: testConfig.UI_BASE_URL,
     logLevel:  testConfig.LOG_LEVEL,
     specs: [
@@ -59,7 +60,8 @@ exports.config = {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableMochaHooks: true
-        }]
+        }],
+        'spec'
     ],
     services: [
         'intercept',

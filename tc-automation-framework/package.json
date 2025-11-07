@@ -4,8 +4,7 @@
   "description": "Automated testing framework, automation TC 2024",
   "scripts": {
     "e2e": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js 2>&1 | tee test-logs.log",
-    "e2e-test-suite": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --suite test 2>&1 | tee test-logs.log",
-    "test": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json api/test/",
+    "e2e-conduit": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Conduit_tests/**/*.js\" 2>&1 | tee test-logs.log",
     "test-swapi": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Starships_tests/**/*.js\"",
     "test-dog": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Dogs_tests/**/*.js\"",
     "test-database": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"database/test/**/*.js\"",
@@ -43,12 +42,14 @@
     "pre-commit": "1.2.2",
     "uuid": "10.0.0",
     "wdio-image-comparison-service": "4.0.0",
-    "wdio-intercept-service": "4.4.1",
-    "winston": "3.13.0"
+    "wdio-intercept-service": "4.4.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "~7.25.1",
-    "husky": "^4.3.8"
+    "axios": "^1.13.1",
+    "husky": "^4.3.8",
+    "nyc": "^17.1.0",
+    "winston": "^3.18.3"
   },
   "private": true
 }

@@ -1,6 +1,8 @@
 node_modules/
+allure-results/
+report.json
+test-logs.log
 
-# Optional:
 .env
 .vscode/
 .DS_Store

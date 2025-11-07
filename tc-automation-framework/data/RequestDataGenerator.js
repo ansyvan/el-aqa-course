@@ -38,6 +38,7 @@ class RequestDataGenerator {
             phone: faker.phone.phoneNumber(),
             email: faker.internet.email(),
             username: faker.internet.userName(),
+            password: faker.internet.password(),
             jobTitle: faker.name.jobTitle(),
             company: faker.company.companyName()
         };
@@ -46,6 +47,16 @@ class RequestDataGenerator {
 
     static generateJobTitle() {
         return faker.name.jobTitle();
+    }
+
+    static generateFakeArticle() {
+        const article = {
+            title: faker.lorem.sentence(),
+            description: faker.lorem.sentence(),
+            body: faker.lorem.paragraphs(3),
+            tags: faker.lorem.words(3).split(' ')
+        };
+        return article;
     }
 }
 

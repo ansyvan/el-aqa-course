@@ -2,7 +2,7 @@ module.exports = {
     BROWSER_NAME: process.env.BROWSER_NAME || 'chrome',
     IMPLICIT_WAIT_TIMEOUT: Number(process.env.IMPLICIT_WAIT_TIMEOUT) || 2000,
     SPEC_NAME: process.env.SPEC_NAME || '../ui/test/**/*Test.js',
-    LOG_LEVEL: process.env.LOG_LEVEL || 'info',
+    LOG_LEVEL: process.env.LOG_LEVEL || 'warn',
     DELETE_IMAGES_ORIGINS: process.env.DELETE_IMAGES_ORIGINS || 'false',
     SPEC_FILE_RETRIES: Number(process.env.SPEC_FILE_RETRIES) || 0,
     BROWSER_ARGS: process.env.BROWSER_ARGS ? process.env.BROWSER_ARGS.split(';') : undefined,
@@ -16,6 +16,7 @@ module.exports = {
     UI_BASE_URL: process.env.FRONTEND_URL || 'http://localhost:3000',
     SWAPI_APP_URL: 'https://swapi.dev/',
     DOG_APP_URL: 'https://dog.ceo/',
+    CONDUIT_APP_URL: 'https://demo.learnwebdriverio.com/',
     CONTENT_TYPE: {
         TEXT: 'text/plain',
         XML: 'application/xml',
