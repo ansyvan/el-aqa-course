@@ -6,4 +6,4 @@ test-logs.log
 .env
 .vscode/
 .DS_Store
-.npmrc
+.npmrctc-automation-framework/data/TestsImages/
