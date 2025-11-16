@@ -65,10 +65,14 @@ exports.config = {
     ],
     services: [
         'intercept',
+        'chromedriver',
+        'geckodriver',
         ['image-comparison',
             {
                 baselineFolder: path.join(__dirname, '../data/TestsImages/ImagesOrigin'),
                 screenshotPath: path.join(__dirname, '../data/TestsImages/ImagesTests'),
+                formatImageName: '{tag}-{logName}-{browserName}-{width}x{height}',
+                savePerInstance: true,
                 autoSaveBaseline: true
             }
         ]
