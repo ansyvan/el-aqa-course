@@ -1,7 +1,10 @@
 require('../../utils/test-reporter-setup');
 const BreedsPage = require('../../pages/DogApp/BreedsPage');
+const CompareImagesHelper = require('../../utils/compareImagesHelper');
 
 describe('Get random dog image by breed', () => {
+
+    const imgTag = 'dog-breed-image';
 
     before(async() => {
         await BreedsPage.openBreedsListPage();
@@ -13,8 +16,18 @@ describe('Get random dog image by breed', () => {
         expect(await BreedsPage.breedOption('akita').isExisting()).to.be.true;
     });
 
-    it('Should fetch random dog image for "pug" breed', async() => {
+    it('Should fetch a random "pug" image', async() => {
         await BreedsPage.fetchRandomDogByBreed('pug');
-        expect(await browserUtils.getLastResponseUrl()).to.include('/breed/pug/images/random');
+        await BreedsPage.imageResult.waitForDisplayed();
+        expect(await BreedsPage.imageResult.isDisplayed()).to.be.true;
+    });
+
+    it('Should perform image comparison', async() => {
+        const dogImage = BreedsPage.imageResult;
+
+        await CompareImagesHelper.saveElement(dogImage, imgTag);
+        const res = await CompareImagesHelper.compareImages(dogImage, imgTag, 0.1,
+            {ignoreColors: false});
+        expect(res).to.be.true;
     });
 });

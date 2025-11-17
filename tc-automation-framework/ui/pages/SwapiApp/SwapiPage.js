@@ -6,6 +6,7 @@ class SwapiPage extends BasePage {
     get restEndPointNameInput() { return $('input#interactive'); }
     get sendRequestButton() { return $('.btn.btn-primary'); }
     get requestResultField() { return $('#interactive_output'); }
+    get header() { return $('.jumbotron'); }
 
     constructor() {
         super();

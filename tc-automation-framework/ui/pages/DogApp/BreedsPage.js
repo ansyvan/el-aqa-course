@@ -7,6 +7,7 @@ class BreedsPage extends BasePage {
     get dogSelectorDropdown() {return $('select.dog-selector'); }
     breedOption(value) { return $(`option[value=${value}]`); }
     get fetchButton() { return $('.get-dog'); }
+    get imageResult() { return $('.demo-image img'); }
 
     constructor() {
         super();

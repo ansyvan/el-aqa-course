@@ -71,7 +71,7 @@ exports.config = {
             {
                 baselineFolder: path.join(__dirname, '../data/TestsImages/ImagesOrigin'),
                 screenshotPath: path.join(__dirname, '../data/TestsImages/ImagesTests'),
-                formatImageName: '{tag}-{logName}-{browserName}-{width}x{height}',
+                formatImageName: '{tag}-{browserName}-{width}x{height}',
                 savePerInstance: true,
                 autoSaveBaseline: true
             }
@@ -87,7 +87,7 @@ exports.config = {
             _.pick(capabilities, ['browserName', 'browserVersion']),
             {windowSize: `${windowSize.width},${windowSize.height}`}
         );
-        global.BROWSER_NAME = testConfig.BROWSER_NAME;
+        global.BROWSER_NAME = browser.capabilities.browserName;
         global.browserUtils = require('../ui/utils/wdioBrowserUtils.js');
         global.compareImagesHelper = require('../ui/utils/compareImagesHelper');
         global.glob = require('glob');

@@ -4,9 +4,9 @@
   "description": "Automated testing framework, automation TC 2024",
   "scripts": {
     "e2e": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js 2>&1 | tee test-logs.log",
-    "e2e-conduit": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Conduit_tests/**/*.js\" 2>&1 | tee test-logs.log",
-    "e2e-dog": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Dog_tests/**/*.js\" 2>&1 | tee test-logs.log",
-    "e2e-swapi": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Swapi_tests/**/*.js\" 2>&1 | tee test-logs.log",
+    "e2e-conduit": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Conduit_tests/**/*.js\" 2>&1 | tee test-logs.log; npm run allure-report",
+    "e2e-dog": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Dog_tests/**/*.js\" 2>&1 | tee test-logs.log; npm run allure-report",
+    "e2e-swapi": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Swapi_tests/**/*.js\" 2>&1 | tee test-logs.log; npm run allure-report",
     "test-swapi": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Starships_tests/**/*.js\"",
     "test-dog": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Dogs_tests/**/*.js\"",
     "test-database": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"database/test/**/*.js\"",

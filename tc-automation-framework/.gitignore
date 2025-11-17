@@ -1,9 +1,11 @@
 node_modules/
 allure-results/
+allure-report/
 report.json
 test-logs.log
 
 .env
 .vscode/
 .DS_Store
-.npmrctc-automation-framework/data/TestsImages/
+.npmrc
+tc-automation-framework/data/TestsImages/
