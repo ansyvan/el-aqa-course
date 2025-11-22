@@ -8,4 +8,4 @@ test-logs.log
 .vscode/
 .DS_Store
 .npmrc
-tc-automation-framework/data/TestsImages/
+data/TestsImages/

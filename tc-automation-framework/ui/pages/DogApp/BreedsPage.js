@@ -24,8 +24,27 @@ class BreedsPage extends BasePage {
 
     async fetchRandomDogByBreed(breed) {
         await this.dogSelectorDropdown.waitForExist();
+        
+        const oldSrc = await this.imageResult.getAttribute('src');
+
         await this.dogSelectorDropdown.selectByAttribute('value', breed);
         await this.fetchButton.click();
+
+        await browser.waitUntil(
+            async() => (await this.imageResult.getAttribute('src')) !== oldSrc,
+            {
+                timeout: 5000,
+                timeoutMsg: 'Image source did not update after clicking Fetch'
+            }
+        );
+
+        await browser.waitUntil(
+            async() => (await this.imageResult.getProperty('naturalWidth')) > 0,
+            {
+                timeout: 5000,
+                timeoutMsg: 'Image finished loading but width is 0'
+            }
+        );
     }
 }
 

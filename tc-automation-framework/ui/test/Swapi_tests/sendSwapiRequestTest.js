@@ -31,9 +31,11 @@ describe('Send Swapi request using "Try it out" functionality', () => {
 
     it('Should perform image comparison', async() => {
         const websiteHeader = SwapiPage.header;
-        await CompareImagesHelper.saveElement(websiteHeader, imgTag);
         const res = await CompareImagesHelper.compareImages(websiteHeader, imgTag, 0.1,
-            {ignoreColors: false});
+            {
+                ignoreColors: false
+            });
+
         expect(res).to.be.true;
     });
 

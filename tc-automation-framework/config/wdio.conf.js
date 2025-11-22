@@ -92,7 +92,7 @@ exports.config = {
         global.compareImagesHelper = require('../ui/utils/compareImagesHelper');
         global.glob = require('glob');
         if (testConfig.DELETE_IMAGES_ORIGINS === 'true') {
-            await compareImagesHelper.deleteOrigins();
+            await compareImagesHelper.deleteOrigins(imgTag);
         }
     }
 };

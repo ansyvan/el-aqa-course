@@ -13,21 +13,46 @@ describe('Get random dog image by breed', () => {
     });
 
     it('Should have "pug" in the dropdown', async() => {
-        expect(await BreedsPage.breedOption('akita').isExisting()).to.be.true;
+        expect(await BreedsPage.breedOption('pug').isExisting()).to.be.true;
     });
 
-    it('Should fetch a random "pug" image', async() => {
+    it('Should fetch the first random "pug" image', async() => {
         await BreedsPage.fetchRandomDogByBreed('pug');
         await BreedsPage.imageResult.waitForDisplayed();
-        expect(await BreedsPage.imageResult.isDisplayed()).to.be.true;
+        await browser.waitUntil(async() => {
+            return (await BreedsPage.imageResult.getProperty('complete')) === true;
+        }, { timeout: 5000, timeoutMsg: 'Image not loaded completely' });
+        
+        CompareImagesHelper.deleteOrigins(imgTag);
+
+        await CompareImagesHelper.compareImages(
+            BreedsPage.imageResult,
+            imgTag,
+            0.1,
+            {
+                ignoreColors: false
+            }
+        );
     });
 
-    it('Should perform image comparison', async() => {
-        const dogImage = BreedsPage.imageResult;
+    it('Should fetch the second random "pug" image and compare them', async() => {
+        await BreedsPage.fetchRandomDogByBreed('pug');
 
-        await CompareImagesHelper.saveElement(dogImage, imgTag);
-        const res = await CompareImagesHelper.compareImages(dogImage, imgTag, 0.1,
-            {ignoreColors: false});
-        expect(res).to.be.true;
+        const res = await CompareImagesHelper.compareImages(
+            BreedsPage.imageResult,
+            imgTag,
+            0.1,
+            {
+                ignoreColors: false,
+                autoSaveBaseline: false
+            });
+            
+        expect(res).to.be.false;
+    });
+
+    afterEach(async function() {
+        if (this.currentTest.state === 'failed') {
+            CompareImagesHelper.attachDiffImageToReport(imgTag);
+        }
     });
 });
