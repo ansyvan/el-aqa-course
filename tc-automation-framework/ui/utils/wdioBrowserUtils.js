@@ -69,6 +69,27 @@ class WdioBrowserUtils {
         }
         return url.split('/articles/').pop().replace(/\/$/, '');
     }
+
+    static async logInterceptedRequests() {
+        log.info('--- [INTERCEPTOR] Printing captured requests ---');
+        
+        const requests = await browser.getRequests();
+
+        if (requests.length === 0) {
+            log.info('No requests captured.');
+            return;
+        }
+
+        requests.forEach((req, index) => {
+            const method = req.method;
+            const url = req.url;
+            const status = req.response ? req.response.statusCode : 'No Response';
+            
+            log.info(`Request #${index + 1}: [${method}] ${url} | Status: ${status}`);
+        });
+        
+        log.info('--- [INTERCEPTOR] End of requests ---');
+    }
 }
 
 module.exports = WdioBrowserUtils;

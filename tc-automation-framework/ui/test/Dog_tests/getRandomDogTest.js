@@ -50,6 +50,10 @@ describe('Get random dog image by breed', () => {
         expect(res).to.be.false;
     });
 
+    after(async function() {
+        await browserUtils.logInterceptedRequests();
+    });
+
     afterEach(async function() {
         if (this.currentTest.state === 'failed') {
             CompareImagesHelper.attachDiffImageToReport(imgTag);
