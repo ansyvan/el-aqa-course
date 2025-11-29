@@ -1,5 +1,6 @@
 node_modules/
 allure-results/
+allure-report/
 report.json
 test-logs.log
 
@@ -7,3 +8,4 @@ test-logs.log
 .vscode/
 .DS_Store
 .npmrc
+data/TestsImages/

@@ -1,35 +1,62 @@
 const fs = require('fs');
 const ContentType = require('../../config/test-config').CONTENT_TYPE;
+const glob = require('glob');
 
 class CompareImagesHelper {
-    static deleteOrigins() {
-        return glob('../**/ImagesOrigin/*.png', (err, files) => {
-            if (err) {
-                log.debug(err);
+    static deleteOrigins(imageTag) {
+
+        if (!imageTag) {
+            log.warn('[Helper] deleteOrigins called without tag! Deletion cancelled for safety.');
+            return;
+        }
+
+        const filePattern = `data/TestsImages/ImagesOrigin/**/*${imageTag}-${global.BROWSER_NAME}*.png`;
+
+        log.debug(`[Helper] Searching for files to delete with pattern: ${filePattern}`);
+
+        try {
+            const files = glob.sync(filePattern);
+            
+            if (files.length > 0) {
+                files.forEach(file => {
+                    fs.unlinkSync(file);
+                    log.info(`[Helper] Deleted file: ${file}`);
+                });
             } else {
-                files.forEach(file => fs.unlink(file));
+                log.debug(`[Helper] Files to delete not found for tag: ${imageTag}`);
             }
-        });
+        } catch (err) {
+            log.error(`[Helper] Error deleting files: ${err}`);
+        }
     }
 
     static attachDiffImageToReport(imageTag) {
-        const fileToUpload = `data/TestsImages/ImagesTests/diff/${imageTag}-${BROWSER_NAME}*.png`;
-        return glob(fileToUpload, (err, files) => {
-            try {
-                if (err)
-                    log.debug(err);
-                else {
-                    const diffImage = fs.readFileSync(files[0]);
-                    testReporter.addStep('Image comparison diff artifact');
-                    testReporter.addAttachment('Diff', Buffer.from(diffImage, 'base64'), ContentType.PNG);
-                    log.debug('Attaching diff image');
-                }
-            } catch (error) {
-                log.debug('Error occured with diff image attachment');
-                testReporter.addStep('Image comparison diff artifact error log');
-                testReporter.addAttachment('Error', Buffer.from(error.toString(), 'utf8'), ContentType.TEXT);
+        const filePattern =
+        `data/TestsImages/ImagesTests/diff/desktop_${global.BROWSER_NAME}/${imageTag}-${global.BROWSER_NAME}*.png`;
+
+        try {
+            const files = glob.sync(filePattern);
+
+            if (files.length > 0) {
+                const diffImage = fs.readFileSync(files[0]);
+                testReporter.addStep('Image comparison diff artifact');
+                testReporter.addAttachment(
+                    'Diff',
+                    Buffer.from(diffImage, 'base64'),
+                    ContentType.PNG
+                );
+            } else {
+                log.warn(`[Helper] Not found diff-file: ${filePattern}`);
             }
-        });
+        } catch (error) {
+            log.error('Error occured with diff image attachment', error);
+            testReporter.addStep('Image comparison diff artifact error log');
+            testReporter.addAttachment(
+                'Error',
+                Buffer.from(error.toString(), 'utf8'),
+                ContentType.TEXT
+            );
+        }
     }
 
     static async saveElement(wdioElement, imageTag) {
@@ -37,18 +64,32 @@ class CompareImagesHelper {
         return browser.saveElement(element, imageTag);
     }
 
-    static async compareImages(wdioElement, imgTag, threshold, {blockOut, ignoreColors = false} = {}) {
-        const element = typeof wdioElement === 'object' ? await wdioElement : wdioElement;
-        let percentage;
+    static async compareImages(
+        wdioElement,
+        imgTag,
+        threshold,
+        { blockOut, ignoreColors = false, autoSaveBaseline } = {}
+    ) {
+        const element =
+      typeof wdioElement === 'object' ? await wdioElement : wdioElement;
+
+        const options = {
+            saveAboveTolerance: threshold,
+            ignoreColors: ignoreColors
+        };
+
         if (blockOut) {
-            percentage = await browser.checkElement(element, imgTag,
-                {blockOut: blockOut, saveAboveTolerance: threshold, ignoreColors: ignoreColors});
-        } else {
-            percentage = await browser.checkElement(element, imgTag,
-                {saveAboveTolerance: threshold, ignoreColors: ignoreColors});
+            options.blockOut = blockOut;
         }
+
+        if (typeof autoSaveBaseline !== 'undefined') {
+            options.autoSaveBaseline = autoSaveBaseline;
+        }
+
+        const percentage = await browser.checkElement(element, imgTag, options);
+
         return new Promise((resolve) => {
-            (percentage < threshold) ? resolve(true) : resolve(false);
+            percentage < threshold ? resolve(true) : resolve(false);
         });
     }
 }

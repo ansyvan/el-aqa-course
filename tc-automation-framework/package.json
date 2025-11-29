@@ -4,7 +4,10 @@
   "description": "Automated testing framework, automation TC 2024",
   "scripts": {
     "e2e": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js 2>&1 | tee test-logs.log",
-    "e2e-conduit": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Conduit_tests/**/*.js\" 2>&1 | tee test-logs.log",
+    "e2e-conduit": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Conduit_tests/**/*.js\" 2>&1 | tee test-logs.log; npm run allure-report",
+    "e2e-dog": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Dog_tests/**/*.js\" 2>&1 | tee test-logs.log; npm run allure-report",
+    "e2e-swapi": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Swapi_tests/**/*.js\" 2>&1 | tee test-logs.log; npm run allure-report",
+    "e2e-angular": "node --max-old-space-size=4096 ./node_modules/.bin/wdio config/wdio.conf.js --spec \"ui/test/Angular_tests/angularMenuTest.js\" 2>&1 | tee test-logs.log; npm run allure-report",
     "test-swapi": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Starships_tests/**/*.js\"",
     "test-dog": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"api/test/Dogs_tests/**/*.js\"",
     "test-database": "./node_modules/.bin/mocha --config=./api/test/regression.mocharc.json \"database/test/**/*.js\"",
@@ -40,6 +43,7 @@
     "nodemailer": "6.9.3",
     "npm-run-all": "4.1.5",
     "pre-commit": "1.2.2",
+    "selenium-webdriver": "^4.38.0",
     "uuid": "10.0.0",
     "wdio-image-comparison-service": "4.0.0",
     "wdio-intercept-service": "4.4.1"
@@ -47,8 +51,12 @@
   "devDependencies": {
     "@babel/eslint-parser": "~7.25.1",
     "axios": "^1.13.1",
+    "chromedriver": "^142.0.2",
+    "geckodriver": "^6.0.2",
     "husky": "^4.3.8",
     "nyc": "^17.1.0",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-geckodriver-service": "^5.0.2",
     "winston": "^3.18.3"
   },
   "private": true
