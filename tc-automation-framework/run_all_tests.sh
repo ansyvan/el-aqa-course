@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 generate_report() {
     echo "Generating Allure report..."
